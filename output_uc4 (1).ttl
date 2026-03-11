@@ -1,0 +1,148 @@
+@prefix activity: <https://example.org/activity/> .
+@prefix entity: <https://example.org/entity/> .
+@prefix entity_output: <https://example.org/outputs/> .
+@prefix person: <https://example.org/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:ml_algorithm a prov:Entity ;
+    rdfs:label "ML Algorithm"^^xsd:string .
+
+entity:prediction a prov:Entity ;
+    rdfs:label "Prediction"^^xsd:string ;
+    prov:wasGeneratedBy activity:model_validation .
+
+entity:validation_report a prov:Entity ;
+    rdfs:label "Validation Report"^^xsd:string ;
+    prov:wasGeneratedBy activity:model_validation .
+
+entity_output:test_dataset a prov:Entity ;
+    rdfs:label "Test Dataset"^^xsd:string ;
+    prov:wasGeneratedBy activity:transformation .
+
+entity_output:training_dataset a prov:Entity ;
+    rdfs:label "Training Dataset"^^xsd:string ;
+    prov:wasGeneratedBy activity:transformation .
+
+activity:model_development a prov:Activity ;
+    prov:used entity:training_dataset ;
+    prov:wasAssociatedWith person:modeler .
+
+entity:combined_dataset a prov:Entity ;
+    rdfs:label "Combined Dataset"^^xsd:string ;
+    prov:wasGeneratedBy activity:cleaning_integration .
+
+entity:dataset01 a prov:Entity ;
+    rdfs:label "Dataset 01"^^xsd:string ;
+    prov:wasGeneratedBy activity:measuring_01 .
+
+entity:dataset02 a prov:Entity ;
+    rdfs:label "Dataset 02"^^xsd:string ;
+    prov:wasGeneratedBy activity:measuring_02 .
+
+entity:dataset_n a prov:Entity ;
+    rdfs:label "Dataset N"^^xsd:string ;
+    prov:wasGeneratedBy activity:measuring_n .
+
+entity:method01 a prov:Entity ;
+    rdfs:label "Method 01"^^xsd:string .
+
+entity:method_n a prov:Entity ;
+    rdfs:label "Method N"^^xsd:string .
+
+entity:test_dataset a prov:Entity ;
+    rdfs:label "Test Dataset"^^xsd:string ;
+    prov:wasGeneratedBy activity:transformation .
+
+entity:training_dataset a prov:Entity ;
+    rdfs:label "Training Dataset"^^xsd:string ;
+    prov:wasGeneratedBy activity:transformation .
+
+entity_output:combined_dataset a prov:Entity ;
+    rdfs:label "Combined Dataset"^^xsd:string ;
+    prov:wasGeneratedBy activity:cleaning_integration .
+
+entity_output:dataset01 a prov:Entity ;
+    rdfs:label "Dataset 01"^^xsd:string ;
+    prov:wasGeneratedBy activity:measuring_01 .
+
+entity_output:dataset02 a prov:Entity ;
+    rdfs:label "Dataset 02"^^xsd:string ;
+    prov:wasGeneratedBy activity:measuring_02 .
+
+entity_output:dataset_n a prov:Entity ;
+    rdfs:label "Dataset N"^^xsd:string ;
+    prov:wasGeneratedBy activity:measuring_n .
+
+entity_output:method01 a prov:Entity ;
+    rdfs:label "Method 01"^^xsd:string .
+
+entity_output:method_n a prov:Entity ;
+    rdfs:label "Method N"^^xsd:string .
+
+entity_output:model a prov:Entity ;
+    rdfs:label "Prefictive Model"^^xsd:string ;
+    prov:wasGeneratedBy activity:model_development .
+
+person:01 a prov:Agent,
+        "prov:Person"^^xsd:string ;
+    rdfs:label "John Doe"^^xsd:string .
+
+person:02 a prov:Agent,
+        "prov:Person"^^xsd:string ;
+    rdfs:label "John Doe"^^xsd:string .
+
+person:data_curator a prov:Agent,
+        "prov:Person"^^xsd:string ;
+    rdfs:label "Jane Doe"^^xsd:string .
+
+person:n a prov:Agent,
+        "prov:Person"^^xsd:string ;
+    rdfs:label "John Doe"^^xsd:string .
+
+activity:cleaning_integration a prov:Activity ;
+    prov:used entity:dataset01,
+        entity:dataset02,
+        entity:dataset_n,
+        entity:method02,
+        entity_output:dataset01,
+        entity_output:dataset02,
+        entity_output:dataset_n,
+        entity_output:method02 ;
+    prov:wasAssociatedWith person:data_curator,
+        person:modeler .
+
+activity:measuring_01 a prov:Activity ;
+    prov:used entity:method01,
+        entity_output:method01 ;
+    prov:wasAssociatedWith person:01 .
+
+activity:measuring_02 a prov:Activity ;
+    prov:used entity:method02,
+        entity_output:method02 ;
+    prov:wasAssociatedWith person:02 .
+
+activity:measuring_n a prov:Activity ;
+    prov:used entity:method_n,
+        entity_output:method_n ;
+    prov:wasAssociatedWith person:n .
+
+activity:model_validation a prov:Activity ;
+    prov:used entity:test_dataset,
+        entity_output:model .
+
+entity:method02 a prov:Entity ;
+    rdfs:label "Method 02"^^xsd:string .
+
+entity_output:method02 a prov:Entity ;
+    rdfs:label "Method 02"^^xsd:string .
+
+person:modeler a prov:Agent,
+        "prov:Person"^^xsd:string ;
+    rdfs:label "Jane Doe Doe"^^xsd:string .
+
+activity:transformation a prov:Activity ;
+    prov:used entity:combined_dataset,
+        entity_output:combined_dataset .
+

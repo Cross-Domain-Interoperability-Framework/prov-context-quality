@@ -1,0 +1,86 @@
+{
+    "@context":  "https://schema.org/",
+    "@type": "Action",
+    "@id": "https://nautilus.verne/identifiers/Action-00252231.json",
+    "name": "3D scanning of nautilus-collection-item:00515643",
+    "agent": {
+        "@id": "https://nautilus.verne/identifiers/Person-00000562.json",
+        "@type": "Person",
+        "givenName": "Pierre",
+        "familyName": "Aronnax",
+        "honorificPrefix": "Professor"
+    },
+    "identifier": "nautilus-scanning-event:02552891",
+    "actionStatus": "CompletedActionStatus",
+    "instrument": "Nautilus 3D scanning chamber",
+    "object": "nautilus-collection-item:00515643",
+    "result": {
+        "@id": "https://nautilus.verne/identifiers/Dataset-015481461",
+        "@type": "Dataset",
+        "identifier": "nautilus-3D-scan:02545642",
+        "name": "3D Scan of Nautilus Collection Item 00515643",
+        "about": "nautilus-collection-item:00515643"
+    },
+    "startTime": "1848-11-17T15:39:04Z",
+    "endTime": "1848-11-17T15:50:19Z",
+    "actionProcess": {
+        "@type": "HowTo",
+        "name": "How to 3D scan a seashell with the Nautilus 3D scanning chamber",
+        "estimatedCost": "20 Pounds Sterling and 40 shillings",
+        "performTime": "T2H30M",
+        "prepTime": "T30M",
+        "supply": [
+            "ambergris",
+            "blank Amethyst data slate"
+        ],
+        "tool": [
+            "asbestos gloves",
+            "kelp-leather apron",
+            "topaz protective goggles",
+            "soda-lime gas mask"
+        ],
+        "yield": "Amethyst data slate with 3D scan data",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Initialisation of the Nautilus 3D scanning chamber",
+                "description": "Add three grains of ambergris to the device's brass thurible",
+                "subjectOf": {
+                    "@type": "VideoObject",
+                    "name": "Videographic guide to the initialisation of the Nautilus 3D scanning chamber",
+                    "contentUrl": "https://nautilus.verne/video-archive/26623.video"
+                }
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Sample loading",
+                "description": "Place the object to be scanned in the copper casket ornamented with krakens at the centre of the chamber"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Configuration of the scanning process",
+                "description": "Approach the luminous display panel bordered by red coral. Speak clearly and deferentially to explain how the scanning should proceed. The Nautilus difference engine will configure the chamber to account for your preferences. Should there be uncertainties, the difference engine shall ask you for further clarification."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Shelter or depart",
+                "description": "Shelter behind at least 4 inches of cinnabar-coated lead during the operation of the machine. Alternatively, leave the scanning laboratory entirely - the scanning requires no supervision."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Scanning",
+                "description": "The chamber will scan the sample by eldritch means. Scanning is complete when the copper casket ornamented with Krakens opens."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Sample retrieval",
+                "description": "Retrieve the sample from the copper casket ornamented with Krakens opens. Return to secure archiving or storage as needed."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Data slate retrieval",
+                "description": "Approach the alcove ornamented with hippocampi in rampant pose. An amethyst data slate will emerge. Wait for it to cool and retrieve it. Your 3D scan is examinable with the Nautilus holographicum."
+            }
+        ]
+    }
+}

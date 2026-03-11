@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#SamplePreparation_1",
+      "schema:name": "Sample preparation \u2014 load bulk sample into quartz tube",
+      "schema:description": "Approximately 1 mg of bulk aggregate from the TAGSAM collection device was loaded and weighed inside a quartz tube, which was then placed into the pyrolysis oven interfaced with the GC-MS system.",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:endTime": "2023-11-21T00:00:00Z",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "#PyrolysisOven",
+        "schema:name": "Pyrolysis Oven",
+        "schema:description": "Pyrolysis front-end interface coupled to the GC-MS system. Flash heats samples at 10\u00b0C/ms to target temperatures up to 1300\u00b0C. For this analysis, target temperature was approximately 600\u00b0C."
+      },
+      "prov:used": [
+        {
+          "@id": "#OREX-803003-0",
+          "schema:name": "Bennu asteroid sample OREX-803003-0",
+          "schema:description": "Approximately 1 mg aggregate of material from asteroid Bennu, collected by the OSIRIS-REx Touch-and-Go Sample Acquisition Mechanism (TAGSAM)."
+        }
+      ],
+      "schema:result": [
+        {
+          "@id": "#PreparedSample",
+          "schema:name": "Prepared sample in quartz tube",
+          "schema:description": "~1 mg Bennu aggregate loaded and weighed in quartz tube, ready for pyrolysis."
+        }
+      ],
+      "schema:agent": {
+        "@type": [
+          "schema:Organization"
+        ],
+        "@id": "#NASA_GSFC",
+        "schema:name": "NASA Goddard Space Flight Center",
+        "schema:url": "https://www.nasa.gov/goddard"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#Pyrolysis_1",
+      "schema:name": "Flash pyrolysis of Bennu sample at ~600\u00b0C",
+      "schema:description": "The prepared sample was flash-heated at 10\u00b0C/ms to approximately 600\u00b0C. Thermally extracted volatiles were carried in a helium stream along a heated transfer line (300\u00b0C) into the GC-MS system. Pyrolysis breaks macromolecular material into discrete smaller components. Note: bulk samples may contain soluble organic matter (SOM) that can produce thermal degradation products and rearrangement reactions, making it difficult to distinguish IOM-derived vs. SOM-derived compounds.",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:endTime": "2023-11-21T00:00:00Z",
+      "schema:instrument": {
+        "@id": "#PyrolysisOven"
+      },
+      "prov:used": [
+        {
+          "@id": "#PreparedSample"
+        }
+      ],
+      "schema:result": [
+        {
+          "@id": "#PyrolysisProducts",
+          "schema:name": "Pyrolysis volatiles in helium carrier stream",
+          "schema:description": "Thermally extracted volatiles from flash pyrolysis of Bennu sample, carried in helium through heated transfer line at 300\u00b0C to GC inlet."
+        }
+      ],
+      "schema:agent": {
+        "@id": "#NASA_GSFC"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#GCSeparation_1",
+      "schema:name": "Gas chromatographic separation on Rtx-5ms column",
+      "schema:description": "Pyrolysis products separated on an Rtx-5ms nonpolar fused silica capillary column (30 m \u00d7 0.250 mm \u00d7 0.50 \u00b5m, with 5 m guard). Split injection (10:1, 300\u00b0C inlet). Oven program: 40\u00b0C hold \u2192 ramp at ~3.5\u00b0C/min to 300\u00b0C \u2192 hold at 300\u00b0C. Total run 87.79 min. Helium carrier at 1.500 mL/min constant flow.",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:endTime": "2023-11-21T00:00:00Z",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "#GasChromatograph",
+        "schema:name": "Gas Chromatograph",
+        "schema:description": "GC fitted with Rtx-5ms (5% diphenyl / 95% dimethyl polysiloxane) fused silica capillary column, 30 m \u00d7 0.250 mm \u00d7 0.50 \u00b5m film thickness, with 5 m \u00d7 0.250 mm guard column. Front inlet operated in split mode (10:1 ratio, 15.0 mL/min split flow) at 300\u00b0C. Helium carrier gas at 1.500 mL/min constant flow. Oven program: 40\u00b0C (hold) \u2192 300\u00b0C (~3.5\u00b0C/min) \u2192 300\u00b0C (hold). Total run time 87.79 minutes."
+      },
+      "prov:used": [
+        {
+          "@id": "#PyrolysisProducts"
+        }
+      ],
+      "schema:result": [
+        {
+          "@id": "#SeparatedEluent",
+          "schema:name": "Chromatographically separated eluent",
+          "schema:description": "Time-resolved stream of separated compounds eluting from the GC column into the mass spectrometer."
+        }
+      ],
+      "schema:agent": {
+        "@id": "#NASA_GSFC"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#MSDetection_FullScan_1",
+      "schema:name": "MS detection \u2014 Full Scan mode (m/z 50\u2013500)",
+      "schema:description": "Continuous full scan acquisition across m/z 50\u2013500 in positive EI mode for the entire 87.79-minute run (scan time 0.100 s). Provides comprehensive mass spectral data for compound identification via fragmentation pattern matching against spectral libraries and comparison with analytical reference standards. Ion source and transfer line at 300\u00b0C.",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:endTime": "2023-11-21T00:00:00Z",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "#TSQ_MassSpectrometer",
+        "schema:name": "Thermo Scientific TSQ Triple-Quadrupole Mass Spectrometer",
+        "schema:description": "TSQ triple-quadrupole MS operated in electron ionization (EI) mode, positive polarity. MS transfer line 300\u00b0C, ion source 300\u00b0C. Detector gain 100,000. Operated in simultaneous full scan and timed SRM/MRM acquisition modes.",
+        "schema:url": "https://www.thermofisher.com/"
+      },
+      "prov:used": [
+        {
+          "@id": "#SeparatedEluent"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "20231121_002_OREX-803003-0.cdf",
+          "schema:name": "Sample Data \u2014 OREX-803003-0",
+          "schema:description": "Raw analytical data (full scan and MRM) for sample OREX-803003-0 in Common Data Format, from Chromeleon Data Vault sequence 20231929_Bennu_01.seq.",
+          "schema:encodingFormat": "application/x-netcdf"
+        }
+      ],
+      "schema:agent": {
+        "@id": "#NASA_GSFC"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#MSDetection_MRM_1",
+      "schema:name": "MS detection \u2014 Timed SRM/MRM mode (38 target compounds)",
+      "schema:description": "Simultaneous timed Selected Reaction Monitoring targeting 38 compounds (aromatic hydrocarbons, PAHs, sulfur-bearing organics, oxygen/nitrogen heterocycles) via 2\u20133 diagnostic precursor\u2192product ion transitions per compound. Minimum dwell time 10.0 ms, desired window 0.6 min, 6 scans per peak. Precursor and product resolution both Normal. Dramatically increased detection sensitivity versus full scan, enabling detection of low-abundance organics and more accurate quantification.",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:endTime": "2023-11-21T00:00:00Z",
+      "schema:instrument": {
+        "@id": "#TSQ_MassSpectrometer"
+      },
+      "prov:used": [
+        {
+          "@id": "#SeparatedEluent"
+        }
+      ],
+      "schema:result": [
+        {
+          "@id": "20231121_002_OREX-803003-0.cdf"
+        }
+      ],
+      "schema:agent": {
+        "@id": "#NASA_GSFC"
+      }
+    }
+  ]
+}

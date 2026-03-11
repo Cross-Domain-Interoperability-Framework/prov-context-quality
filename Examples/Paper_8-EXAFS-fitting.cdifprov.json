@@ -1,0 +1,153 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#c5250654-d18b-4657-b066-d3311ce7d2a5",
+      "schema:name": "Run of Galaxy workflow engine",
+      "schema:additionalType": [
+        "schema:OrganizeAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-28T17:49:11.644661",
+      "schema:endTime": "2024-10-28T17:49:27.648788",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "#1f93607d-e8f7-4d03-b4c9-6d3619810560",
+        "schema:name": "Galaxy workflow engine"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#5b1292dc-6021-45f6-8f81-40d977069fc9",
+      "schema:name": "Workflow to reproduce paper 8 EXAFS fitting",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-09-27T15:27:15.076443",
+      "schema:endTime": "2024-09-27T15:27:15.076453",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "workflows/0a07785dca20180d.gxwf.yml",
+        "schema:name": "Workflow to reproduce paper 8 EXAFS fitting",
+        "schema:object": [
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#d71cd989-da11-4217-b71c-d72453bac70b",
+            "schema:name": "Washcoat Athena project file from paper",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#5b9487c3-d0ed-40f3-8a79-094e4c9d2374",
+            "schema:name": "20g ash Athena project file from paper",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#f544af95-5ed7-43ea-bbb4-7dbc315227aa",
+            "schema:name": "PdO_cif_file.cif",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#e7984433-8814-4b43-b8b2-1b24d2e4753d",
+            "schema:name": "Pd_cif_file.cif",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          }
+        ],
+        "schema:subjectOf": {
+          "@type": [
+            "schema:MediaObject",
+            "schema:HowTo",
+            "schema:SoftwareSourceCode"
+          ],
+          "@id": "workflows/0a07785dca20180d.abstract.cwl",
+          "schema:name": "workflows/0a07785dca20180d.abstract"
+        }
+      },
+      "prov:used": [
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Washcoat_Athena_project_file_from_paper_3dfde3a7417d0973.prj",
+          "schema:name": "Washcoat Athena project file from paper",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#d71cd989-da11-4217-b71c-d72453bac70b"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/20g_ash_Athena_project_file_from_paper_cb3d3286c5ba876f.prj",
+          "schema:name": "20g ash Athena project file from paper",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#5b9487c3-d0ed-40f3-8a79-094e4c9d2374"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/PdO_cif_file.cif_ebd697d0c147d306.cif",
+          "schema:name": "PdO_cif_file.cif",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#f544af95-5ed7-43ea-bbb4-7dbc315227aa"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Pd_cif_file.cif_b0b2392468d82f00.cif",
+          "schema:name": "Pd_cif_file.cif",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#e7984433-8814-4b43-b8b2-1b24d2e4753d"
+          }
+        }
+      ]
+    }
+  ]
+}

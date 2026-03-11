@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#194b7c6e-aeed-4b9e-8117-49621cccb965",
+      "schema:name": "Run of Galaxy workflow engine",
+      "schema:additionalType": [
+        "schema:OrganizeAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-09-27T10:30:38.975410",
+      "schema:endTime": "2024-09-27T10:30:40.690532",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "#a1f5b92d-7152-4a4a-90fe-14446c76da01",
+        "schema:name": "Galaxy workflow engine"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5",
+      "schema:name": "Workflow constructed from history ''Extracting structural information of Au colloids at ultra-dilute concentrations: identification of growth during nanoparticle immobilization (paper-3''",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-09-27T10:28:59.043893",
+      "schema:endTime": "2024-09-27T10:28:59.043905",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "workflows/1a5c6ad02e8082a6.gxwf.yml",
+        "schema:name": "Workflow constructed from history ''Extracting structural information of Au colloids at ultra-dilute concentrations: identification of growth during nanoparticle immobilization (paper-3''",
+        "schema:object": [
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#5e03f729-585a-44c0-9eb0-f5299397a62c",
+            "schema:name": "Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          }
+        ],
+        "schema:subjectOf": {
+          "@type": [
+            "schema:MediaObject",
+            "schema:HowTo",
+            "schema:SoftwareSourceCode"
+          ],
+          "@id": "workflows/1a5c6ad02e8082a6.abstract.cwl",
+          "schema:name": "workflows/1a5c6ad02e8082a6.abstract"
+        }
+      },
+      "prov:used": [
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj_1.prj",
+          "schema:name": "Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#5e03f729-585a-44c0-9eb0-f5299397a62c"
+          }
+        }
+      ]
+    }
+  ]
+}

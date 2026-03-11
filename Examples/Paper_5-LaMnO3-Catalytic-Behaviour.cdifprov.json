@@ -1,0 +1,153 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#2a5c0a80-1273-4077-8509-3c55eae0ddfd",
+      "schema:name": "Run of Galaxy workflow engine",
+      "schema:additionalType": [
+        "schema:OrganizeAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-30T14:10:21.773632",
+      "schema:endTime": "2024-10-30T14:10:33.822661",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "#6bbb765e-5c48-42ed-8a0d-dcad0afdb12c",
+        "schema:name": "Galaxy workflow engine"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16",
+      "schema:name": "LaMnO3 Catalytic Behaviour",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-30T14:02:40.265013",
+      "schema:endTime": "2024-10-30T14:02:40.265017",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "workflows/f06ca0d3d213b10e.gxwf.yml",
+        "schema:name": "LaMnO3 Catalytic Behaviour",
+        "schema:object": [
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#fadd0238-2a3b-4dce-978c-aa1e4fced660",
+            "schema:name": "Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#092081eb-d50c-47f8-b999-ef8afece02f5",
+            "schema:name": "Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#a3ee12d6-46f7-48ed-9d0d-873e5a1f46b3",
+            "schema:name": "mp-565203_Mn2O3.cif",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#8ffbf969-27c5-4072-99cf-ce95fa079946",
+            "schema:name": "1667441.cif",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          }
+        ],
+        "schema:subjectOf": {
+          "@type": [
+            "schema:MediaObject",
+            "schema:HowTo",
+            "schema:SoftwareSourceCode"
+          ],
+          "@id": "workflows/f06ca0d3d213b10e.abstract.cwl",
+          "schema:name": "workflows/f06ca0d3d213b10e.abstract"
+        }
+      },
+      "prov:used": [
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Upload__Figure_2-5__Mn_K_edge_LMOA_time_series.prj_4bf0dfdd37d908b6.prj",
+          "schema:name": "Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#fadd0238-2a3b-4dce-978c-aa1e4fced660"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Upload__Figure_2-5__La_L3_edge_LMOA_time_series.prj_a22d0f72d1f36993.prj",
+          "schema:name": "Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#092081eb-d50c-47f8-b999-ef8afece02f5"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/mp-565203_Mn2O3.cif_acaef9f591c8f62d.cif",
+          "schema:name": "mp-565203_Mn2O3.cif",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#a3ee12d6-46f7-48ed-9d0d-873e5a1f46b3"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/1667441.cif_7be2e841c9ddb917.cif",
+          "schema:name": "1667441.cif",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#8ffbf969-27c5-4072-99cf-ce95fa079946"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1140 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/wfrun/process/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/workflow/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ],
+            "datePublished": "2024-09-11T16:14:01+00:00",
+            "hasPart": [
+                {
+                    "@id": "workflows/1967248db44ca916.ga"
+                },
+                {
+                    "@id": "workflows/1967248db44ca916.gxwf.yml"
+                },
+                {
+                    "@id": "workflows/1967248db44ca916.abstract.cwl"
+                },
+                {
+                    "@id": "workflows/1967248db44ca916.html"
+                },
+                {
+                    "@id": "datasets/A_01.dat_1.tabular"
+                },
+                {
+                    "@id": "datasets/A_02.dat_2.tabular"
+                },
+                {
+                    "@id": "datasets/A_03.dat_3.tabular"
+                },
+                {
+                    "@id": "datasets/A_04.dat_4.tabular"
+                },
+                {
+                    "@id": "datasets/A_05.dat_5.tabular"
+                },
+                {
+                    "@id": "datasets/A_06.dat_6.tabular"
+                },
+                {
+                    "@id": "datasets/A_07.dat_7.tabular"
+                },
+                {
+                    "@id": "datasets/A_08.dat_8.tabular"
+                },
+                {
+                    "@id": "datasets/A_09.dat_9.tabular"
+                },
+                {
+                    "@id": "datasets/A_10.dat_10.tabular"
+                },
+                {
+                    "@id": "datasets/B_10.dat_13.tabular"
+                },
+                {
+                    "@id": "datasets/B_09.dat_14.tabular"
+                },
+                {
+                    "@id": "datasets/B_08.dat_15.tabular"
+                },
+                {
+                    "@id": "datasets/B_07.dat_16.tabular"
+                },
+                {
+                    "@id": "datasets/B_06.dat_17.tabular"
+                },
+                {
+                    "@id": "datasets/B_05.dat_18.tabular"
+                },
+                {
+                    "@id": "datasets/B_04.dat_19.tabular"
+                },
+                {
+                    "@id": "datasets/B_03.dat_20.tabular"
+                },
+                {
+                    "@id": "datasets/B_02.dat_21.tabular"
+                },
+                {
+                    "@id": "datasets/B_01.dat_22.tabular"
+                },
+                {
+                    "@id": "datasets/C_10.dat_25.tabular"
+                },
+                {
+                    "@id": "datasets/C_09.dat_26.tabular"
+                },
+                {
+                    "@id": "datasets/C_08.dat_27.tabular"
+                },
+                {
+                    "@id": "datasets/C_07.dat_28.tabular"
+                },
+                {
+                    "@id": "datasets/C_06.dat_29.tabular"
+                },
+                {
+                    "@id": "datasets/C_05.dat_30.tabular"
+                },
+                {
+                    "@id": "datasets/D_04.dat_31.tabular"
+                },
+                {
+                    "@id": "datasets/C_03.dat_32.tabular"
+                },
+                {
+                    "@id": "datasets/C_03.dat_33.tabular"
+                },
+                {
+                    "@id": "datasets/C_02.dat_34.tabular"
+                },
+                {
+                    "@id": "datasets/C_01.dat_35.tabular"
+                },
+                {
+                    "@id": "datasets/D_10.dat_38.tabular"
+                },
+                {
+                    "@id": "datasets/D_09.dat_39.tabular"
+                },
+                {
+                    "@id": "datasets/D_08.dat_40.tabular"
+                },
+                {
+                    "@id": "datasets/D_07.dat_41.tabular"
+                },
+                {
+                    "@id": "datasets/D_06.dat_42.tabular"
+                },
+                {
+                    "@id": "datasets/D_05.dat_43.tabular"
+                },
+                {
+                    "@id": "datasets/D_04.dat_44.tabular"
+                },
+                {
+                    "@id": "datasets/D_03.dat_45.tabular"
+                },
+                {
+                    "@id": "datasets/D_02.dat_46.tabular"
+                },
+                {
+                    "@id": "datasets/D_01.dat_47.tabular"
+                },
+                {
+                    "@id": "datasets/Fe_metal_03.dat_50.tabular"
+                },
+                {
+                    "@id": "datasets/Fe_metal_02.dat_51.tabular"
+                },
+                {
+                    "@id": "datasets/Fe_metal_01.dat_52.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_10.dat_55.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_09.dat_56.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_08.dat_57.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_07.dat_58.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_06.dat_59.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_05.dat_60.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_04.dat_61.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_03.dat_62.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_02.dat_63.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_01.dat_64.tabular"
+                },
+                {
+                    "@id": "datasets/7a_03.dat_67.tabular"
+                },
+                {
+                    "@id": "datasets/7a_02.dat_68.tabular"
+                },
+                {
+                    "@id": "datasets/7a_01.dat_69.tabular"
+                },
+                {
+                    "@id": "datasets_attrs.txt"
+                },
+                {
+                    "@id": "jobs_attrs.txt"
+                },
+                {
+                    "@id": "implicit_collection_jobs_attrs.txt"
+                },
+                {
+                    "@id": "collections_attrs.txt"
+                },
+                {
+                    "@id": "export_attrs.txt"
+                },
+                {
+                    "@id": "libraries_attrs.txt"
+                },
+                {
+                    "@id": "library_folders_attrs.txt"
+                },
+                {
+                    "@id": "invocation_attrs.txt"
+                }
+            ],
+            "license": "",
+            "mainEntity": {
+                "@id": "workflows/1967248db44ca916.gxwf.yml"
+            },
+            "mentions": [
+                {
+                    "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+                },
+                {
+                    "@id": "#dataset_collection-2617"
+                },
+                {
+                    "@id": "#dataset_collection-2618"
+                },
+                {
+                    "@id": "#dataset_collection-2619"
+                },
+                {
+                    "@id": "#dataset_collection-2620"
+                },
+                {
+                    "@id": "#dataset_collection-2621"
+                },
+                {
+                    "@id": "#dataset_collection-2622"
+                },
+                {
+                    "@id": "#dataset_collection-2623"
+                }
+            ]
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/crate/1.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ]
+        },
+        {
+            "@id": "workflows/1967248db44ca916.ga",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "name": "workflows/1967248db44ca916",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy"
+            }
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy",
+            "@type": "ComputerLanguage",
+            "identifier": {
+                "@id": "https://galaxyproject.org/"
+            },
+            "name": "Galaxy",
+            "url": {
+                "@id": "https://galaxyproject.org/"
+            }
+        },
+        {
+            "@id": "workflows/1967248db44ca916.gxwf.yml",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "input": [
+                {
+                    "@id": "#dataset_collection-2617-param"
+                },
+                {
+                    "@id": "#dataset_collection-2618-param"
+                },
+                {
+                    "@id": "#dataset_collection-2619-param"
+                },
+                {
+                    "@id": "#dataset_collection-2620-param"
+                },
+                {
+                    "@id": "#dataset_collection-2621-param"
+                },
+                {
+                    "@id": "#dataset_collection-2622-param"
+                },
+                {
+                    "@id": "#dataset_collection-2623-param"
+                }
+            ],
+            "name": "Paper_2_Diphosphine-WF",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy"
+            },
+            "subjectOf": {
+                "@id": "workflows/1967248db44ca916.abstract.cwl"
+            }
+        },
+        {
+            "@id": "workflows/1967248db44ca916.abstract.cwl",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "HowTo"
+            ],
+            "name": "workflows/1967248db44ca916.abstract",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
+            }
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl",
+            "@type": "ComputerLanguage",
+            "alternateName": "CWL",
+            "identifier": {
+                "@id": "https://w3id.org/cwl/"
+            },
+            "name": "Common Workflow Language",
+            "url": {
+                "@id": "https://www.commonwl.org/"
+            }
+        },
+        {
+            "@id": "workflows/1967248db44ca916.html",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "name": "workflows/1967248db44ca916",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy"
+            }
+        },
+        {
+            "@id": "#5a5580a2-c86f-485f-995b-49da50a2287d",
+            "@type": "SoftwareApplication",
+            "name": "Galaxy workflow engine"
+        },
+        {
+            "@id": "#28904568-12b4-478c-815e-015203e5caf4",
+            "@type": "OrganizeAction",
+            "endTime": "2024-09-11T16:12:57.977262",
+            "instrument": {
+                "@id": "#5a5580a2-c86f-485f-995b-49da50a2287d"
+            },
+            "name": "Run of Galaxy workflow engine",
+            "startTime": "2024-09-11T16:12:55.771086"
+        },
+        {
+            "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339",
+            "@type": "CreateAction",
+            "endTime": "2024-09-11T16:11:48.628535",
+            "instrument": {
+                "@id": "workflows/1967248db44ca916.gxwf.yml"
+            },
+            "name": "Paper_2_Diphosphine-WF",
+            "object": [
+                {
+                    "@id": "#dataset_collection-2617"
+                },
+                {
+                    "@id": "#dataset_collection-2618"
+                },
+                {
+                    "@id": "#dataset_collection-2619"
+                },
+                {
+                    "@id": "#dataset_collection-2620"
+                },
+                {
+                    "@id": "#dataset_collection-2621"
+                },
+                {
+                    "@id": "#dataset_collection-2622"
+                },
+                {
+                    "@id": "#dataset_collection-2623"
+                }
+            ],
+            "startTime": "2024-09-11T16:11:48.596770"
+        },
+        {
+            "@id": "datasets/A_01.dat_1.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_01.dat"
+        },
+        {
+            "@id": "datasets/A_02.dat_2.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_02.dat"
+        },
+        {
+            "@id": "datasets/A_03.dat_3.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_03.dat"
+        },
+        {
+            "@id": "datasets/A_04.dat_4.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_04.dat"
+        },
+        {
+            "@id": "datasets/A_05.dat_5.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_05.dat"
+        },
+        {
+            "@id": "datasets/A_06.dat_6.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_06.dat"
+        },
+        {
+            "@id": "datasets/A_07.dat_7.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_07.dat"
+        },
+        {
+            "@id": "datasets/A_08.dat_8.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_08.dat"
+        },
+        {
+            "@id": "datasets/A_09.dat_9.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_09.dat"
+        },
+        {
+            "@id": "datasets/A_10.dat_10.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "A_10.dat"
+        },
+        {
+            "@id": "#dataset_collection-2617",
+            "@type": "Collection",
+            "additionalType": "https://training.galaxyproject.org/training-material/faqs/galaxy/collections_build_list.html",
+            "exampleOfWork": {
+                "@id": "#dataset_collection-2617-param"
+            },
+            "hasPart": [
+                {
+                    "@id": "datasets/A_01.dat_1.tabular"
+                },
+                {
+                    "@id": "datasets/A_02.dat_2.tabular"
+                },
+                {
+                    "@id": "datasets/A_03.dat_3.tabular"
+                },
+                {
+                    "@id": "datasets/A_04.dat_4.tabular"
+                },
+                {
+                    "@id": "datasets/A_05.dat_5.tabular"
+                },
+                {
+                    "@id": "datasets/A_06.dat_6.tabular"
+                },
+                {
+                    "@id": "datasets/A_07.dat_7.tabular"
+                },
+                {
+                    "@id": "datasets/A_08.dat_8.tabular"
+                },
+                {
+                    "@id": "datasets/A_09.dat_9.tabular"
+                },
+                {
+                    "@id": "datasets/A_10.dat_10.tabular"
+                }
+            ],
+            "name": "A Time"
+        },
+        {
+            "@id": "#dataset_collection-2617-param",
+            "@type": "FormalParameter",
+            "additionalType": "Collection",
+            "description": "",
+            "name": "A Time"
+        },
+        {
+            "@id": "datasets/B_10.dat_13.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_10.dat"
+        },
+        {
+            "@id": "datasets/B_09.dat_14.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_09.dat"
+        },
+        {
+            "@id": "datasets/B_08.dat_15.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_08.dat"
+        },
+        {
+            "@id": "datasets/B_07.dat_16.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_07.dat"
+        },
+        {
+            "@id": "datasets/B_06.dat_17.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_06.dat"
+        },
+        {
+            "@id": "datasets/B_05.dat_18.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_05.dat"
+        },
+        {
+            "@id": "datasets/B_04.dat_19.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_04.dat"
+        },
+        {
+            "@id": "datasets/B_03.dat_20.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_03.dat"
+        },
+        {
+            "@id": "datasets/B_02.dat_21.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_02.dat"
+        },
+        {
+            "@id": "datasets/B_01.dat_22.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "B_01.dat"
+        },
+        {
+            "@id": "#dataset_collection-2618",
+            "@type": "Collection",
+            "additionalType": "https://training.galaxyproject.org/training-material/faqs/galaxy/collections_build_list.html",
+            "exampleOfWork": {
+                "@id": "#dataset_collection-2618-param"
+            },
+            "hasPart": [
+                {
+                    "@id": "datasets/B_10.dat_13.tabular"
+                },
+                {
+                    "@id": "datasets/B_09.dat_14.tabular"
+                },
+                {
+                    "@id": "datasets/B_08.dat_15.tabular"
+                },
+                {
+                    "@id": "datasets/B_07.dat_16.tabular"
+                },
+                {
+                    "@id": "datasets/B_06.dat_17.tabular"
+                },
+                {
+                    "@id": "datasets/B_05.dat_18.tabular"
+                },
+                {
+                    "@id": "datasets/B_04.dat_19.tabular"
+                },
+                {
+                    "@id": "datasets/B_03.dat_20.tabular"
+                },
+                {
+                    "@id": "datasets/B_02.dat_21.tabular"
+                },
+                {
+                    "@id": "datasets/B_01.dat_22.tabular"
+                }
+            ],
+            "name": "B Time"
+        },
+        {
+            "@id": "#dataset_collection-2618-param",
+            "@type": "FormalParameter",
+            "additionalType": "Collection",
+            "description": "",
+            "name": "B Time"
+        },
+        {
+            "@id": "datasets/C_10.dat_25.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_10.dat"
+        },
+        {
+            "@id": "datasets/C_09.dat_26.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_09.dat"
+        },
+        {
+            "@id": "datasets/C_08.dat_27.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_08.dat"
+        },
+        {
+            "@id": "datasets/C_07.dat_28.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_07.dat"
+        },
+        {
+            "@id": "datasets/C_06.dat_29.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_06.dat"
+        },
+        {
+            "@id": "datasets/C_05.dat_30.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_05.dat"
+        },
+        {
+            "@id": "datasets/D_04.dat_31.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_04.dat"
+        },
+        {
+            "@id": "datasets/C_03.dat_32.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_03.dat"
+        },
+        {
+            "@id": "datasets/C_03.dat_33.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_03.dat"
+        },
+        {
+            "@id": "datasets/C_02.dat_34.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_02.dat"
+        },
+        {
+            "@id": "datasets/C_01.dat_35.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "C_01.dat"
+        },
+        {
+            "@id": "#dataset_collection-2619",
+            "@type": "Collection",
+            "additionalType": "https://training.galaxyproject.org/training-material/faqs/galaxy/collections_build_list.html",
+            "exampleOfWork": {
+                "@id": "#dataset_collection-2619-param"
+            },
+            "hasPart": [
+                {
+                    "@id": "datasets/C_10.dat_25.tabular"
+                },
+                {
+                    "@id": "datasets/C_09.dat_26.tabular"
+                },
+                {
+                    "@id": "datasets/C_08.dat_27.tabular"
+                },
+                {
+                    "@id": "datasets/C_07.dat_28.tabular"
+                },
+                {
+                    "@id": "datasets/C_06.dat_29.tabular"
+                },
+                {
+                    "@id": "datasets/C_05.dat_30.tabular"
+                },
+                {
+                    "@id": "datasets/D_04.dat_31.tabular"
+                },
+                {
+                    "@id": "datasets/C_03.dat_32.tabular"
+                },
+                {
+                    "@id": "datasets/C_03.dat_33.tabular"
+                },
+                {
+                    "@id": "datasets/C_02.dat_34.tabular"
+                },
+                {
+                    "@id": "datasets/C_01.dat_35.tabular"
+                }
+            ],
+            "name": "C Time"
+        },
+        {
+            "@id": "#dataset_collection-2619-param",
+            "@type": "FormalParameter",
+            "additionalType": "Collection",
+            "description": "",
+            "name": "C Time"
+        },
+        {
+            "@id": "datasets/D_10.dat_38.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_10.dat"
+        },
+        {
+            "@id": "datasets/D_09.dat_39.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_09.dat"
+        },
+        {
+            "@id": "datasets/D_08.dat_40.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_08.dat"
+        },
+        {
+            "@id": "datasets/D_07.dat_41.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_07.dat"
+        },
+        {
+            "@id": "datasets/D_06.dat_42.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_06.dat"
+        },
+        {
+            "@id": "datasets/D_05.dat_43.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_05.dat"
+        },
+        {
+            "@id": "datasets/D_04.dat_44.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_04.dat"
+        },
+        {
+            "@id": "datasets/D_03.dat_45.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_03.dat"
+        },
+        {
+            "@id": "datasets/D_02.dat_46.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_02.dat"
+        },
+        {
+            "@id": "datasets/D_01.dat_47.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "D_01.dat"
+        },
+        {
+            "@id": "#dataset_collection-2620",
+            "@type": "Collection",
+            "additionalType": "https://training.galaxyproject.org/training-material/faqs/galaxy/collections_build_list.html",
+            "exampleOfWork": {
+                "@id": "#dataset_collection-2620-param"
+            },
+            "hasPart": [
+                {
+                    "@id": "datasets/D_10.dat_38.tabular"
+                },
+                {
+                    "@id": "datasets/D_09.dat_39.tabular"
+                },
+                {
+                    "@id": "datasets/D_08.dat_40.tabular"
+                },
+                {
+                    "@id": "datasets/D_07.dat_41.tabular"
+                },
+                {
+                    "@id": "datasets/D_06.dat_42.tabular"
+                },
+                {
+                    "@id": "datasets/D_05.dat_43.tabular"
+                },
+                {
+                    "@id": "datasets/D_04.dat_44.tabular"
+                },
+                {
+                    "@id": "datasets/D_03.dat_45.tabular"
+                },
+                {
+                    "@id": "datasets/D_02.dat_46.tabular"
+                },
+                {
+                    "@id": "datasets/D_01.dat_47.tabular"
+                }
+            ],
+            "name": "D Time"
+        },
+        {
+            "@id": "#dataset_collection-2620-param",
+            "@type": "FormalParameter",
+            "additionalType": "Collection",
+            "description": "",
+            "name": "D Time"
+        },
+        {
+            "@id": "datasets/Fe_metal_03.dat_50.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "Fe_metal_03.dat"
+        },
+        {
+            "@id": "datasets/Fe_metal_02.dat_51.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "Fe_metal_02.dat"
+        },
+        {
+            "@id": "datasets/Fe_metal_01.dat_52.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "Fe_metal_01.dat"
+        },
+        {
+            "@id": "#dataset_collection-2621",
+            "@type": "Collection",
+            "additionalType": "https://training.galaxyproject.org/training-material/faqs/galaxy/collections_build_list.html",
+            "exampleOfWork": {
+                "@id": "#dataset_collection-2621-param"
+            },
+            "hasPart": [
+                {
+                    "@id": "datasets/Fe_metal_03.dat_50.tabular"
+                },
+                {
+                    "@id": "datasets/Fe_metal_02.dat_51.tabular"
+                },
+                {
+                    "@id": "datasets/Fe_metal_01.dat_52.tabular"
+                }
+            ],
+            "name": "Fe metal"
+        },
+        {
+            "@id": "#dataset_collection-2621-param",
+            "@type": "FormalParameter",
+            "additionalType": "Collection",
+            "description": "",
+            "name": "Fe metal"
+        },
+        {
+            "@id": "datasets/FeBr_10.dat_55.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_10.dat"
+        },
+        {
+            "@id": "datasets/FeBr_09.dat_56.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_09.dat"
+        },
+        {
+            "@id": "datasets/FeBr_08.dat_57.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_08.dat"
+        },
+        {
+            "@id": "datasets/FeBr_07.dat_58.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_07.dat"
+        },
+        {
+            "@id": "datasets/FeBr_06.dat_59.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_06.dat"
+        },
+        {
+            "@id": "datasets/FeBr_05.dat_60.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_05.dat"
+        },
+        {
+            "@id": "datasets/FeBr_04.dat_61.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_04.dat"
+        },
+        {
+            "@id": "datasets/FeBr_03.dat_62.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_03.dat"
+        },
+        {
+            "@id": "datasets/FeBr_02.dat_63.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_02.dat"
+        },
+        {
+            "@id": "datasets/FeBr_01.dat_64.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "FeBr_01.dat"
+        },
+        {
+            "@id": "#dataset_collection-2622",
+            "@type": "Collection",
+            "additionalType": "https://training.galaxyproject.org/training-material/faqs/galaxy/collections_build_list.html",
+            "exampleOfWork": {
+                "@id": "#dataset_collection-2622-param"
+            },
+            "hasPart": [
+                {
+                    "@id": "datasets/FeBr_10.dat_55.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_09.dat_56.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_08.dat_57.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_07.dat_58.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_06.dat_59.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_05.dat_60.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_04.dat_61.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_03.dat_62.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_02.dat_63.tabular"
+                },
+                {
+                    "@id": "datasets/FeBr_01.dat_64.tabular"
+                }
+            ],
+            "name": "FrBr Standard"
+        },
+        {
+            "@id": "#dataset_collection-2622-param",
+            "@type": "FormalParameter",
+            "additionalType": "Collection",
+            "description": "",
+            "name": "FrBr Standard"
+        },
+        {
+            "@id": "datasets/7a_03.dat_67.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "7a_03.dat"
+        },
+        {
+            "@id": "datasets/7a_02.dat_68.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "7a_02.dat"
+        },
+        {
+            "@id": "datasets/7a_01.dat_69.tabular",
+            "@type": "File",
+            "encodingFormat": "text/plain",
+            "name": "7a_01.dat"
+        },
+        {
+            "@id": "#dataset_collection-2623",
+            "@type": "Collection",
+            "additionalType": "https://training.galaxyproject.org/training-material/faqs/galaxy/collections_build_list.html",
+            "exampleOfWork": {
+                "@id": "#dataset_collection-2623-param"
+            },
+            "hasPart": [
+                {
+                    "@id": "datasets/7a_03.dat_67.tabular"
+                },
+                {
+                    "@id": "datasets/7a_02.dat_68.tabular"
+                },
+                {
+                    "@id": "datasets/7a_01.dat_69.tabular"
+                }
+            ],
+            "name": "Reading 7a"
+        },
+        {
+            "@id": "#dataset_collection-2623-param",
+            "@type": "FormalParameter",
+            "additionalType": "Collection",
+            "description": "",
+            "name": "Reading 7a"
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/process/0.1",
+            "@type": "CreativeWork",
+            "name": "Process Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/workflow/0.1",
+            "@type": "CreativeWork",
+            "name": "Workflow Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+            "@type": "CreativeWork",
+            "name": "Workflow RO-Crate",
+            "version": "1.0"
+        },
+        {
+            "@id": "datasets_attrs.txt",
+            "@type": "File",
+            "description": "datasets properties",
+            "encodingFormat": "application/json",
+            "version": "2.0"
+        },
+        {
+            "@id": "jobs_attrs.txt",
+            "@type": "File",
+            "description": "jobs properties",
+            "encodingFormat": "application/json",
+            "version": "2.0"
+        },
+        {
+            "@id": "implicit_collection_jobs_attrs.txt",
+            "@type": "File",
+            "description": "implicit collection jobs properties",
+            "encodingFormat": "application/json",
+            "version": "2.0"
+        },
+        {
+            "@id": "collections_attrs.txt",
+            "@type": "File",
+            "description": "collections properties",
+            "encodingFormat": "application/json",
+            "version": "2.0"
+        },
+        {
+            "@id": "export_attrs.txt",
+            "@type": "File",
+            "description": "export properties",
+            "encodingFormat": "application/json",
+            "version": "2.0"
+        },
+        {
+            "@id": "libraries_attrs.txt",
+            "@type": "File",
+            "description": "libraries properties",
+            "encodingFormat": "application/json",
+            "version": "2.0"
+        },
+        {
+            "@id": "library_folders_attrs.txt",
+            "@type": "File",
+            "description": "library folders properties",
+            "encodingFormat": "application/json",
+            "version": "2.0"
+        },
+        {
+            "@id": "invocation_attrs.txt",
+            "@type": "File",
+            "description": "invocation properties",
+            "encodingFormat": "application/json",
+            "version": "2.0"
+        },
+        {
+            "@id": "#datasets_attrs.txt.provenance",
+            "@type": "CreativeWork",
+            "description": "datasets provenance properties",
+            "encodingFormat": "application/json",
+            "version": "2.0"
+        }
+    ]
+}

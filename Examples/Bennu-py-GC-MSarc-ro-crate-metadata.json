@@ -1,0 +1,586 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    "https://w3id.org/ro/terms/workflow-run/context",
+    {
+      "Sample": "https://bioschemas.org/Sample",
+      "LabProcess": "https://bioschemas.org/LabProcess",
+      "LabProtocol": "https://bioschemas.org/LabProtocol",
+      "executesLabProtocol": "https://bioschemas.org/executesLabProtocol",
+      "parameterValue": "https://bioschemas.org/parameterValue",
+      "labEquipment": "https://bioschemas.org/labEquipment",
+      "reagent": "https://bioschemas.org/reagent",
+      "intendedUse": "https://bioschemas.org/intendedUse",
+      "FormalParameter": "https://bioschemas.org/FormalParameter",
+      "ComputationalWorkflow": "https://bioschemas.org/ComputationalWorkflow",
+      "input": "https://bioschemas.org/input",
+      "output": "https://bioschemas.org/output",
+      "measurementMethod": "http://schema.org/measurementMethod"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": [
+        {"@id": "https://w3id.org/ro/crate/1.1"},
+        {"@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"}
+      ],
+      "about": {"@id": "./"}
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Py-GC-MS/MS Analysis of OSIRIS-REx Bennu Sample OREX-803003-0",
+      "description": "ARC RO-Crate documenting the pyrolysis-gas chromatography-tandem mass spectrometry (py-GC-MS/MS) analysis of approximately 1 mg of aggregate material from asteroid Bennu, collected by the OSIRIS-REx TAGSAM device. Analysis performed at NASA Goddard Space Flight Center on November 21, 2023. Modeled using the ARC Workflow Run RO-Crate profile with Bioschemas LabProtocol/LabProcess types to represent laboratory analytical processes.",
+      "datePublished": "2023-11-21",
+      "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"},
+      "conformsTo": [
+        {"@id": "https://w3id.org/ro/wfrun/process/0.5"},
+        {"@id": "https://w3id.org/ro/wfrun/workflow/0.5"}
+      ],
+      "mainEntity": {"@id": "#PyGCMS_Protocol"},
+      "hasPart": [
+        {"@id": "20231121_GC-MS_GSFC_OREX-803003-0_1_methodDescription_1.pdf"},
+        {"@id": "20231121_GC-MS_GSFC_OREX-803003-0_1_report_1.pdf"},
+        {"@id": "20231121_GC-MS_GSFC_OREX-803003-0_1_samplePreparation_1.pdf"},
+        {"@id": "GC-MS_GSFC_OREX-803003-0_1_instrumentMetadata_1.txt"},
+        {"@id": "20230929_001_Blank.cdf"},
+        {"@id": "20231121_002_OREX-803003-0.cdf"}
+      ],
+      "mentions": [
+        {"@id": "#PyGCMS_Run_1"},
+        {"@id": "#SamplePrep_Run_1"},
+        {"@id": "#Pyrolysis_Run_1"},
+        {"@id": "#GCSeparation_Run_1"},
+        {"@id": "#MSDetection_Run_1"}
+      ]
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/process/0.5",
+      "@type": ["CreativeWork", "Profile"],
+      "name": "Process Run Crate",
+      "version": "0.5"
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/workflow/0.5",
+      "@type": ["CreativeWork", "Profile"],
+      "name": "Workflow Run Crate",
+      "version": "0.5"
+    },
+    {
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "@type": "CreativeWork",
+      "name": "Creative Commons Attribution 4.0 International",
+      "identifier": "CC-BY-4.0"
+    },
+
+
+    {
+      "@id": "#PyGCMS_Protocol",
+      "@type": ["File", "SoftwareSourceCode", "ComputationalWorkflow", "LabProtocol"],
+      "name": "Py-GC-MS/MS analysis protocol for OSIRIS-REx Bennu sample",
+      "description": "Flash pyrolysis coupled to gas chromatography-tandem mass spectrometry with simultaneous full scan (m/z 50–500) and timed SRM/MRM acquisition targeting 38 organic compounds. Method identifier: Mojarro_88min_MRM_4_IOM+FullScan_10_1_Split_py.",
+      "intendedUse": "Characterization of complex organic mixtures in bulk solid extraterrestrial samples by direct microanalysis without chemical pretreatment.",
+      "measurementMethod": "Pyrolysis-GC-MS/MS",
+      "labEquipment": [
+        {"@id": "#PyrolysisOven"},
+        {"@id": "#GasChromatograph"},
+        {"@id": "#TSQ_MassSpectrometer"}
+      ],
+      "hasPart": [
+        {"@id": "#SamplePrep_Protocol"},
+        {"@id": "#Pyrolysis_Protocol"},
+        {"@id": "#GCSeparation_Protocol"},
+        {"@id": "#MSDetection_Protocol"}
+      ],
+      "input": [
+        {"@id": "#param_sampleMass"},
+        {"@id": "#param_pyrolysisTemp"},
+        {"@id": "#param_pyrolysisRate"}
+      ],
+      "output": [
+        {"@id": "#param_outputFormat"}
+      ]
+    },
+
+
+    {
+      "@id": "#SamplePrep_Protocol",
+      "@type": ["SoftwareSourceCode", "LabProtocol"],
+      "name": "Sample preparation protocol",
+      "description": "Load and weigh bulk solid sample inside quartz tubes, place into pyrolysis oven interfaced with GC-MS.",
+      "labEquipment": [
+        {"@id": "#QuartzTubes"},
+        {"@id": "#PyrolysisOven"}
+      ],
+      "input": [{"@id": "#param_sampleMass"}],
+      "output": [{"@id": "#param_preparedSampleForm"}]
+    },
+    {
+      "@id": "#Pyrolysis_Protocol",
+      "@type": ["SoftwareSourceCode", "LabProtocol"],
+      "name": "Flash pyrolysis protocol",
+      "description": "Flash heat prepared sample to target temperature at controlled ramp rate. Thermally extracted volatiles carried in helium through heated transfer line (300°C) to GC inlet.",
+      "labEquipment": [{"@id": "#PyrolysisOven"}],
+      "input": [
+        {"@id": "#param_pyrolysisTemp"},
+        {"@id": "#param_pyrolysisRate"},
+        {"@id": "#param_transferLineTemp"}
+      ]
+    },
+    {
+      "@id": "#GCSeparation_Protocol",
+      "@type": ["SoftwareSourceCode", "LabProtocol"],
+      "name": "Gas chromatographic separation protocol",
+      "description": "Separate pyrolysis products on nonpolar fused silica capillary column with temperature program from initial hold through ramp to final hold.",
+      "labEquipment": [{"@id": "#GasChromatograph"}],
+      "input": [
+        {"@id": "#param_columnType"},
+        {"@id": "#param_carrierGasFlow"},
+        {"@id": "#param_splitRatio"},
+        {"@id": "#param_inletTemp"},
+        {"@id": "#param_ovenProgram"}
+      ]
+    },
+    {
+      "@id": "#MSDetection_Protocol",
+      "@type": ["SoftwareSourceCode", "LabProtocol"],
+      "name": "Dual-mode MS detection protocol (full scan + timed SRM/MRM)",
+      "description": "Simultaneous full scan (m/z 50–500, EI positive) and timed SRM/MRM acquisition monitoring 38 target compounds via 2–3 diagnostic precursor→product ion transitions each.",
+      "labEquipment": [{"@id": "#TSQ_MassSpectrometer"}],
+      "input": [
+        {"@id": "#param_scanRange"},
+        {"@id": "#param_ionizationMode"},
+        {"@id": "#param_mrmCompoundCount"}
+      ]
+    },
+
+
+    {
+      "@id": "#param_sampleMass",
+      "@type": "FormalParameter",
+      "name": "Sample mass",
+      "description": "Mass of bulk sample loaded into quartz tube",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_pyrolysisTemp",
+      "@type": "FormalParameter",
+      "name": "Pyrolysis target temperature",
+      "description": "Target temperature for flash pyrolysis",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_pyrolysisRate",
+      "@type": "FormalParameter",
+      "name": "Pyrolysis heating rate",
+      "description": "Rate of flash heating",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_transferLineTemp",
+      "@type": "FormalParameter",
+      "name": "Transfer line temperature",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_columnType",
+      "@type": "FormalParameter",
+      "name": "GC column type",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_carrierGasFlow",
+      "@type": "FormalParameter",
+      "name": "Carrier gas flow rate",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_splitRatio",
+      "@type": "FormalParameter",
+      "name": "Inlet split ratio",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_inletTemp",
+      "@type": "FormalParameter",
+      "name": "Inlet temperature",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_ovenProgram",
+      "@type": "FormalParameter",
+      "name": "GC oven temperature program",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_scanRange",
+      "@type": "FormalParameter",
+      "name": "Full scan m/z range",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_ionizationMode",
+      "@type": "FormalParameter",
+      "name": "Ionization mode",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_mrmCompoundCount",
+      "@type": "FormalParameter",
+      "name": "Number of MRM target compounds",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_preparedSampleForm",
+      "@type": "FormalParameter",
+      "name": "Prepared sample form",
+      "additionalType": "PropertyValue"
+    },
+    {
+      "@id": "#param_outputFormat",
+      "@type": "FormalParameter",
+      "name": "Output data format",
+      "additionalType": "PropertyValue"
+    },
+
+
+    {
+      "@id": "#PyGCMS_Run_1",
+      "@type": ["CreateAction", "LabProcess"],
+      "name": "Py-GC-MS/MS analysis of OREX-803003-0",
+      "description": "Complete py-GC-MS/MS analysis session for Bennu asteroid sample OREX-803003-0, session identifier: 20231121_GCMS_GSFC_OREX-803003-0_1.",
+      "executesLabProtocol": {"@id": "#PyGCMS_Protocol"},
+      "instrument": {"@id": "#PyGCMS_Protocol"},
+      "startTime": "2023-11-21T00:00:00Z",
+      "endTime": "2023-11-21T23:59:59Z",
+      "agent": {"@id": "#NASA_GSFC"},
+      "object": [
+        {"@id": "#OREX-803003-0"}
+      ],
+      "result": [
+        {"@id": "20231121_002_OREX-803003-0.cdf"}
+      ],
+      "actionStatus": "http://schema.org/CompletedActionStatus",
+      "parameterValue": [
+        {
+          "@id": "#pv_sampleMass",
+          "@type": "PropertyValue",
+          "name": "Sample mass",
+          "propertyID": {"@id": "#param_sampleMass"},
+          "value": "~1",
+          "unitText": "mg"
+        },
+        {
+          "@id": "#pv_pyrolysisTemp",
+          "@type": "PropertyValue",
+          "name": "Pyrolysis target temperature",
+          "propertyID": {"@id": "#param_pyrolysisTemp"},
+          "value": 600,
+          "unitText": "°C"
+        },
+        {
+          "@id": "#pv_pyrolysisRate",
+          "@type": "PropertyValue",
+          "name": "Pyrolysis heating rate",
+          "propertyID": {"@id": "#param_pyrolysisRate"},
+          "value": 10,
+          "unitText": "°C/ms"
+        }
+      ]
+    },
+
+
+    {
+      "@id": "#SamplePrep_Run_1",
+      "@type": ["CreateAction", "LabProcess"],
+      "name": "Sample preparation — load Bennu aggregate into quartz tube",
+      "description": "Approximately 1 mg of bulk aggregate from the TAGSAM collection device loaded and weighed inside a quartz tube, placed into pyrolysis oven interfaced with GC-MS.",
+      "executesLabProtocol": {"@id": "#SamplePrep_Protocol"},
+      "instrument": {"@id": "#SamplePrep_Protocol"},
+      "endTime": "2023-11-21T00:00:00Z",
+      "agent": {"@id": "#NASA_GSFC"},
+      "object": [{"@id": "#OREX-803003-0"}],
+      "result": [{"@id": "#PreparedSample"}],
+      "actionStatus": "http://schema.org/CompletedActionStatus",
+      "parameterValue": [
+        {
+          "@id": "#pv_prep_mass",
+          "@type": "PropertyValue",
+          "name": "Sample mass",
+          "propertyID": {"@id": "#param_sampleMass"},
+          "value": "~1",
+          "unitText": "mg"
+        },
+        {
+          "@id": "#pv_prep_container",
+          "@type": "PropertyValue",
+          "name": "Sample container",
+          "value": "quartz tube"
+        }
+      ]
+    },
+    {
+      "@id": "#Pyrolysis_Run_1",
+      "@type": ["CreateAction", "LabProcess"],
+      "name": "Flash pyrolysis at ~600°C",
+      "description": "Flash-heated at 10°C/ms to approximately 600°C. Volatiles carried in helium through heated transfer line (300°C). Note: bulk samples may contain SOM producing thermal degradation products and rearrangement reactions, making it difficult to distinguish IOM-derived vs. SOM-derived compounds.",
+      "executesLabProtocol": {"@id": "#Pyrolysis_Protocol"},
+      "instrument": {"@id": "#Pyrolysis_Protocol"},
+      "endTime": "2023-11-21T00:00:00Z",
+      "agent": {"@id": "#NASA_GSFC"},
+      "object": [{"@id": "#PreparedSample"}],
+      "result": [{"@id": "#PyrolysisProducts"}],
+      "actionStatus": "http://schema.org/CompletedActionStatus",
+      "parameterValue": [
+        {
+          "@id": "#pv_pyro_temp",
+          "@type": "PropertyValue",
+          "name": "Target temperature",
+          "propertyID": {"@id": "#param_pyrolysisTemp"},
+          "value": 600,
+          "unitText": "°C"
+        },
+        {
+          "@id": "#pv_pyro_rate",
+          "@type": "PropertyValue",
+          "name": "Heating rate",
+          "propertyID": {"@id": "#param_pyrolysisRate"},
+          "value": 10,
+          "unitText": "°C/ms"
+        },
+        {
+          "@id": "#pv_pyro_transferline",
+          "@type": "PropertyValue",
+          "name": "Transfer line temperature",
+          "propertyID": {"@id": "#param_transferLineTemp"},
+          "value": 300,
+          "unitText": "°C"
+        }
+      ]
+    },
+    {
+      "@id": "#GCSeparation_Run_1",
+      "@type": ["CreateAction", "LabProcess"],
+      "name": "GC separation on Rtx-5ms column",
+      "description": "Chromatographic separation on Rtx-5ms column (30 m × 0.250 mm × 0.50 µm, 5 m guard). Split injection 10:1 at 300°C. Oven: 40°C hold → ~3.5°C/min → 300°C hold. He carrier 1.500 mL/min. Run time 87.79 min.",
+      "executesLabProtocol": {"@id": "#GCSeparation_Protocol"},
+      "instrument": {"@id": "#GCSeparation_Protocol"},
+      "endTime": "2023-11-21T00:00:00Z",
+      "agent": {"@id": "#NASA_GSFC"},
+      "object": [{"@id": "#PyrolysisProducts"}],
+      "result": [{"@id": "#SeparatedEluent"}],
+      "actionStatus": "http://schema.org/CompletedActionStatus",
+      "parameterValue": [
+        {
+          "@id": "#pv_gc_column",
+          "@type": "PropertyValue",
+          "name": "Column",
+          "propertyID": {"@id": "#param_columnType"},
+          "value": "Rtx-5ms, 30 m × 0.250 mm × 0.50 µm + 5 m guard"
+        },
+        {
+          "@id": "#pv_gc_carrier",
+          "@type": "PropertyValue",
+          "name": "Carrier gas flow",
+          "propertyID": {"@id": "#param_carrierGasFlow"},
+          "value": 1.5,
+          "unitText": "mL/min"
+        },
+        {
+          "@id": "#pv_gc_split",
+          "@type": "PropertyValue",
+          "name": "Split ratio",
+          "propertyID": {"@id": "#param_splitRatio"},
+          "value": "10:1"
+        },
+        {
+          "@id": "#pv_gc_inlet",
+          "@type": "PropertyValue",
+          "name": "Inlet temperature",
+          "propertyID": {"@id": "#param_inletTemp"},
+          "value": 300,
+          "unitText": "°C"
+        },
+        {
+          "@id": "#pv_gc_oven",
+          "@type": "PropertyValue",
+          "name": "Oven program",
+          "propertyID": {"@id": "#param_ovenProgram"},
+          "value": "40°C (hold 5 min) → 300°C at ~3.5°C/min → 300°C (hold to 87.79 min)"
+        }
+      ]
+    },
+    {
+      "@id": "#MSDetection_Run_1",
+      "@type": ["CreateAction", "LabProcess"],
+      "name": "Dual-mode MS detection (full scan + MRM)",
+      "description": "Simultaneous full scan (m/z 50–500, EI positive, 0.100 s scan time) and timed SRM/MRM (38 compounds, 2–3 transitions each). Ion source and transfer line at 300°C. Detector gain 100,000.",
+      "executesLabProtocol": {"@id": "#MSDetection_Protocol"},
+      "instrument": {"@id": "#MSDetection_Protocol"},
+      "endTime": "2023-11-21T00:00:00Z",
+      "agent": {"@id": "#NASA_GSFC"},
+      "object": [{"@id": "#SeparatedEluent"}],
+      "result": [{"@id": "20231121_002_OREX-803003-0.cdf"}],
+      "actionStatus": "http://schema.org/CompletedActionStatus",
+      "parameterValue": [
+        {
+          "@id": "#pv_ms_scanrange",
+          "@type": "PropertyValue",
+          "name": "Full scan range",
+          "propertyID": {"@id": "#param_scanRange"},
+          "value": "m/z 50–500"
+        },
+        {
+          "@id": "#pv_ms_ionization",
+          "@type": "PropertyValue",
+          "name": "Ionization mode",
+          "propertyID": {"@id": "#param_ionizationMode"},
+          "value": "Electron Ionization (EI), positive polarity"
+        },
+        {
+          "@id": "#pv_ms_mrm",
+          "@type": "PropertyValue",
+          "name": "MRM target compounds",
+          "propertyID": {"@id": "#param_mrmCompoundCount"},
+          "value": 38
+        },
+        {
+          "@id": "#pv_ms_sourceTemp",
+          "@type": "PropertyValue",
+          "name": "Ion source temperature",
+          "value": 300,
+          "unitText": "°C"
+        },
+        {
+          "@id": "#pv_ms_scantime",
+          "@type": "PropertyValue",
+          "name": "Full scan time",
+          "value": 0.1,
+          "unitText": "s"
+        }
+      ]
+    },
+
+
+    {
+      "@id": "#OREX-803003-0",
+      "@type": "Sample",
+      "name": "Bennu asteroid sample OREX-803003-0",
+      "description": "Approximately 1 mg aggregate of material from asteroid Bennu, collected by the OSIRIS-REx Touch-and-Go Sample Acquisition Mechanism (TAGSAM).",
+      "identifier": "OREX-803003-0"
+    },
+    {
+      "@id": "#PreparedSample",
+      "@type": "Sample",
+      "name": "Prepared sample in quartz tube",
+      "description": "~1 mg Bennu aggregate loaded and weighed in quartz tube, ready for pyrolysis."
+    },
+    {
+      "@id": "#PyrolysisProducts",
+      "@type": "Sample",
+      "name": "Pyrolysis volatiles in helium carrier stream",
+      "description": "Thermally extracted volatiles from flash pyrolysis, carried in helium through heated transfer line at 300°C to GC inlet."
+    },
+    {
+      "@id": "#SeparatedEluent",
+      "@type": "Sample",
+      "name": "Chromatographically separated eluent",
+      "description": "Time-resolved stream of separated compounds eluting from the GC column into the mass spectrometer."
+    },
+
+
+    {
+      "@id": "#PyrolysisOven",
+      "@type": "DefinedTerm",
+      "name": "Pyrolysis Oven",
+      "description": "Pyrolysis front-end interface coupled to GC-MS. Flash heats at 10°C/ms to temperatures up to 1300°C."
+    },
+    {
+      "@id": "#GasChromatograph",
+      "@type": "DefinedTerm",
+      "name": "Gas Chromatograph with Rtx-5ms column",
+      "description": "GC with Rtx-5ms (5% diphenyl / 95% dimethyl polysiloxane) fused silica capillary column, 30 m × 0.250 mm × 0.50 µm, with 5 m × 0.250 mm guard column."
+    },
+    {
+      "@id": "#TSQ_MassSpectrometer",
+      "@type": "DefinedTerm",
+      "name": "Thermo Scientific TSQ Triple-Quadrupole Mass Spectrometer",
+      "description": "TSQ triple-quadrupole MS, serial number TSQ96CI2301004. Operated in EI mode, positive polarity, with simultaneous full scan and timed SRM/MRM capability.",
+      "identifier": "TSQ96CI2301004",
+      "url": "https://www.thermofisher.com/"
+    },
+    {
+      "@id": "#QuartzTubes",
+      "@type": "DefinedTerm",
+      "name": "Quartz sample tubes",
+      "description": "Quartz tubes used for loading and weighing solid samples for pyrolysis."
+    },
+    {
+      "@id": "#ChromeleonDataSystem",
+      "@type": "SoftwareApplication",
+      "name": "Thermo Chromeleon Chromatography Data System",
+      "description": "Data acquisition and instrument control. Method: Mojarro_88min_MRM_4_IOM+FullScan_10_1_Split_py. Data Vault sequence: 20231929_Bennu_01.seq."
+    },
+
+
+    {
+      "@id": "20231121_GC-MS_GSFC_OREX-803003-0_1_methodDescription_1.pdf",
+      "@type": "File",
+      "name": "Method Description",
+      "description": "Describes the analytical approach: full scan and MRM acquisition modes, file naming conventions, and rationale for MRM with example ion transitions.",
+      "encodingFormat": "application/pdf"
+    },
+    {
+      "@id": "20231121_GC-MS_GSFC_OREX-803003-0_1_report_1.pdf",
+      "@type": "File",
+      "name": "Materials and Methods Report",
+      "description": "Scientific context for py-GC-MS technique, strengths for microanalysis of solid samples, caveats on SOM thermal degradation. Identifies sample as ~1 mg OREX-803003-0 from TAGSAM.",
+      "encodingFormat": "application/pdf"
+    },
+    {
+      "@id": "20231121_GC-MS_GSFC_OREX-803003-0_1_samplePreparation_1.pdf",
+      "@type": "File",
+      "name": "Sample Preparation",
+      "description": "Sample loading: bulk solid in quartz tubes, flash-heated at 10°C/ms to ~600°C.",
+      "encodingFormat": "application/pdf"
+    },
+    {
+      "@id": "GC-MS_GSFC_OREX-803003-0_1_instrumentMetadata_1.txt",
+      "@type": "File",
+      "name": "Instrument Metadata",
+      "description": "Complete instrument configuration from Chromeleon: GC parameters, MS settings, oven program, full timed SRM transition schedule for 38 target compounds.",
+      "encodingFormat": "text/plain"
+    },
+    {
+      "@id": "20230929_001_Blank.cdf",
+      "@type": "File",
+      "name": "Blank Run",
+      "description": "Procedural blank run, September 29, 2023.",
+      "encodingFormat": "application/x-netcdf"
+    },
+    {
+      "@id": "20231121_002_OREX-803003-0.cdf",
+      "@type": "File",
+      "name": "Sample Data — OREX-803003-0",
+      "description": "Raw analytical data (full scan and MRM) in Common Data Format from Chromeleon sequence 20231929_Bennu_01.seq.",
+      "encodingFormat": "application/x-netcdf"
+    },
+
+
+    {
+      "@id": "#NASA_GSFC",
+      "@type": "Organization",
+      "name": "NASA Goddard Space Flight Center",
+      "url": "https://www.nasa.gov/goddard"
+    },
+    {
+      "@id": "#OSIRIS-REx",
+      "@type": "Project",
+      "name": "OSIRIS-REx",
+      "description": "Origins, Spectral Interpretation, Resource Identification, and Security–Regolith Explorer. NASA asteroid sample return mission to 101955 Bennu.",
+      "url": "https://science.nasa.gov/mission/osiris-rex/"
+    }
+  ]
+}

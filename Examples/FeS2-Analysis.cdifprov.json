@@ -1,0 +1,267 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#a5a33e97-2433-492b-8185-0e11c32cd595",
+      "schema:name": "Run of Galaxy workflow engine",
+      "schema:additionalType": [
+        "schema:OrganizeAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-23T14:09:56.604071",
+      "schema:endTime": "2024-10-23T14:09:57.188610",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "#248c4448-96a7-4050-acbf-1e68e621e637",
+        "schema:name": "Galaxy workflow engine"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#d5787109-088d-4886-a72e-03f42a4ec5cc",
+      "schema:name": "FeS2 Analysis",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-23T14:09:38.754317",
+      "schema:endTime": "2024-10-23T14:09:38.754320",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "workflows/6f2a09489271f4de.gxwf.yml",
+        "schema:name": "FeS2 Analysis",
+        "schema:object": [
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#f640df2f-ce68-4309-bc83-2e052fb749f1",
+            "schema:name": "fes2_rt01_mar02.xmu",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#0c058fb5-124f-4a1e-820a-643ff322c47a",
+            "schema:name": "1564889.cif",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          }
+        ],
+        "schema:result": [
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#77c5b2f3-9a04-44dd-befd-a76467d5277c",
+            "schema:name": "FeS2_plot",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#0b97bec8-4ea8-4a62-bc9d-fb03e229da8c",
+            "schema:name": "FeS2_athena",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#d27f0edf-71e5-4739-b016-770e7bcd02bb",
+            "schema:name": "fes2_sp",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#f00eb10f-cf39-4a5c-a65f-f78e3ebd0600",
+            "schema:name": "fes2_gds",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#8b809a36-4335-40f1-b5a7-279154baaeaa",
+            "schema:name": "fit_report_FeS2",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#783887b9-b28d-4a8f-8c88-91eabb9170bb",
+            "schema:name": "rmr_FeS2",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#acc4dcb8-d90b-40d7-aac2-08878864e45e",
+            "schema:name": "chikr_FeS2",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          }
+        ],
+        "schema:subjectOf": {
+          "@type": [
+            "schema:MediaObject",
+            "schema:HowTo",
+            "schema:SoftwareSourceCode"
+          ],
+          "@id": "workflows/6f2a09489271f4de.abstract.cwl",
+          "schema:name": "workflows/6f2a09489271f4de.abstract"
+        }
+      },
+      "prov:used": [
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/fes2_rt01_mar02.xmu_df0bac1ee137448a.txt",
+          "schema:name": "fes2_rt01_mar02.xmu",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#f640df2f-ce68-4309-bc83-2e052fb749f1"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/1564889.cif_df02c7af9dfe5b62.cif",
+          "schema:name": "1564889.cif",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#0c058fb5-124f-4a1e-820a-643ff322c47a"
+          }
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/FeS2_plot_6c2ea4582a260280.png",
+          "schema:name": "FeS2_plot",
+          "schema:encodingFormat": "application/octet-stream",
+          "schema:exampleOfWork": {
+            "@id": "#77c5b2f3-9a04-44dd-befd-a76467d5277c"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/FeS2_athena_d49ffa4044c67d15.prj",
+          "schema:name": "FeS2_athena",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#0b97bec8-4ea8-4a62-bc9d-fb03e229da8c"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/fes2_sp_75738551921d866c.sp",
+          "schema:name": "fes2_sp",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#d27f0edf-71e5-4739-b016-770e7bcd02bb"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/fes2_gds_547228271cdb66e2.gds",
+          "schema:name": "fes2_gds",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#f00eb10f-cf39-4a5c-a65f-f78e3ebd0600"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/fit_report_FeS2_a9305118c6acc078.feffit",
+          "schema:name": "fit_report_FeS2",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#8b809a36-4335-40f1-b5a7-279154baaeaa"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/rmr_FeS2_fb5bc774c9b03fce.png",
+          "schema:name": "rmr_FeS2",
+          "schema:encodingFormat": "application/octet-stream",
+          "schema:exampleOfWork": {
+            "@id": "#783887b9-b28d-4a8f-8c88-91eabb9170bb"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/chikr_FeS2_c3e4da2bb600d6e3.png",
+          "schema:name": "chikr_FeS2",
+          "schema:encodingFormat": "application/octet-stream",
+          "schema:exampleOfWork": {
+            "@id": "#acc4dcb8-d90b-40d7-aac2-08878864e45e"
+          }
+        }
+      ]
+    }
+  ]
+}

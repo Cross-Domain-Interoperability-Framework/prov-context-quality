@@ -1,0 +1,325 @@
+# PROV version of provenance classes as described at the Dagstuhl Workshop in November 2025
+# Definitions taken from https://docs.google.com/document/d/1_vUF4S_-y1UcYYSSDwjYMr2IJd7PZ8irQK0dI5VQoWM/edit?tab=t.0 on 08/12/2025
+
+# The style of using verbs to name classes representing activities seems ike it is not produing the desired effect: rather then producing clarity, I think they will actually cause confusion. Verbs become nouns when used to describe classes, which gets really complicated from an implementation perspective (for example, you would say "The Extracting class is used here to represent..." where "Extraction class" would be less confusing. Remember that we are naming implementation artefacts representing activities, not the activities themselves. The names of classes should be active nouns, not verbs. These are highlighted in the text where they seemed strange to my ear from an editorial perspective. 
+
+# Is there a reason why American English is being used here? It is traditional with international standards to use the Sovereign's (Oxford) English.
+
+# My other big question is why we are using such a different approach to agents? I understand the arguments from an ontologist's perspective, but this seems to be creating a lot of potential confusion for little actual gain when handed to developers for implementation. The proposed way of handling agents, as resources with roles, is contrary to how the other vocabularies used in CDIF do it (ODRL, DDI-CDI) and also seem to break the PROV Information Model. What is the argument here? This seems like a high prie to pay, and the benefit is not clear to me. We are suposed to be using other people's standards as much as possible here.
+
+# Note that I have included the full list of Entities here, because some of them - while proposed as properties of Activities - will need more information (like a link to the actual resource, or more detail). I have included them all by default, even though some of them may indeed only be properties. 
+
+
+
+# baseURI: http://ddialliance.org/Specification/DDI-CDI/1.0/PROV/
+
+
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cdi: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/>.
+@prefix cdif: <http://ddialliance.org/Specification/DDI-CDI/1.0/PROV/>.
+@prefix prov:  <http://www.w3.org/ns/prov#>.
+
+
+# ACTIVITIES
+
+cdif:IntentionalConditioning
+a prov:Activity, rdfs:Class;
+rdfs:label "Conditioning (Intentional)";
+rdfs:comment "An activity in which the state of an entity is intentionally changed by an agent, in preparation for a specified and subsequent activity."@en.
+
+cdif:PassiveConditioning a prov:Activity, rdfs:Class;
+rdfs:label "Conditioning (Passive)";
+rdfs:comment "A non-intentional process in which the state of an entity is changed, such that it impacts or precipitates a planned and subsequent activity."@en.
+
+cdif:Sampling
+a prov:Activity, rdfs:Class;
+rdfs:label "Sampling";
+rdfs:comment "An activity in which a portion or part of an entity is extracted from or identified within a whole."@en.
+
+cdif:Observing_Measuring
+a prov:Activity, rdfs:Class;
+rdfs:label "Observing/Measuring";
+rdfs:comment "An activity during which an entity gathers data or information about another entity or itself. Measuring is observing during which reference standards or similar entities are used for the quantitative comparison of properties."@en .
+
+#Why not "Creation" here? The English seems very stilted.
+cdif:Creating
+a prov:Activity, rdfs:Class;
+rdfs:label "Creating";
+rdfs:comment "An activity through which an entity is brought into existence. Serves as a superclass for other more expressive classes that create entities, such as authoring."@en .
+
+# Why not "Data Transformation"? The English here seems stilted.
+cdif:DataTransforming
+a prov:Activity, rdfs:Class;
+rdfs:label "Data Transforming";
+rdfs:comment "An activity during which a volume of data is modified."@en .
+
+cdif:DataCleaning
+a prov:Activity, rdfs:Class;
+rdfs:label "Data Cleaning";
+rdfs:comment "A data transformation during which erroneous, duplicated, or corrupted data is removed from a volume of data."@en .
+
+#Why not "Data Validation"? the English here seems stilted.
+cdif:DataValidating
+a prov:Activity, rdfs:Class;
+rdfs:label "Data Validating";
+rdfs:comment "An activity during which a volume of data is evaluated in relation to some specification or criteria, usually assessing its soundness, justifiability, or appropriateness for a given purpose."@en .
+
+# Could be "Analysis"
+cdif:Analyzing
+a prov:Activity, rdfs:Class;
+rdfs:label "Analyzing";
+rdfs:comment "An activity during which one or more entities are studied by examining their constituent parts and the interrelationships between those parts in order to increase one's knowledge about those entities."@en .
+
+#Why not "Consumption"? "Consuming" is more typical as an adjective.
+cdif:Consuming
+a prov:Activity, rdfs:Class;
+rdfs:label "Consuming";
+rdfs:comment "An activity during which an agent acquires and uses an entity."@en .
+
+cdif:Provisioning
+a prov:Activity, rdfs:Class;
+rdfs:label "Provisioning";
+rdfs:comment "An activity during which an agent supplies an entity to other agents."@en .
+
+# "Access" is more natural
+cdif:Accessing
+a prov:Activity, rdfs:Class;
+rdfs:label "Accessing";
+rdfs:comment "An activity during which an agent realises its rights and abilities to approach and interact with an entity."@en .
+
+# "Extraction" seems less stilted
+cdif:Extracting
+a prov:Activity, rdfs:Class;
+rdfs:label "Extracting";
+rdfs:comment "An activity during which an entity is moved to a new location."@en .
+
+cdif:Cataloguing
+a prov:Activity, rdfs:Class;
+rdfs:label "Cataloguing";
+rdfs:comment "An activity during which the existence of an entity is described in a systematic list."@en .
+
+cdif:Archiving
+a prov:Activity, rdfs:Class;
+rdfs:label "Archiving";
+rdfs:comment "An activity during which an entity is transferred to a facility charged with its long-term (generally >10 years) preservation."@en .
+
+#"Preservation"???
+cdif:Preserving
+a prov:Activity, rdfs:Class;
+rdfs:label "Preserving";
+rdfs:comment "An activity during which an entity is modified to stabilise its make-up and properties, facilitating future use."@en .
+
+#"Calibration"?
+cdif:Calibrating
+a prov:Activity, rdfs:Class;
+rdfs:label "Calibrating";
+rdfs:comment "An activity during which measurement data produced by an entity are compared to a reference dataset with known accuracy in order to establish, verify, or document the accuracy of the entity."@en .
+
+#"Configuration"?? This one could be very confusing!
+cdif:Configuring
+a prov:Activity, rdfs:Class;
+rdfs:label "Configuring";
+rdfs:comment "An activity during which an entity is modified to grant it desirable properties or dispose it toward desirable behaviour."@en .
+
+#"Aggregation"? This could also be very confusing.
+cdif:Aggregating
+a prov:Activity, rdfs:Class;
+rdfs:label "Aggregating";
+rdfs:comment "An activity during which multiple entities are gathered together and assembled into a whole based on a defined set of criteria."@en .
+
+# "Integration"? Also potentially very confusing.
+cdif:Integrating
+a prov:Activity, rdfs:Class;
+rdfs:label "Integrating";
+rdfs:comment "An activity during which multiple entities are unified into a coherent whole, often losing their distinctiveness."@en .
+
+#"Derivation"?
+cdif:Deriving
+a prov:Activity, rdfs:Class;
+rdfs:label "Deriving";
+rdfs:comment "A creation process during which a new entity arises from parts or all of pre-existing entities."@en .
+
+#"Harmonization"?
+cdif:Harmonizing
+a prov:Activity, rdfs:Class;
+rdfs:label "Harmonizing";
+rdfs:comment "An activity during which a set of entities are transformed to regularise their properties, allowing meaningful collective treatment."@en .
+
+#"Quality Control"? This one just seems odd to a native speaker.
+cdif:QualityControlling
+a prov:Activity, rdfs:Class;
+rdfs:label "Quality Controlling";
+rdfs:comment "An activity during which an entity's compliance to a set of defined criteria is assessed, resulting in acceptance or rejection of that entity in a set of further activities."@en .
+
+
+#ENiTIES
+
+cdif:Experiment_StudyDescription
+a prov:Entity, rdfs:Class;
+rdfs:label "Experiment/Study Description";
+rdfs:comment "An entity that describes the set activities to validate or falsify a hypothesis, their participants, and context."@en .
+
+cdif:Hypothesis
+a prov:Entity, rdfs:Class;
+rdfs:label "Hypothesis";
+rdfs:comment "An assertion about one or more phenomena that can be verified or falsified by testing."@en .
+
+cdif:Sample
+a prov:Entity, rdfs:Class;
+rdfs:label "Sample";
+rdfs:comment "An entity which is the intended output of a sampling activity."@en .
+
+cdif:Method
+a prov:Entity, rdfs:Class;
+rdfs:label "Method";
+rdfs:comment "An entity which specifies how to perform one or more activities, often contextualising and describing the rationale for its approach."@en .
+
+cdif:Instrument
+a prov:Entity, rdfs:Class;
+rdfs:label "Instrument";
+rdfs:comment "An entity which is conferred an instrument role in a activity by an agent."@en .
+
+cdif:Data
+a prov:Entity, rdfs:Class;
+rdfs:label "Data";
+rdfs:comment "A set of formally systematised symbols or signs (recorded on any type of medium) which represent one or more properties of an entity or that entity itself."@en .
+
+# Do you mean "Documentation"? Not all documents are documentation? (This is different than what was meant in earlier drafts where it was an Activity as opposed to an Entity.)
+cdif:Document
+a prov:Entity, rdfs:Class;
+rdfs:label "Document";
+rdfs:comment "An entity which is the result of a documenting activity."@en .
+
+cdif:QualityCriterion
+a prov:Entity, rdfs:Class;
+rdfs:label "Quality Criterion";
+rdfs:comment "An entity which is used as a standard, point of comparison, and/or component of a rubric for agents to determine whether another entity complies to specifications in a quality control activity."@en .
+
+cdif:QualityReport
+a prov:Entity, rdfs:Class;
+rdfs:label "Quality Report";
+rdfs:comment "A document which contains the results of a quality controlling or testing activity."@en .
+
+cdif:DataProduct
+a prov:Entity, rdfs:Class;
+rdfs:label "Data Product";
+rdfs:comment "A volume of data which has been assembled to provision one or more intended consumers with a logical unit for specified - and ideally documented - downstream use."@en .
+
+#This is a more limited definition than in other vocabularies. Very different from DCAT, DDI-CDI, etc. We may want to rename to avoid confusion - this is more specialized.
+cdif:Dataset
+a prov:Entity, rdfs:Class;
+rdfs:label "Dataset";
+rdfs:comment "A volume of data which is composed of smaller data volumes that have been aggregated or integrated."@en .
+
+cdif:Audience
+a prov:Entity, rdfs:Class;
+rdfs:label "Audience";
+rdfs:comment "An entity which is composed of individuals or groups to whom a provisioning activity is targeted."@en .
+
+# The Person, Organization, and Machine entities are commented out as they would produce name clashes with the prov:Agents classes below. I include them here in case we want to play with a different approach to PROV implementation here.
+
+# This is not an Entity per the PROV model. This will not necessarily align with most PROV implementations or other vocabularies, notably DDI-CDI.
+# cdif:Organization
+# a prov:Entity, rdfs:Class;
+# rdfs:label "Organization";
+# rdfs:comment "An entity which is a social or legal institution. It can have a Role as Agent when involved in a specific Activity."@en .
+
+# This is not an Entity per the PROV model when acting as an Agent. This will not necessarily align with most PROV implementations or other vocabularies, notably DDI-CDI.
+# cdif:Person
+# a prov:Entity, rdfs:Class;
+# rdfs:label "Person";
+# rdfs:comment "An entity which is a member of the species Homo sapiens / An entity to which legal personhood has been conferred."@en .
+
+# This is not an Entity per the PROV model when acting as an Agent. This will not necessarily align with most PROV implementations or other vocabularies, notably DDI-CDI.
+# cdif:Machine
+# a prov:Entity, rdfs:Class;
+# rdfs:label "Machine";
+# rdfs:comment "An entity which has been manufactured to perform one or more tasks."@en .
+
+cdif:Software
+a prov:Entity, rdfs:Class;
+rdfs:label "Software";
+rdfs:comment "An entity which is composed data - including files containing programs, configurations, and other instructions - that direct or support the execution of one or more tasks by a machine."@en .
+
+cdif:SubjectOfObservation
+a prov:Entity, rdfs:Class;
+rdfs:label "Subject of Observation";
+rdfs:comment "The subject of an observing activity."@en .
+
+cdif:ObservedEvent
+a prov:Entity, rdfs:Class;
+rdfs:label "Observed Event";
+rdfs:comment "An event which is the object of an observing activity."@en .
+
+cdif:ObservationResource
+a prov:Entity, rdfs:Class;
+rdfs:label "Observation Resource";
+rdfs:comment "An entity which is used during an observing activity."@en .
+
+cdif:SamplingResource
+a prov:Entity, rdfs:Class;
+rdfs:label "SamplingResource";
+rdfs:comment "An entity which is used during a sampling activity."@en .
+
+#Is this supposed to be a processing resource? It sounds like it is another name for data or dataset or data product(!) Rename?
+cdif:DataResource
+a prov:Entity, rdfs:Class;
+rdfs:label "Data Resource";
+rdfs:comment "An entity which is used during an activity that targets or otherwise handles data."@en .
+
+#This is very specific to the natural sciences. can we come up with a term which is more generic, or an alternate for when we are describing non-features such as humans or their institutions/activities?
+cdif:FeatureOfInterest
+a prov:Entity, rdfs:Class;
+rdfs:label "Feature of Interest";
+rdfs:comment "An entity that is the subject or object of an activity."@en .
+
+cdif:StudyResult
+a prov:Entity, rdfs:Class;
+rdfs:label "Study Result";
+rdfs:comment "An entity that is the intended output of a study."@en .
+
+cdif:Output
+a prov:Entity, rdfs:Class;
+rdfs:label "Output";
+rdfs:comment "An entity that results, intentionally or unintentionally, from an activity."@en .
+
+cdif:Outcome
+a prov:Entity, rdfs:Class;
+rdfs:label "Outcome";
+rdfs:comment "Downstream impacts from a set of research activities"@en .
+
+# AGENTS
+# There is a huge issue here in the abstract model, as it significantly alters the PROV Information Model by making Agents into Entities with roles, which is not how PROV is designed to work. To void issues here, I am modelling the combination of organization + role, person + role, and machine + role into Agenct which are sub-classed into their corresponding classes in DDI-CDI. Other roles can be added to these from the list as needed, although in some cases the roles in the abstract model are intended for use on entities. (I should note that this also seems somewhat broken. In social sciences, an Instrument is not a machine playing the role of an Instrument, it is a surveym which s a combination of documentary resources, software, persons, and machines. We need to take a closer look at this with a braoder set of requirements. I have notd how I have disposed of the entries in the table in the documentation for the abstract model.
+
+cdif:Person
+a prov:Agent, rdfs:Class;
+rdfs:label "Person";
+rdfs:comment "A member of the species Homo sapiens / An entity to which legal personhood has been conferred."@en .
+
+cdif:Organization
+a prov:Agent, rdfs:Class;
+rdfs:label "Organization";
+rdfs:comment "A social or legal institution."@en .
+
+cdif:Machine
+a prov:Agent, rdfs:Class;
+rdfs:label "Machine";
+rdfs:comment "An artificial agent which has been manufactured to perform one or more tasks. Distinct from a tool in that it possesses agency."@en .
+
+# Agent role is now just a PROV Agent, so nothing is needed here.
+# Observer is a prov:role value on a cdif:Person.
+# Generator/Creator is a prov:role on any of the available prov:Agents given here.
+# Participant Role is a prov:role on any of the available prov:Agents given here.
+# Instrument Role is a prov:role on a prov:Entity serving as an instrument.
+# Sensor Role is a prov:role on a prov:Entity serving as a sensor.
+# Instrument Role is a prov:role on a prov:Entity serving as an Instrument.
+# Consumer Role is a prov:role on any of the available prov:Agents given here.
+# Provider Role is a prov:role on any of the available prov:Agents given here.
+

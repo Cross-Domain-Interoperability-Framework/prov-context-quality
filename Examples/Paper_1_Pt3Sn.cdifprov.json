@@ -1,0 +1,385 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#db926013-bea1-4ace-a395-27dd3d89fbc7",
+      "schema:name": "Run of Galaxy workflow engine",
+      "schema:additionalType": [
+        "schema:OrganizeAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-14T16:47:45.570110",
+      "schema:endTime": "2024-10-14T16:47:49.924132",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "#4d9d14b1-849c-4369-974e-8b100f1f36b2",
+        "schema:name": "Galaxy workflow engine"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418",
+      "schema:name": "Paper 1: XANES, LCF, EXAFS",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-14T16:46:03.039565",
+      "schema:endTime": "2024-10-14T16:46:03.039568",
+      "schema:instrument": {
+        "@type": [
+          "schema:Thing",
+          "schema:SoftwareApplication"
+        ],
+        "@id": "workflows/bf972370cf6dfa23.gxwf.yml",
+        "schema:name": "Paper 1: XANES, LCF, EXAFS",
+        "schema:object": [
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#dataset_collection-9118-param",
+            "schema:name": "Sn K edge H2 under H2",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Collection"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#dataset_collection-9119-param",
+            "schema:name": "Sn K edge H2",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Collection"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#dataset_collection-9120-param",
+            "schema:name": "Sn K edge Ar",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Collection"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#dataset_collection-9121-param",
+            "schema:name": "Sn K edge Air",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Collection"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#dataset_collection-9122-param",
+            "schema:name": "Pt L3 edge H2 under H2",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Collection"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#dataset_collection-9123-param",
+            "schema:name": "Pt L3 edge H2",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Collection"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#dataset_collection-9124-param",
+            "schema:name": "Pt L3 edge Ar",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Collection"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#dataset_collection-9125-param",
+            "schema:name": "Pt L3 edge Air",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Collection"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#86eb1800-e856-4bce-ac72-b6d94271e585",
+            "schema:name": "Sn foil.prj",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#3c95ac8b-e82e-46eb-b2db-d8f90a591ead",
+            "schema:name": "SnO2 0.9 2.6-13.5 gbkg.prj",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#620bf6ab-fc6f-42e7-9eb5-e3bfa6e72a9c",
+            "schema:name": "1692395.cif",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#26b7fc6c-93d5-45b4-9b43-971f7d4c549d",
+            "schema:name": "1690711.cif",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#a7eedcc6-fde7-494a-963c-9c313aac9b96",
+            "schema:name": "1680385.cif",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "File"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#Sn foil Calibration-param",
+            "schema:name": "Sn foil Calibration",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Float"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#SnO2 Calibration-param",
+            "schema:name": "SnO2 Calibration",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Float"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#Sn K edge under H2 Calibration-param",
+            "schema:name": "Sn K edge under H2 Calibration",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Float"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#Sn3Pt Sn Calibration-param",
+            "schema:name": "Sn3Pt Sn Calibration",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Float"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#Pt L3 edge under H2 Calibration-param",
+            "schema:name": "Pt L3 edge under H2 Calibration",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Float"
+            ]
+          },
+          {
+            "@type": [
+              "schema:MediaObject"
+            ],
+            "@id": "#Sn3Pt Pt Calibration-param",
+            "schema:name": "Sn3Pt Pt Calibration",
+            "schema:additionalType": [
+              "schema:FormalParameter",
+              "Float"
+            ]
+          }
+        ],
+        "schema:subjectOf": {
+          "@type": [
+            "schema:MediaObject",
+            "schema:HowTo",
+            "schema:SoftwareSourceCode"
+          ],
+          "@id": "workflows/bf972370cf6dfa23.abstract.cwl",
+          "schema:name": "workflows/bf972370cf6dfa23.abstract"
+        }
+      },
+      "prov:used": [
+        {
+          "@id": "#dataset_collection-9118",
+          "schema:name": "Sn K edge H2 under H2"
+        },
+        {
+          "@id": "#dataset_collection-9119",
+          "schema:name": "Sn K edge H2"
+        },
+        {
+          "@id": "#dataset_collection-9120",
+          "schema:name": "Sn K edge Ar"
+        },
+        {
+          "@id": "#dataset_collection-9121",
+          "schema:name": "Sn K edge Air"
+        },
+        {
+          "@id": "#dataset_collection-9122",
+          "schema:name": "Pt L3 edge H2 under H2"
+        },
+        {
+          "@id": "#dataset_collection-9123",
+          "schema:name": "Pt L3 edge H2"
+        },
+        {
+          "@id": "#dataset_collection-9124",
+          "schema:name": "Pt L3 edge Ar"
+        },
+        {
+          "@id": "#dataset_collection-9125",
+          "schema:name": "Pt L3 edge Air"
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Sn_foil.prj_b9b199e627b0df6d.prj",
+          "schema:name": "Sn foil.prj",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#86eb1800-e856-4bce-ac72-b6d94271e585"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/SnO2_0.9_2.6-13.5_gbkg.prj_48b3093bef30842b.prj",
+          "schema:name": "SnO2 0.9 2.6-13.5 gbkg.prj",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#3c95ac8b-e82e-46eb-b2db-d8f90a591ead"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/1692395.cif_d28c7de7a4bf240d.cif",
+          "schema:name": "1692395.cif",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#620bf6ab-fc6f-42e7-9eb5-e3bfa6e72a9c"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/1690711.cif_b3eebcf05996ed00.cif",
+          "schema:name": "1690711.cif",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#26b7fc6c-93d5-45b4-9b43-971f7d4c549d"
+          }
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/1680385.cif_d8d62840031974c8.cif",
+          "schema:name": "1680385.cif",
+          "schema:encodingFormat": "text/plain",
+          "schema:exampleOfWork": {
+            "@id": "#a7eedcc6-fde7-494a-963c-9c313aac9b96"
+          }
+        },
+        {
+          "@id": "#Sn foil Calibration-pv",
+          "schema:name": "Sn foil Calibration"
+        },
+        {
+          "@id": "#SnO2 Calibration-pv",
+          "schema:name": "SnO2 Calibration"
+        },
+        {
+          "@id": "#Sn K edge under H2 Calibration-pv",
+          "schema:name": "Sn K edge under H2 Calibration"
+        },
+        {
+          "@id": "#Sn3Pt Sn Calibration-pv",
+          "schema:name": "Sn3Pt Sn Calibration"
+        },
+        {
+          "@id": "#Pt L3 edge under H2 Calibration-pv",
+          "schema:name": "Pt L3 edge under H2 Calibration"
+        },
+        {
+          "@id": "#Sn3Pt Pt Calibration-pv",
+          "schema:name": "Sn3Pt Pt Calibration"
+        }
+      ]
+    }
+  ]
+}
