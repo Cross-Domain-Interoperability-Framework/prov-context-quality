@@ -165,7 +165,11 @@ WRROC/ARC agents map directly to cdifProv:
 - `Organization` → `schema:Organization` as `schema:agent`
 - Multiple agents → first as `schema:agent`, remainder as `schema:participant`
 
-The [WRROCToCdifProv.py](https://github.com/Cross-Domain-Interoperability-Framework/packaging/tree/main/tools/WRROCToCdifProv.py) converter handles this mapping, inlining agent details at first occurrence and using `@id` references thereafter.
+The [WRROCToCdifProv.py](tools/WRROCToCdifProv.py) converter handles this mapping, inlining agent details at first occurrence and using `@id` references thereafter.
+
+### 5.4 Galaxy RO-Crate Converters
+
+The Galaxy RO-Crate converters ([galaxyROCrateToCDIF.py](tools/galaxyROCrateToCDIF.py) and [galaxyROCrateToCDIFActions.py](tools/galaxyROCrateToCDIFActions.py)) represent computational tools as software agents using `bios:computationalTool` on the workflow's `schema:HowTo` or individual step activities. Each Galaxy tool is typed as `schema:SoftwareApplication` with name, version, and identifier (Galaxy tool shed ID). This follows the recommendation in §7.5 below — software tools that execute workflow steps are treated as instruments rather than primary agents, since the workflow engine orchestrates them.
 
 ## 6. Comparison Table
 
