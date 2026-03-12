@@ -120,33 +120,29 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.extract_group.extract_group",
-                "schema:value": "single"
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group": {
+                    "@type": "schema:StructuredValue",
+                    "extract_group": "single",
+                    "group_name": "merge"
+                  },
+                  "format": "athena"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.extract_group.group_name",
-                "schema:value": "merge"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "athena"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibration_e0",
-                "schema:value": 29200
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate": {
+                    "@type": "schema:StructuredValue",
+                    "calibrate": "true",
+                    "calibration_e0": 29200
+                  },
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -171,33 +167,29 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.extract_group.extract_group",
-                "schema:value": "single"
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group": {
+                    "@type": "schema:StructuredValue",
+                    "extract_group": "single",
+                    "group_name": "SnO2_0_9_2_6_13_5_0_8_1_0_with_theory"
+                  },
+                  "format": "athena"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.extract_group.group_name",
-                "schema:value": "SnO2_0_9_2_6_13_5_0_8_1_0_with_theory"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "athena"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibration_e0",
-                "schema:value": 29219.73
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate": {
+                    "@type": "schema:StructuredValue",
+                    "calibrate": "true",
+                    "calibration_e0": 29219.73
+                  },
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -222,38 +214,30 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.energy_column.energy_column",
-                "schema:value": "auto"
+                "schema:name": "merge_inputs",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "format": {
+                    "@type": "schema:StructuredValue",
+                    "energy_column.energy_column": "auto",
+                    "format": "plaintext",
+                    "mu_column.mu_column": "auto"
+                  },
+                  "merge_inputs": "true"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "plaintext"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.mu_column.mu_column",
-                "schema:value": "auto"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.merge_inputs",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibration_e0",
-                "schema:value": 29200
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate": {
+                    "@type": "schema:StructuredValue",
+                    "calibrate": "true",
+                    "calibration_e0": 29200
+                  },
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -278,38 +262,30 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.energy_column.energy_column",
-                "schema:value": "auto"
+                "schema:name": "merge_inputs",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "format": {
+                    "@type": "schema:StructuredValue",
+                    "energy_column.energy_column": "auto",
+                    "format": "plaintext",
+                    "mu_column.mu_column": "auto"
+                  },
+                  "merge_inputs": "true"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "plaintext"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.mu_column.mu_column",
-                "schema:value": "auto"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.merge_inputs",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibration_e0",
-                "schema:value": 29204.5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate": {
+                    "@type": "schema:StructuredValue",
+                    "calibrate": "true",
+                    "calibration_e0": 29204.5
+                  },
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -334,38 +310,30 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.energy_column.energy_column",
-                "schema:value": "auto"
+                "schema:name": "merge_inputs",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "format": {
+                    "@type": "schema:StructuredValue",
+                    "energy_column.energy_column": "auto",
+                    "format": "plaintext",
+                    "mu_column.mu_column": "auto"
+                  },
+                  "merge_inputs": "true"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "plaintext"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.mu_column.mu_column",
-                "schema:value": "auto"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.merge_inputs",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibration_e0",
-                "schema:value": 29204.5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate": {
+                    "@type": "schema:StructuredValue",
+                    "calibrate": "true",
+                    "calibration_e0": 29204.5
+                  },
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -390,38 +358,30 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.energy_column.energy_column",
-                "schema:value": "auto"
+                "schema:name": "merge_inputs",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "format": {
+                    "@type": "schema:StructuredValue",
+                    "energy_column.energy_column": "auto",
+                    "format": "plaintext",
+                    "mu_column.mu_column": "auto"
+                  },
+                  "merge_inputs": "true"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "plaintext"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.mu_column.mu_column",
-                "schema:value": "auto"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.merge_inputs",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibration_e0",
-                "schema:value": 29204.5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate": {
+                    "@type": "schema:StructuredValue",
+                    "calibrate": "true",
+                    "calibration_e0": 29204.5
+                  },
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -446,33 +406,26 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.energy_column.energy_column",
-                "schema:value": "auto"
+                "schema:name": "merge_inputs",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "format": {
+                    "@type": "schema:StructuredValue",
+                    "energy_column.energy_column": "auto",
+                    "format": "plaintext",
+                    "mu_column.mu_column": "auto"
+                  },
+                  "merge_inputs": "true"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "plaintext"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.mu_column.mu_column",
-                "schema:value": "auto"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.merge_inputs",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate.calibrate": "true",
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -497,33 +450,26 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.energy_column.energy_column",
-                "schema:value": "auto"
+                "schema:name": "merge_inputs",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "format": {
+                    "@type": "schema:StructuredValue",
+                    "energy_column.energy_column": "auto",
+                    "format": "plaintext",
+                    "mu_column.mu_column": "auto"
+                  },
+                  "merge_inputs": "true"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "plaintext"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.mu_column.mu_column",
-                "schema:value": "auto"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.merge_inputs",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate.calibrate": "true",
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -548,33 +494,26 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.energy_column.energy_column",
-                "schema:value": "auto"
+                "schema:name": "merge_inputs",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "format": {
+                    "@type": "schema:StructuredValue",
+                    "energy_column.energy_column": "auto",
+                    "format": "plaintext",
+                    "mu_column.mu_column": "auto"
+                  },
+                  "merge_inputs": "true"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "plaintext"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.mu_column.mu_column",
-                "schema:value": "auto"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.merge_inputs",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate.calibrate": "true",
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -599,33 +538,26 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.energy_column.energy_column",
-                "schema:value": "auto"
+                "schema:name": "merge_inputs",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "format": {
+                    "@type": "schema:StructuredValue",
+                    "energy_column.energy_column": "auto",
+                    "format": "plaintext",
+                    "mu_column.mu_column": "auto"
+                  },
+                  "merge_inputs": "true"
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.format",
-                "schema:value": "plaintext"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.format.mu_column.mu_column",
-                "schema:value": "auto"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "merge_inputs.merge_inputs",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.calibrate.calibrate",
-                "schema:value": "true"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "processing.rebin",
-                "schema:value": 0
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "calibrate.calibrate": "true",
+                  "rebin": 0
+                }
               }
             ]
           },
@@ -650,18 +582,13 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "format.absorbing_atom",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "format.format",
-                "schema:value": "cif"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "format.radius",
-                "schema:value": 3
+                "schema:name": "format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "absorbing_atom": 0,
+                  "format": "cif",
+                  "radius": 3
+                }
               }
             ]
           },
@@ -686,18 +613,13 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "format.absorbing_atom",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "format.format",
-                "schema:value": "cif"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "format.radius",
-                "schema:value": 3
+                "schema:name": "format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "absorbing_atom": 1,
+                  "format": "cif",
+                  "radius": 3
+                }
               }
             ]
           },
@@ -722,18 +644,13 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "format.absorbing_atom",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "format.format",
-                "schema:value": "cif"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "format.radius",
-                "schema:value": 3
+                "schema:name": "format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "absorbing_atom": 0,
+                  "format": "cif",
+                  "radius": 3
+                }
               }
             ]
           },
@@ -758,18 +675,13 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "format.absorbing_atom",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "format.format",
-                "schema:value": "cif"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "format.radius",
-                "schema:value": 3
+                "schema:name": "format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "absorbing_atom": 0,
+                  "format": "cif",
+                  "radius": 3
+                }
               }
             ]
           },
@@ -1038,38 +950,24 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "plots[0].variable.variable",
-                "schema:value": "flat"
+                "schema:name": "plots[0].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "flat",
+                  "x_limit_max": 29450,
+                  "x_limit_min": 29150,
+                  "y_limit_min": 0
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "plots[0].variable.x_limit_max",
-                "schema:value": 29450
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[0].variable.x_limit_min",
-                "schema:value": 29150
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[0].variable.y_limit_min",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[1].variable.variable",
-                "schema:value": "dmude"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[1].variable.x_limit_max",
-                "schema:value": 29215
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[1].variable.x_limit_min",
-                "schema:value": 29190
+                "schema:name": "plots[1].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "dmude",
+                  "x_limit_max": 29215,
+                  "x_limit_min": 29190
+                }
               }
             ]
           },
@@ -1216,38 +1114,24 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "plots[0].variable.variable",
-                "schema:value": "flat"
+                "schema:name": "plots[0].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "flat",
+                  "x_limit_max": 11800,
+                  "x_limit_min": 11500,
+                  "y_limit_min": 0
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "plots[0].variable.x_limit_max",
-                "schema:value": 11800
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[0].variable.x_limit_min",
-                "schema:value": 11500
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[0].variable.y_limit_min",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[1].variable.variable",
-                "schema:value": "dmude"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[1].variable.x_limit_max",
-                "schema:value": 11575
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "plots[1].variable.x_limit_min",
-                "schema:value": 11550
+                "schema:name": "plots[1].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "dmude",
+                  "x_limit_max": 11575,
+                  "x_limit_min": 11550
+                }
               }
             ]
           },
@@ -1272,363 +1156,206 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].label",
-                "schema:value": "Sn"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].degen.value",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].degen.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].deltar.name",
-                "schema:value": "alpha_SnPtSn"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].deltar.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].deltar.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].e0.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].e0.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].id",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].s02.value",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].s02.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].sigma2.name",
-                "schema:value": "sigma2_SnPtSn"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].sigma2.value",
-                "schema:value": 0.003
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.paths[0].sigma2.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[0].selection.selection",
-                "schema:value": "manual"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].label",
-                "schema:value": "Pt"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].degen.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].deltar.expr",
-                "schema:value": "alpha_SnPtSn"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].deltar.name",
-                "schema:value": "alpha_PtSnPt"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].deltar.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].deltar.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].e0.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].e0.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].id",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].s02.value",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].s02.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].sigma2.expr",
-                "schema:value": "sigma2_SnPtSn"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].sigma2.name",
-                "schema:value": "sigma2_PtSnPt"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].sigma2.value",
-                "schema:value": 0.003
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.paths[0].sigma2.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[1].selection.selection",
-                "schema:value": "all"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].label",
-                "schema:value": "SnO2"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].degen.value",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].degen.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].deltar.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].deltar.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].e0.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].e0.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].id",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].s02.value",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].s02.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].sigma2.value",
-                "schema:value": 0.003
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.paths[0].sigma2.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[2].selection.selection",
-                "schema:value": "manual"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].label",
-                "schema:value": "PtO2"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].degen.value",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].degen.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].deltar.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].deltar.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].e0.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].e0.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].id",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].s02.value",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].s02.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].sigma2.value",
-                "schema:value": 0.003
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.paths[0].sigma2.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "feff_outputs[3].selection.selection",
-                "schema:value": "manual"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.degen.is_common",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.degen.value",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.degen.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.deltar.is_common",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.deltar.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.deltar.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.e0.is_common",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.e0.value",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.e0.vary",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.s02.is_common",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.s02.value",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.s02.vary",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.sigma2.is_common",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.sigma2.value",
-                "schema:value": 0.003
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "variables.sigma2.vary",
-                "schema:value": 1
+                "schema:name": "feff_outputs[0]",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "label": "Sn",
+                  "selection": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0]": {
+                      "@type": "schema:StructuredValue",
+                      "degen": {
+                        "@type": "schema:StructuredValue",
+                        "value": 1,
+                        "vary": 1
+                      },
+                      "deltar": {
+                        "@type": "schema:StructuredValue",
+                        "name": "alpha_SnPtSn",
+                        "value": 0,
+                        "vary": 1
+                      },
+                      "e0": {
+                        "@type": "schema:StructuredValue",
+                        "value": 0,
+                        "vary": 1
+                      },
+                      "id": 1,
+                      "s02": {
+                        "@type": "schema:StructuredValue",
+                        "value": 1,
+                        "vary": 1
+                      },
+                      "sigma2": {
+                        "@type": "schema:StructuredValue",
+                        "name": "sigma2_SnPtSn",
+                        "value": 0.003,
+                        "vary": 1
+                      }
+                    },
+                    "selection": "manual"
+                  }
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "feff_outputs[1]",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "label": "Pt",
+                  "selection": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0]": {
+                      "@type": "schema:StructuredValue",
+                      "degen.vary": 1,
+                      "deltar": {
+                        "@type": "schema:StructuredValue",
+                        "expr": "alpha_SnPtSn",
+                        "name": "alpha_PtSnPt",
+                        "value": 0,
+                        "vary": 1
+                      },
+                      "e0": {
+                        "@type": "schema:StructuredValue",
+                        "value": 0,
+                        "vary": 1
+                      },
+                      "id": 1,
+                      "s02": {
+                        "@type": "schema:StructuredValue",
+                        "value": 1,
+                        "vary": 1
+                      },
+                      "sigma2": {
+                        "@type": "schema:StructuredValue",
+                        "expr": "sigma2_SnPtSn",
+                        "name": "sigma2_PtSnPt",
+                        "value": 0.003,
+                        "vary": 1
+                      }
+                    },
+                    "selection": "all"
+                  }
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "feff_outputs[2]",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "label": "SnO2",
+                  "selection": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0]": {
+                      "@type": "schema:StructuredValue",
+                      "degen": {
+                        "@type": "schema:StructuredValue",
+                        "value": 1,
+                        "vary": 1
+                      },
+                      "deltar": {
+                        "@type": "schema:StructuredValue",
+                        "value": 0,
+                        "vary": 1
+                      },
+                      "e0": {
+                        "@type": "schema:StructuredValue",
+                        "value": 0,
+                        "vary": 1
+                      },
+                      "id": 1,
+                      "s02": {
+                        "@type": "schema:StructuredValue",
+                        "value": 1,
+                        "vary": 1
+                      },
+                      "sigma2": {
+                        "@type": "schema:StructuredValue",
+                        "value": 0.003,
+                        "vary": 1
+                      }
+                    },
+                    "selection": "manual"
+                  }
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "feff_outputs[3]",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "label": "PtO2",
+                  "selection": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0]": {
+                      "@type": "schema:StructuredValue",
+                      "degen": {
+                        "@type": "schema:StructuredValue",
+                        "value": 1,
+                        "vary": 1
+                      },
+                      "deltar": {
+                        "@type": "schema:StructuredValue",
+                        "value": 0,
+                        "vary": 1
+                      },
+                      "e0": {
+                        "@type": "schema:StructuredValue",
+                        "value": 0,
+                        "vary": 1
+                      },
+                      "id": 1,
+                      "s02": {
+                        "@type": "schema:StructuredValue",
+                        "value": 1,
+                        "vary": 1
+                      },
+                      "sigma2": {
+                        "@type": "schema:StructuredValue",
+                        "value": 0.003,
+                        "vary": 1
+                      }
+                    },
+                    "selection": "manual"
+                  }
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "variables",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "degen": {
+                    "@type": "schema:StructuredValue",
+                    "is_common": 0,
+                    "value": 1,
+                    "vary": 1
+                  },
+                  "deltar": {
+                    "@type": "schema:StructuredValue",
+                    "is_common": 0,
+                    "value": 0,
+                    "vary": 1
+                  },
+                  "e0": {
+                    "@type": "schema:StructuredValue",
+                    "is_common": 1,
+                    "value": 0,
+                    "vary": 1
+                  },
+                  "s02": {
+                    "@type": "schema:StructuredValue",
+                    "is_common": 1,
+                    "value": 1,
+                    "vary": 0
+                  },
+                  "sigma2": {
+                    "@type": "schema:StructuredValue",
+                    "is_common": 0,
+                    "value": 0.003,
+                    "vary": 1
+                  }
+                }
               }
             ]
           },
@@ -1653,73 +1380,37 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "execution.execution",
-                "schema:value": "simultaneous"
+                "schema:name": "execution",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "execution": "simultaneous",
+                  "simultaneous[0]": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0].path_id": 2,
+                    "paths[1].path_id": 3,
+                    "paths[2].path_id": 5
+                  },
+                  "simultaneous[1]": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0].path_id": 1,
+                    "paths[1].path_id": 4
+                  }
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[0].path_id",
-                "schema:value": 2
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[1].path_id",
-                "schema:value": 3
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[2].path_id",
-                "schema:value": 5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[1].paths[0].path_id",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[1].paths[1].path_id",
-                "schema:value": 4
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.dk",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.fitspace",
-                "schema:value": "q"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kmax",
-                "schema:value": 9
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kmin",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kweight",
-                "schema:value": 2
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.rmax",
-                "schema:value": 5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.rmin",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.window",
-                "schema:value": "hanning"
+                "schema:name": "fit_vars",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "dk": 1,
+                  "fitspace": "q",
+                  "kmax": 9,
+                  "kmin": 0,
+                  "kweight": 2,
+                  "rmax": 5,
+                  "rmin": 0,
+                  "window": "hanning"
+                }
               }
             ]
           },
@@ -1744,73 +1435,37 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "execution.execution",
-                "schema:value": "simultaneous"
+                "schema:name": "execution",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "execution": "simultaneous",
+                  "simultaneous[0]": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0].path_id": 2,
+                    "paths[1].path_id": 3,
+                    "paths[2].path_id": 5
+                  },
+                  "simultaneous[1]": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0].path_id": 1,
+                    "paths[1].path_id": 4
+                  }
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[0].path_id",
-                "schema:value": 2
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[1].path_id",
-                "schema:value": 3
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[2].path_id",
-                "schema:value": 5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[1].paths[0].path_id",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[1].paths[1].path_id",
-                "schema:value": 4
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.dk",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.fitspace",
-                "schema:value": "q"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kmax",
-                "schema:value": 9
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kmin",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kweight",
-                "schema:value": 2
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.rmax",
-                "schema:value": 5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.rmin",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.window",
-                "schema:value": "hanning"
+                "schema:name": "fit_vars",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "dk": 1,
+                  "fitspace": "q",
+                  "kmax": 9,
+                  "kmin": 0,
+                  "kweight": 2,
+                  "rmax": 5,
+                  "rmin": 0,
+                  "window": "hanning"
+                }
               }
             ]
           },
@@ -1835,73 +1490,37 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "execution.execution",
-                "schema:value": "simultaneous"
+                "schema:name": "execution",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "execution": "simultaneous",
+                  "simultaneous[0]": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0].path_id": 2,
+                    "paths[1].path_id": 3,
+                    "paths[2].path_id": 5
+                  },
+                  "simultaneous[1]": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0].path_id": 1,
+                    "paths[1].path_id": 4
+                  }
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[0].path_id",
-                "schema:value": 2
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[1].path_id",
-                "schema:value": 3
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[2].path_id",
-                "schema:value": 5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[1].paths[0].path_id",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[1].paths[1].path_id",
-                "schema:value": 4
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.dk",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.fitspace",
-                "schema:value": "q"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kmax",
-                "schema:value": 9
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kmin",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kweight",
-                "schema:value": 2
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.rmax",
-                "schema:value": 5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.rmin",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.window",
-                "schema:value": "hanning"
+                "schema:name": "fit_vars",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "dk": 1,
+                  "fitspace": "q",
+                  "kmax": 9,
+                  "kmin": 0,
+                  "kweight": 2,
+                  "rmax": 5,
+                  "rmin": 0,
+                  "window": "hanning"
+                }
               }
             ]
           },
@@ -1926,73 +1545,37 @@
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "execution.execution",
-                "schema:value": "simultaneous"
+                "schema:name": "execution",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "execution": "simultaneous",
+                  "simultaneous[0]": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0].path_id": 2,
+                    "paths[1].path_id": 3,
+                    "paths[2].path_id": 5
+                  },
+                  "simultaneous[1]": {
+                    "@type": "schema:StructuredValue",
+                    "paths[0].path_id": 1,
+                    "paths[1].path_id": 4
+                  }
+                }
               },
               {
                 "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[0].path_id",
-                "schema:value": 2
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[1].path_id",
-                "schema:value": 3
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[0].paths[2].path_id",
-                "schema:value": 5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[1].paths[0].path_id",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "execution.simultaneous[1].paths[1].path_id",
-                "schema:value": 4
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.dk",
-                "schema:value": 1
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.fitspace",
-                "schema:value": "q"
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kmax",
-                "schema:value": 9
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kmin",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.kweight",
-                "schema:value": 2
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.rmax",
-                "schema:value": 5
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.rmin",
-                "schema:value": 0
-              },
-              {
-                "@type": "schema:PropertyValue",
-                "schema:name": "fit_vars.window",
-                "schema:value": "hanning"
+                "schema:name": "fit_vars",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "dk": 1,
+                  "fitspace": "q",
+                  "kmax": 9,
+                  "kmin": 0,
+                  "kweight": 2,
+                  "rmax": 5,
+                  "rmin": 0,
+                  "window": "hanning"
+                }
               }
             ]
           }

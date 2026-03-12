@@ -371,6 +371,95 @@ def _extract_meaningful_params(job):
     return result
 
 
+def _compact_params_to_properties(flat_params):
+    """Compact flat dot-separated params into PropertyValue nodes.
+
+    Groups params sharing a common prefix into schema:StructuredValue
+    objects for more compact, readable output.
+
+    Example: three flat params like merge_inputs.format.energy_column,
+    merge_inputs.format.format, merge_inputs.format.mu_column become a
+    single PropertyValue named "merge_inputs.format" whose value is a
+    StructuredValue with sub-properties.
+    """
+    if not flat_params:
+        return []
+
+    def _convert_val(v):
+        try:
+            v = float(v)
+            if v == int(v):
+                v = int(v)
+        except (ValueError, TypeError):
+            pass
+        return v
+
+    # Build tree from dot-separated names
+    root = {}
+    for p in flat_params:
+        parts = p["name"].split(".")
+        node = root
+        ok = True
+        for part in parts[:-1]:
+            if part not in node:
+                node[part] = {}
+            elif not isinstance(node[part], dict):
+                # Conflict: a leaf already exists at this path
+                ok = False
+                break
+            node = node[part]
+        if ok:
+            node[parts[-1]] = _convert_val(p["value"])
+        else:
+            # Fall back: store with full dotted key at root
+            root[p["name"]] = _convert_val(p["value"])
+
+    # Emit PropertyValue nodes from tree
+    def _emit(tree, prefix):
+        results = []
+        for key in tree:
+            val = tree[key]
+            name = f"{prefix}.{key}" if prefix else key
+            if not isinstance(val, dict):
+                results.append({
+                    "@type": "schema:PropertyValue",
+                    "schema:name": name,
+                    "schema:value": val,
+                })
+            elif len(val) >= 2:
+                # Multiple children: compact into StructuredValue
+                sv = {"@type": "schema:StructuredValue"}
+                _flatten_sv(val, "", sv)
+                results.append({
+                    "@type": "schema:PropertyValue",
+                    "schema:name": name,
+                    "schema:value": sv,
+                })
+            else:
+                # Single child: keep flattening
+                results.extend(_emit(val, name))
+        return results
+
+    def _flatten_sv(tree, prefix, sv):
+        """Flatten tree into StructuredValue, keeping dots in sub-keys."""
+        for key in tree:
+            val = tree[key]
+            subkey = f"{prefix}.{key}" if prefix else key
+            if isinstance(val, dict):
+                if len(val) >= 2:
+                    # Nested multi-child: create nested StructuredValue
+                    nested = {"@type": "schema:StructuredValue"}
+                    _flatten_sv(val, "", nested)
+                    sv[subkey] = nested
+                else:
+                    # Single child in subtree: continue flattening
+                    _flatten_sv(val, subkey, sv)
+            else:
+                sv[subkey] = val
+
+    return _emit(root, "")
+
+
 # --- Build HowToStep nodes ---
 
 def _build_howto_step(step, job, position):
@@ -425,23 +514,9 @@ def _build_howto_step(step, job, position):
     if job.get("update_time"):
         node["schema:endTime"] = job["update_time"]
 
-    # Meaningful parameters
+    # Meaningful parameters — compact into StructuredValue groups
     meaningful = _extract_meaningful_params(job)
-    for p in meaningful:
-        pv = {
-            "@type": "schema:PropertyValue",
-            "schema:name": p["name"],
-        }
-        # Try numeric conversion
-        val = p["value"]
-        try:
-            val = float(val)
-            if val == int(val):
-                val = int(val)
-        except (ValueError, TypeError):
-            pass
-        pv["schema:value"] = val
-        props.append(pv)
+    props.extend(_compact_params_to_properties(meaningful))
 
     if props:
         node["schema:additionalProperty"] = props

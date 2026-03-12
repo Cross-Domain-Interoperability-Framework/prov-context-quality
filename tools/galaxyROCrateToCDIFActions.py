@@ -343,6 +343,82 @@ def _extract_meaningful_params(job):
     return result
 
 
+def _compact_params_to_properties(flat_params):
+    """Compact flat dot-separated params into PropertyValue nodes.
+
+    Groups params sharing a common prefix into schema:StructuredValue
+    objects for more compact, readable output.
+    """
+    if not flat_params:
+        return []
+
+    def _convert_val(v):
+        try:
+            v = float(v)
+            if v == int(v):
+                v = int(v)
+        except (ValueError, TypeError):
+            pass
+        return v
+
+    # Build tree from dot-separated names
+    root = {}
+    for p in flat_params:
+        parts = p["name"].split(".")
+        node = root
+        ok = True
+        for part in parts[:-1]:
+            if part not in node:
+                node[part] = {}
+            elif not isinstance(node[part], dict):
+                ok = False
+                break
+            node = node[part]
+        if ok:
+            node[parts[-1]] = _convert_val(p["value"])
+        else:
+            root[p["name"]] = _convert_val(p["value"])
+
+    def _emit(tree, prefix):
+        results = []
+        for key in tree:
+            val = tree[key]
+            name = f"{prefix}.{key}" if prefix else key
+            if not isinstance(val, dict):
+                results.append({
+                    "@type": "schema:PropertyValue",
+                    "schema:name": name,
+                    "schema:value": val,
+                })
+            elif len(val) >= 2:
+                sv = {"@type": "schema:StructuredValue"}
+                _flatten_sv(val, "", sv)
+                results.append({
+                    "@type": "schema:PropertyValue",
+                    "schema:name": name,
+                    "schema:value": sv,
+                })
+            else:
+                results.extend(_emit(val, name))
+        return results
+
+    def _flatten_sv(tree, prefix, sv):
+        for key in tree:
+            val = tree[key]
+            subkey = f"{prefix}.{key}" if prefix else key
+            if isinstance(val, dict):
+                if len(val) >= 2:
+                    nested = {"@type": "schema:StructuredValue"}
+                    _flatten_sv(val, "", nested)
+                    sv[subkey] = nested
+                else:
+                    _flatten_sv(val, subkey, sv)
+            else:
+                sv[subkey] = val
+
+    return _emit(root, "")
+
+
 # --- Build file reference nodes ---
 
 def _build_file_ref(entity):
@@ -487,25 +563,11 @@ def _build_step_activity(step, job, position, step_id_map, parent_id=None):
         if result_refs:
             node["schema:result"] = result_refs
 
-    # Parameters as schema:additionalProperty
+    # Parameters as schema:additionalProperty — compact into StructuredValue groups
     if job:
         meaningful = _extract_meaningful_params(job)
-        if meaningful:
-            props = []
-            for p in meaningful:
-                pv = {
-                    "@type": "schema:PropertyValue",
-                    "schema:name": p["name"],
-                }
-                val = p["value"]
-                try:
-                    val = float(val)
-                    if val == int(val):
-                        val = int(val)
-                except (ValueError, TypeError):
-                    pass
-                pv["schema:value"] = val
-                props.append(pv)
+        props = _compact_params_to_properties(meaningful)
+        if props:
             node["schema:additionalProperty"] = props
 
     return node
