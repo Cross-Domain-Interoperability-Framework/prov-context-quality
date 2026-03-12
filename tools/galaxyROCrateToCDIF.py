@@ -254,8 +254,8 @@ def _parse_jobs(jobs_text):
             "update_time": j.get("update_time", ""),
             "galaxy_version": j.get("galaxy_version", ""),
             "params": j.get("params", {}),
-            "input_datasets": list(j.get("input_dataset_mapping", {}).keys()),
-            "output_datasets": list(j.get("output_dataset_mapping", {}).keys()),
+            "input_dataset_mapping": j.get("input_dataset_mapping", {}),
+            "output_dataset_mapping": j.get("output_dataset_mapping", {}),
         })
 
     return tool_jobs
@@ -283,18 +283,16 @@ def _short_tool_name(tool_id):
 def _match_steps_to_jobs(cwl_steps, tool_jobs):
     """Best-effort matching of CWL steps to Galaxy job records.
 
-    Galaxy jobs appear in execution order. CWL steps are in dependency order.
-    We match by tool name patterns since Galaxy doesn't record CWL step names.
-    Returns list of (step, job_or_None) tuples.
+    First tries pattern-based matching by tool name.  When that leaves
+    too many steps unmatched (e.g. CWL steps are just numbered 1, 2, 3),
+    falls back to 1:1 positional matching.
     """
-    # Build a mapping of short tool name -> list of unmatched jobs
     from collections import defaultdict
     job_pool = defaultdict(list)
     for job in tool_jobs:
         short = _short_tool_name(job["tool_id"])
         job_pool[short].append(job)
 
-    # Known Galaxy tool name -> CWL step name patterns
     TOOL_PATTERNS = {
         "larch_athena": ["Extract", "Merge"],
         "larch_feff": ["FEFF"],
@@ -309,7 +307,6 @@ def _match_steps_to_jobs(cwl_steps, tool_jobs):
         step_name = step["name"]
         job = None
 
-        # Try to match by tool pattern
         for tool_name, patterns in TOOL_PATTERNS.items():
             if any(p.lower() in step_name.lower() for p in patterns):
                 if job_pool[tool_name]:
@@ -318,7 +315,52 @@ def _match_steps_to_jobs(cwl_steps, tool_jobs):
 
         matched.append((step, job))
 
+    # If pattern matching left most steps unmatched, fall back to positional
+    matched_count = sum(1 for _, j in matched if j is not None)
+    if matched_count < len(matched) // 2 and len(tool_jobs) == len(cwl_steps):
+        matched = [(step, job) for step, job in zip(cwl_steps, tool_jobs)]
+
     return matched
+
+
+def _build_job_data_flow(tool_jobs):
+    """Build data-flow maps from Galaxy job dataset mappings.
+
+    Returns:
+        producer: dict mapping dataset_id -> (job_index, output_name)
+        job_inputs: list of lists, one per job, each entry is
+                    (input_name, dataset_id, source_job_index_or_None, source_output_name)
+        job_outputs: list of lists, one per job, each entry is
+                     (output_name, dataset_id)
+    """
+    producer = {}
+    job_outputs = []
+    for i, job in enumerate(tool_jobs):
+        outputs = []
+        for out_name, ds_ids in job.get("output_dataset_mapping", {}).items():
+            for ds_id in ds_ids:
+                clean_name = out_name
+                if clean_name.startswith("__new_primary_file_"):
+                    clean_name = clean_name[len("__new_primary_file_"):]
+                if clean_name.endswith("__"):
+                    clean_name = clean_name[:-2]
+                producer[ds_id] = (i, clean_name)
+                outputs.append((clean_name, ds_id))
+        job_outputs.append(outputs)
+
+    job_inputs = []
+    for i, job in enumerate(tool_jobs):
+        inputs = []
+        for in_name, ds_ids in job.get("input_dataset_mapping", {}).items():
+            for ds_id in ds_ids:
+                src = producer.get(ds_id)
+                if src:
+                    inputs.append((in_name, ds_id, src[0], src[1]))
+                else:
+                    inputs.append((in_name, ds_id, None, None))
+        job_inputs.append(inputs)
+
+    return producer, job_inputs, job_outputs
 
 
 # --- Parameter extraction from Galaxy jobs ---
@@ -462,7 +504,8 @@ def _compact_params_to_properties(flat_params):
 
 # --- Build HowToStep nodes ---
 
-def _build_howto_step(step, job, position):
+def _build_howto_step(step, job, position, job_index=None,
+                      job_inputs=None, job_outputs=None, matched_steps=None):
     """Build a schema:HowToStep node from a CWL step and optional Galaxy job."""
     node = {
         "@type": "schema:HowToStep",
@@ -470,17 +513,27 @@ def _build_howto_step(step, job, position):
         "schema:position": position,
     }
 
-    # Build description from step sources
+    # Build description from step sources (CWL or job-based)
     sources = step.get("sources", [])
     if sources:
-        # Show what this step consumes
         source_names = []
         for s in sources:
             if isinstance(s, str):
-                # CWL source format: "StepName/output_name" or "InputName"
                 source_names.append(s.split("/")[0])
         if source_names:
-            unique = list(dict.fromkeys(source_names))  # dedupe preserving order
+            unique = list(dict.fromkeys(source_names))
+            node["schema:description"] = f"Inputs from: {', '.join(unique)}"
+    elif job_index is not None and job_inputs:
+        # Fall back to job dataset mappings for description
+        inputs = job_inputs[job_index] if job_index < len(job_inputs) else []
+        src_names = []
+        for in_name, ds_id, src_job_idx, src_out_name in inputs:
+            if src_job_idx is not None and matched_steps and src_job_idx < len(matched_steps):
+                src_names.append(matched_steps[src_job_idx][0]["name"])
+            else:
+                src_names.append(f"workflow input ({in_name})")
+        if src_names:
+            unique = list(dict.fromkeys(src_names))
             node["schema:description"] = f"Inputs from: {', '.join(unique)}"
 
     if not job:
@@ -643,6 +696,18 @@ def convert_galaxy_crate(input_path, verbose=False):
             }
             matched_steps.append((step, job))
 
+    # Build job data flow maps for fallback when CWL lacks output declarations
+    _producer, ji, jo = _build_job_data_flow(tool_jobs)
+
+    # Map matched_steps indices to tool_jobs indices
+    job_index_map = {}
+    for i, (step, job) in enumerate(matched_steps):
+        if job is not None:
+            for ti, tj in enumerate(tool_jobs):
+                if tj is job:
+                    job_index_map[i] = ti
+                    break
+
     # Collect unique tools
     tool_set = OrderedDict()
     for job in tool_jobs:
@@ -769,7 +834,12 @@ def convert_galaxy_crate(input_path, verbose=False):
             # Build steps
             steps = []
             for i, (step, job) in enumerate(matched_steps):
-                step_node = _build_howto_step(step, job, i + 1)
+                tj_idx = job_index_map.get(i)
+                step_node = _build_howto_step(
+                    step, job, i + 1,
+                    job_index=tj_idx, job_inputs=ji, job_outputs=jo,
+                    matched_steps=matched_steps,
+                )
                 steps.append(step_node)
 
             if steps:

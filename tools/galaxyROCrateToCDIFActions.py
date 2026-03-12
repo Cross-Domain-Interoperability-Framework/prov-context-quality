@@ -247,8 +247,8 @@ def _parse_jobs(jobs_text):
             "update_time": j.get("update_time", ""),
             "galaxy_version": j.get("galaxy_version", ""),
             "params": j.get("params", {}),
-            "input_datasets": list(j.get("input_dataset_mapping", {}).keys()),
-            "output_datasets": list(j.get("output_dataset_mapping", {}).keys()),
+            "input_dataset_mapping": j.get("input_dataset_mapping", {}),
+            "output_dataset_mapping": j.get("output_dataset_mapping", {}),
         })
 
     return tool_jobs
@@ -268,7 +268,12 @@ def _short_tool_name(tool_id):
 # --- Match CWL steps to Galaxy jobs ---
 
 def _match_steps_to_jobs(cwl_steps, tool_jobs):
-    """Best-effort matching of CWL steps to Galaxy job records."""
+    """Best-effort matching of CWL steps to Galaxy job records.
+
+    First tries pattern-based matching by tool name.  When that leaves
+    too many steps unmatched (e.g. CWL steps are just numbered 1, 2, 3),
+    falls back to 1:1 positional matching.
+    """
     job_pool = defaultdict(list)
     for job in tool_jobs:
         short = _short_tool_name(job["tool_id"])
@@ -296,7 +301,53 @@ def _match_steps_to_jobs(cwl_steps, tool_jobs):
 
         matched.append((step, job))
 
+    # If pattern matching left most steps unmatched, fall back to positional
+    matched_count = sum(1 for _, j in matched if j is not None)
+    if matched_count < len(matched) // 2 and len(tool_jobs) == len(cwl_steps):
+        matched = [(step, job) for step, job in zip(cwl_steps, tool_jobs)]
+
     return matched
+
+
+def _build_job_data_flow(tool_jobs):
+    """Build data-flow maps from Galaxy job dataset mappings.
+
+    Returns:
+        producer: dict mapping dataset_id -> (job_index, output_name)
+        job_inputs: list of lists, one per job, each entry is
+                    (input_name, dataset_id, source_job_index_or_None, source_output_name)
+        job_outputs: list of lists, one per job, each entry is
+                     (output_name, dataset_id)
+    """
+    producer = {}  # dataset_id -> (job_index, output_name)
+    job_outputs = []
+    for i, job in enumerate(tool_jobs):
+        outputs = []
+        for out_name, ds_ids in job.get("output_dataset_mapping", {}).items():
+            for ds_id in ds_ids:
+                # Clean up Galaxy collection output names
+                clean_name = out_name
+                if clean_name.startswith("__new_primary_file_"):
+                    clean_name = clean_name[len("__new_primary_file_"):]
+                if clean_name.endswith("__"):
+                    clean_name = clean_name[:-2]
+                producer[ds_id] = (i, clean_name)
+                outputs.append((clean_name, ds_id))
+        job_outputs.append(outputs)
+
+    job_inputs = []
+    for i, job in enumerate(tool_jobs):
+        inputs = []
+        for in_name, ds_ids in job.get("input_dataset_mapping", {}).items():
+            for ds_id in ds_ids:
+                src = producer.get(ds_id)
+                if src:
+                    inputs.append((in_name, ds_id, src[0], src[1]))
+                else:
+                    inputs.append((in_name, ds_id, None, None))
+        job_inputs.append(inputs)
+
+    return producer, job_inputs, job_outputs
 
 
 # --- Parameter extraction from Galaxy jobs ---
@@ -468,7 +519,9 @@ def _build_collection_ref(entity, index):
 
 # --- Build per-step activity nodes ---
 
-def _build_step_activity(step, job, position, step_id_map, parent_id=None):
+def _build_step_activity(step, job, position, step_id_map, parent_id=None,
+                         job_index=None, job_inputs=None, job_outputs=None,
+                         matched_steps=None):
     """Build a prov:Activity node for a single workflow step.
 
     Args:
@@ -477,6 +530,10 @@ def _build_step_activity(step, job, position, step_id_map, parent_id=None):
         position: 1-based step position
         step_id_map: dict mapping step name -> activity @id for cross-references
         parent_id: @id of the parent CreateAction activity
+        job_index: index of this job in tool_jobs list (for data flow lookup)
+        job_inputs: per-job input list from _build_job_data_flow
+        job_outputs: per-job output list from _build_job_data_flow
+        matched_steps: full list of (step, job) tuples for resolving cross-refs
     """
     step_name = step["name"]
     act_id = step_id_map[step_name]
@@ -516,43 +573,97 @@ def _build_step_activity(step, job, position, step_id_map, parent_id=None):
             inst["schema:identifier"] = tool_id
         node["schema:instrument"] = inst
 
-    # Data-flow: prov:wasInformedBy upstream step activities
-    source_steps = step.get("source_steps", set())
-    if source_steps:
-        informed_by = []
-        for src in sorted(source_steps):
-            if src in step_id_map:
-                informed_by.append({"@id": step_id_map[src]})
-        if informed_by:
-            node["prov:wasInformedBy"] = informed_by
+    # --- Data flow ---
+    # Use CWL sources for prov:wasInformedBy and prov:used when available;
+    # fall back to Galaxy job dataset mappings otherwise.
+    # For schema:result, always prefer CWL outputs but fall back to jobs.
+    has_cwl_sources = bool(step.get("source_steps") or step.get("sources"))
+    has_cwl_outputs = bool(step.get("outputs"))
+    has_job_flow = (job_index is not None and job_inputs and job_outputs)
 
-    # Data-flow: prov:used — reference upstream step outputs or workflow inputs
-    sources = step.get("sources", [])
-    if sources:
-        used_refs = []
-        for s in sources:
-            if isinstance(s, str):
-                if "/" in s:
-                    # Step output reference: "StepName/output_name"
-                    src_step, src_output = s.split("/", 1)
+    # Build job_to_step index for resolving upstream refs
+    job_to_step = {}
+    if has_job_flow and matched_steps:
+        for i, (s, j) in enumerate(matched_steps):
+            if j is not None:
+                job_to_step[i] = step_id_map.get(s["name"])
+
+    # --- prov:wasInformedBy and prov:used ---
+    if has_cwl_sources:
+        # CWL-based input flow
+        source_steps = step.get("source_steps", set())
+        if source_steps:
+            informed_by = []
+            for src in sorted(source_steps):
+                if src in step_id_map:
+                    informed_by.append({"@id": step_id_map[src]})
+            if informed_by:
+                node["prov:wasInformedBy"] = informed_by
+
+        sources = step.get("sources", [])
+        if sources:
+            used_refs = []
+            for s in sources:
+                if isinstance(s, str):
+                    if "/" in s:
+                        src_step, src_output = s.split("/", 1)
+                        used_refs.append({
+                            "@type": "schema:Thing",
+                            "@id": f"#output-{src_step}-{src_output}",
+                            "schema:name": f"{src_step}/{src_output}",
+                        })
+                    else:
+                        used_refs.append({
+                            "@type": "schema:Thing",
+                            "@id": f"#input-{s}",
+                            "schema:name": s,
+                        })
+            if used_refs:
+                node["prov:used"] = used_refs
+
+    elif has_job_flow:
+        # Job-based input flow from Galaxy dataset mappings
+        inputs = job_inputs[job_index] if job_index < len(job_inputs) else []
+        if inputs:
+            informed_set = set()
+            used_refs = []
+            for in_name, ds_id, src_job_idx, src_out_name in inputs:
+                if src_job_idx is not None and src_job_idx in job_to_step:
+                    informed_set.add(src_job_idx)
+                    src_step_id = job_to_step[src_job_idx]
+                    src_step_name = matched_steps[src_job_idx][0]["name"] \
+                        if src_job_idx < len(matched_steps) else f"job-{src_job_idx}"
                     used_refs.append({
                         "@type": "schema:Thing",
-                        "@id": f"#output-{src_step}-{src_output}",
-                        "schema:name": f"{src_step}/{src_output}",
+                        "@id": f"{src_step_id}/output-{src_out_name}",
+                        "schema:name": f"{src_step_name}/{src_out_name}",
                     })
                 else:
-                    # Workflow input reference
                     used_refs.append({
                         "@type": "schema:Thing",
-                        "@id": f"#input-{s}",
-                        "schema:name": s,
+                        "@id": f"#external-{ds_id[:12]}",
+                        "schema:name": f"workflow input ({in_name})",
                     })
-        if used_refs:
-            node["prov:used"] = used_refs
 
-    # Step outputs as schema:result
-    outputs = step.get("outputs", [])
-    if outputs:
+            if informed_set:
+                informed_by = []
+                for idx in sorted(informed_set):
+                    if idx in job_to_step:
+                        informed_by.append({"@id": job_to_step[idx]})
+                node["prov:wasInformedBy"] = informed_by
+
+            seen = set()
+            deduped = []
+            for ref in used_refs:
+                if ref["@id"] not in seen:
+                    seen.add(ref["@id"])
+                    deduped.append(ref)
+            if deduped:
+                node["prov:used"] = deduped
+
+    # --- schema:result ---
+    if has_cwl_outputs:
+        outputs = step.get("outputs", [])
         result_refs = []
         for out in outputs:
             result_refs.append({
@@ -562,6 +673,24 @@ def _build_step_activity(step, job, position, step_id_map, parent_id=None):
             })
         if result_refs:
             node["schema:result"] = result_refs
+
+    elif has_job_flow:
+        # Job-based outputs from Galaxy dataset mappings
+        outputs = job_outputs[job_index] if job_index < len(job_outputs) else []
+        if outputs:
+            result_refs = []
+            seen = set()
+            for out_name, ds_id in outputs:
+                ref_id = f"{act_id}/output-{out_name}"
+                if ref_id not in seen:
+                    seen.add(ref_id)
+                    result_refs.append({
+                        "@type": "schema:Thing",
+                        "@id": ref_id,
+                        "schema:name": f"{step_name}/{out_name}",
+                    })
+            if result_refs:
+                node["schema:result"] = result_refs
 
     # Parameters as schema:additionalProperty — compact into StructuredValue groups
     if job:
@@ -820,10 +949,27 @@ def convert_galaxy_crate_actions(input_path, verbose=False):
             create_action_id = node.get("@id")
             break
 
+    # Build job data flow maps for fallback when CWL lacks output declarations
+    _producer, ji, jo = _build_job_data_flow(tool_jobs)
+
+    # Map matched_steps job indices back to tool_jobs indices
+    job_index_map = {}
+    for i, (step, job) in enumerate(matched_steps):
+        if job is not None:
+            for ti, tj in enumerate(tool_jobs):
+                if tj is job:
+                    job_index_map[i] = ti
+                    break
+
     # Build per-step activity nodes
     step_activities = []
     for i, (step, job) in enumerate(matched_steps):
-        step_node = _build_step_activity(step, job, i + 1, step_id_map, create_action_id)
+        tj_idx = job_index_map.get(i)
+        step_node = _build_step_activity(
+            step, job, i + 1, step_id_map, create_action_id,
+            job_index=tj_idx, job_inputs=ji, job_outputs=jo,
+            matched_steps=matched_steps,
+        )
         step_activities.append(step_node)
 
         if verbose and i == 0:

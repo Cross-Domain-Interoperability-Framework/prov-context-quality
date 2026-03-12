@@ -70,55 +70,416 @@
           {
             "@type": "schema:HowToStep",
             "schema:name": "1",
-            "schema:position": 1
+            "schema:position": 1,
+            "schema:description": "Inputs from: workflow input (merge_inputs|format|dat_file)",
+            "schema:startTime": "2024-09-27T10:30:39.342295",
+            "schema:endTime": "2024-09-27T10:30:46.390132",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_athena",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group.extract_group": "single",
+                  "format": "athena"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "processing.rebin",
+                "schema:value": 0
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "2",
-            "schema:position": 2
+            "schema:position": 2,
+            "schema:description": "Inputs from: workflow input (merge_inputs|format|dat_file)",
+            "schema:startTime": "2024-09-27T10:30:39.437429",
+            "schema:endTime": "2024-09-27T10:30:46.672024",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_athena",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group.extract_group": "single",
+                  "format": "athena"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "processing.rebin",
+                "schema:value": 0
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "3",
-            "schema:position": 3
+            "schema:position": 3,
+            "schema:description": "Inputs from: workflow input (merge_inputs|format|dat_file)",
+            "schema:startTime": "2024-09-27T10:30:39.530865",
+            "schema:endTime": "2024-09-27T10:30:46.990772",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_athena",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group.extract_group": "single",
+                  "format": "athena"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "processing.rebin",
+                "schema:value": 0
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "4",
-            "schema:position": 4
+            "schema:position": 4,
+            "schema:description": "Inputs from: workflow input (merge_inputs|format|dat_file)",
+            "schema:startTime": "2024-09-27T10:30:39.619530",
+            "schema:endTime": "2024-09-27T10:30:50.040010",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_athena",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group.extract_group": "single",
+                  "format": "athena"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "processing.rebin",
+                "schema:value": 0
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "5",
-            "schema:position": 5
+            "schema:position": 5,
+            "schema:description": "Inputs from: workflow input (merge_inputs|format|dat_file)",
+            "schema:startTime": "2024-09-27T10:30:39.707046",
+            "schema:endTime": "2024-09-27T10:30:49.524233",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_athena",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group.extract_group": "single",
+                  "format": "athena"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "processing.rebin",
+                "schema:value": 0
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "6",
-            "schema:position": 6
+            "schema:position": 6,
+            "schema:description": "Inputs from: workflow input (merge_inputs|format|dat_file)",
+            "schema:startTime": "2024-09-27T10:30:39.798614",
+            "schema:endTime": "2024-09-27T10:30:49.542732",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_athena",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group.extract_group": "single",
+                  "format": "athena"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "processing.rebin",
+                "schema:value": 0
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "7",
-            "schema:position": 7
+            "schema:position": 7,
+            "schema:description": "Inputs from: workflow input (merge_inputs|format|dat_file)",
+            "schema:startTime": "2024-09-27T10:30:39.900525",
+            "schema:endTime": "2024-09-27T10:30:49.710736",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_athena",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group.extract_group": "single",
+                  "format": "athena"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "processing.rebin",
+                "schema:value": 0
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "8",
             "schema:position": 8,
-            "schema:description": "Inputs from: Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj"
+            "schema:description": "Inputs from: Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj",
+            "schema:startTime": "2024-09-27T10:30:40.032227",
+            "schema:endTime": "2024-09-27T10:30:51.940457",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_athena",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "merge_inputs.format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "extract_group.extract_group": "all",
+                  "format": "athena"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "rebin": 0,
+                  "xftf": {
+                    "@type": "schema:StructuredValue",
+                    "dk": 3.5,
+                    "kmax": 11.5,
+                    "kmin": 3,
+                    "kweight": 3,
+                    "window": "gaussian",
+                    "xftf": "true"
+                  }
+                }
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "9",
             "schema:position": 9,
-            "schema:description": "Inputs from: 1, 2, 3, 4, 5"
+            "schema:description": "Inputs from: 1, 2, 3, 4, 5",
+            "schema:startTime": "2024-09-27T10:30:40.350505",
+            "schema:endTime": "2024-09-27T10:31:00.598912",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_plot",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_plot/larch_plot/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "plots[0].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "flat",
+                  "x_limit_max": 11960,
+                  "x_limit_min": 11900
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "plots[1].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "flat",
+                  "x_limit_max": 11960,
+                  "x_limit_min": 11920
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "plots[2].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "dmude",
+                  "x_limit_max": 11980,
+                  "x_limit_min": 11900
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "plots[3].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "chir_mag",
+                  "x_limit_max": 6,
+                  "x_limit_min": 0
+                }
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "10",
             "schema:position": 10,
-            "schema:description": "Inputs from: 1, 2, 6, 7"
+            "schema:description": "Inputs from: 1, 2, 6, 7",
+            "schema:startTime": "2024-09-27T10:30:40.614112",
+            "schema:endTime": "2024-09-27T10:31:00.230629",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_plot",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_plot/larch_plot/0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.80+galaxy1"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "plots[0].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "flat",
+                  "x_limit_max": 11960,
+                  "x_limit_min": 11900
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "plots[1].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "flat",
+                  "x_limit_max": 11960,
+                  "x_limit_min": 11920
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "plots[2].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "dmude",
+                  "x_limit_max": 11980,
+                  "x_limit_min": 11900
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "plots[3].variable",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "variable": "chir_mag",
+                  "x_limit_max": 6,
+                  "x_limit_min": 0
+                }
+              }
+            ]
           }
         ]
       },

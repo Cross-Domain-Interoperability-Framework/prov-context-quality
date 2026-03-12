@@ -235,6 +235,13 @@
           "schema:name": "Sn foil Calibration"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-1-Extract-Sn-Foil/output-athena_project_file",
+          "schema:name": "Extract Sn Foil/athena_project_file"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -301,6 +308,13 @@
           "schema:name": "SnO2 Calibration"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-2-Extract-SnO2/output-athena_project_file",
+          "schema:name": "Extract SnO2/athena_project_file"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -365,6 +379,13 @@
           "@type": "schema:Thing",
           "@id": "#input-Sn K edge under H2 Calibration",
           "schema:name": "Sn K edge under H2 Calibration"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-3-Merge-Sn-K-edge-H2-under-H2/output-athena_project_file",
+          "schema:name": "Merge Sn K edge H2 under H2/athena_project_file"
         }
       ],
       "schema:additionalProperty": [
@@ -434,6 +455,13 @@
           "schema:name": "Sn3Pt Sn Calibration"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-4-Merge-Sn-K-edge-H2/output-athena_project_file",
+          "schema:name": "Merge Sn K edge H2/athena_project_file"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -499,6 +527,13 @@
           "@type": "schema:Thing",
           "@id": "#input-Sn3Pt Sn Calibration",
           "schema:name": "Sn3Pt Sn Calibration"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-5-Merge-Sn-K-edge-Ar/output-athena_project_file",
+          "schema:name": "Merge Sn K edge Ar/athena_project_file"
         }
       ],
       "schema:additionalProperty": [
@@ -568,6 +603,13 @@
           "schema:name": "Sn3Pt Sn Calibration"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-6-Merge-Sn-K-edge-Air/output-athena_project_file",
+          "schema:name": "Merge Sn K edge Air/athena_project_file"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -635,6 +677,13 @@
           "schema:name": "Pt L3 edge under H2 Calibration"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-7-Merge-Pt-L3-edge-H2-under-H2/output-athena_project_file",
+          "schema:name": "Merge Pt L3 edge H2 under H2/athena_project_file"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -696,6 +745,13 @@
           "@type": "schema:Thing",
           "@id": "#input-Sn3Pt Pt Calibration",
           "schema:name": "Sn3Pt Pt Calibration"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-Merge-Pt-L3-edge-H2/output-athena_project_file",
+          "schema:name": "Merge Pt L3 edge H2/athena_project_file"
         }
       ],
       "schema:additionalProperty": [
@@ -761,6 +817,13 @@
           "schema:name": "Sn3Pt Pt Calibration"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-9-Merge-Pt-L3-edge-Ar/output-athena_project_file",
+          "schema:name": "Merge Pt L3 edge Ar/athena_project_file"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -824,6 +887,13 @@
           "schema:name": "Sn3Pt Pt Calibration"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-10-Merge-Pt-L3-edge-Air/output-athena_project_file",
+          "schema:name": "Merge Pt L3 edge Air/athena_project_file"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -882,6 +952,23 @@
           "schema:name": "Pt3Sn Cif"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-11-Pt3Sn-FEFF:-Sn/output-feff_inp",
+          "schema:name": "Pt3Sn FEFF: Sn/feff_inp"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-11-Pt3Sn-FEFF:-Sn/output-out_csv",
+          "schema:name": "Pt3Sn FEFF: Sn/out_csv"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-11-Pt3Sn-FEFF:-Sn/output-out_dir",
+          "schema:name": "Pt3Sn FEFF: Sn/out_dir"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -925,6 +1012,23 @@
           "@type": "schema:Thing",
           "@id": "#input-Pt3Sn Cif",
           "schema:name": "Pt3Sn Cif"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-12-Pt3Sn-FEFF:-Pt/output-feff_inp",
+          "schema:name": "Pt3Sn FEFF: Pt/feff_inp"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-12-Pt3Sn-FEFF:-Pt/output-out_csv",
+          "schema:name": "Pt3Sn FEFF: Pt/out_csv"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-12-Pt3Sn-FEFF:-Pt/output-out_dir",
+          "schema:name": "Pt3Sn FEFF: Pt/out_dir"
         }
       ],
       "schema:additionalProperty": [
@@ -972,6 +1076,23 @@
           "schema:name": "SnO2 Cif"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-13-SnO2-FEFF/output-feff_inp",
+          "schema:name": "SnO2 FEFF/feff_inp"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-13-SnO2-FEFF/output-out_csv",
+          "schema:name": "SnO2 FEFF/out_csv"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-13-SnO2-FEFF/output-out_dir",
+          "schema:name": "SnO2 FEFF/out_dir"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -1015,6 +1136,23 @@
           "@type": "schema:Thing",
           "@id": "#input-PtO2 Cif",
           "schema:name": "PtO2 Cif"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-14-PtO2-FEFF/output-feff_inp",
+          "schema:name": "PtO2 FEFF/feff_inp"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-14-PtO2-FEFF/output-out_csv",
+          "schema:name": "PtO2 FEFF/out_csv"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-14-PtO2-FEFF/output-out_dir",
+          "schema:name": "PtO2 FEFF/out_dir"
         }
       ],
       "schema:additionalProperty": [
@@ -1519,6 +1657,18 @@
           "schema:name": "Merge Sn K edge Air/athena_project_file"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-19-Sn-K-XANES-Plot/output-plot_collection|0_flat",
+          "schema:name": "Sn K XANES Plot/plot_collection|0_flat"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-19-Sn-K-XANES-Plot/output-plot_collection|1_dmude",
+          "schema:name": "Sn K XANES Plot/plot_collection|1_dmude"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -1810,6 +1960,18 @@
           "schema:name": "Merge Pt L3 edge Air/athena_project_file"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-22-Pt-L3-XANES-Plot/output-plot_collection|0_flat",
+          "schema:name": "Pt L3 XANES Plot/plot_collection|0_flat"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-22-Pt-L3-XANES-Plot/output-plot_collection|1_dmude",
+          "schema:name": "Pt L3 XANES Plot/plot_collection|1_dmude"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -1913,6 +2075,23 @@
           "@type": "schema:Thing",
           "@id": "#output-Pt3Sn FEFF: Sn-out_dir",
           "schema:name": "Pt3Sn FEFF: Sn/out_dir"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-23-41/output-gds_csv",
+          "schema:name": "41/gds_csv"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-23-41/output-merged_directories",
+          "schema:name": "41/merged_directories"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-23-41/output-sp_csv",
+          "schema:name": "41/sp_csv"
         }
       ],
       "schema:additionalProperty": [
@@ -2184,6 +2363,23 @@
           "schema:name": "41/merged_directories"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-24-Artemis:-H2-under-H2/output-chikr",
+          "schema:name": "Artemis: H2 under H2/chikr"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-24-Artemis:-H2-under-H2/output-fit_report",
+          "schema:name": "Artemis: H2 under H2/fit_report"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-24-Artemis:-H2-under-H2/output-rmr",
+          "schema:name": "Artemis: H2 under H2/rmr"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -2282,6 +2478,23 @@
           "@type": "schema:Thing",
           "@id": "#output-41-merged_directories",
           "schema:name": "41/merged_directories"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-25-Artemis:-H2/output-chikr",
+          "schema:name": "Artemis: H2/chikr"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-25-Artemis:-H2/output-fit_report",
+          "schema:name": "Artemis: H2/fit_report"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-25-Artemis:-H2/output-rmr",
+          "schema:name": "Artemis: H2/rmr"
         }
       ],
       "schema:additionalProperty": [
@@ -2384,6 +2597,23 @@
           "schema:name": "41/merged_directories"
         }
       ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-26-Artemis:-Ar/output-chikr",
+          "schema:name": "Artemis: Ar/chikr"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-26-Artemis:-Ar/output-fit_report",
+          "schema:name": "Artemis: Ar/fit_report"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-26-Artemis:-Ar/output-rmr",
+          "schema:name": "Artemis: Ar/rmr"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -2482,6 +2712,23 @@
           "@type": "schema:Thing",
           "@id": "#output-41-merged_directories",
           "schema:name": "41/merged_directories"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-27-Artemis:-Air/output-chikr",
+          "schema:name": "Artemis: Air/chikr"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-27-Artemis:-Air/output-fit_report",
+          "schema:name": "Artemis: Air/fit_report"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-27-Artemis:-Air/output-rmr",
+          "schema:name": "Artemis: Air/rmr"
         }
       ],
       "schema:additionalProperty": [

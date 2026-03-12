@@ -87,25 +87,257 @@
             "@type": "schema:HowToStep",
             "schema:name": "2",
             "schema:position": 1,
-            "schema:description": "Inputs from: fes2_rt01_mar02.xmu"
+            "schema:description": "Inputs from: fes2_rt01_mar02.xmu",
+            "schema:startTime": "2024-10-23T14:09:56.823447",
+            "schema:endTime": "2024-10-23T14:10:04.994552",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_athena",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.75+galaxy0"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.75+galaxy0"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "merge_inputs",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "format": {
+                    "@type": "schema:StructuredValue",
+                    "energy_column.energy_column": "auto",
+                    "format": "plaintext",
+                    "mu_column.mu_column": "auto"
+                  },
+                  "merge_inputs": "true"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "processing",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "pre_edge": {
+                    "@type": "schema:StructuredValue",
+                    "nnorm": 3,
+                    "norm1": 150,
+                    "norm2": 850,
+                    "pre1": -117,
+                    "pre2": -30,
+                    "pre_edge": "manual"
+                  },
+                  "rebin": 0
+                }
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "3",
             "schema:position": 2,
-            "schema:description": "Inputs from: 1564889.cif"
+            "schema:description": "Inputs from: 1564889.cif",
+            "schema:startTime": "2024-10-23T14:09:57.007640",
+            "schema:endTime": "2024-10-23T14:10:09.006182",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_select_paths",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_select_paths/larch_select_paths/0.9.75+galaxy0"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.75+galaxy0"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "feff_outputs[0].selection",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "paths[0]": {
+                    "@type": "schema:StructuredValue",
+                    "deltar": {
+                      "@type": "schema:StructuredValue",
+                      "value": 0,
+                      "vary": 1
+                    },
+                    "e0": {
+                      "@type": "schema:StructuredValue",
+                      "value": 0,
+                      "vary": 1
+                    },
+                    "id": 1,
+                    "s02": {
+                      "@type": "schema:StructuredValue",
+                      "value": 1,
+                      "vary": 1
+                    },
+                    "sigma2": {
+                      "@type": "schema:StructuredValue",
+                      "value": 0.003,
+                      "vary": 1
+                    }
+                  },
+                  "paths[1]": {
+                    "@type": "schema:StructuredValue",
+                    "deltar": {
+                      "@type": "schema:StructuredValue",
+                      "value": 0,
+                      "vary": 1
+                    },
+                    "e0": {
+                      "@type": "schema:StructuredValue",
+                      "value": 0,
+                      "vary": 1
+                    },
+                    "id": 2,
+                    "s02": {
+                      "@type": "schema:StructuredValue",
+                      "value": 1,
+                      "vary": 1
+                    },
+                    "sigma2": {
+                      "@type": "schema:StructuredValue",
+                      "value": 0.003,
+                      "vary": 1
+                    }
+                  },
+                  "paths[2]": {
+                    "@type": "schema:StructuredValue",
+                    "deltar": {
+                      "@type": "schema:StructuredValue",
+                      "value": 0,
+                      "vary": 1
+                    },
+                    "e0": {
+                      "@type": "schema:StructuredValue",
+                      "value": 0,
+                      "vary": 1
+                    },
+                    "id": 3,
+                    "s02": {
+                      "@type": "schema:StructuredValue",
+                      "value": 1,
+                      "vary": 1
+                    },
+                    "sigma2": {
+                      "@type": "schema:StructuredValue",
+                      "value": 0.003,
+                      "vary": 1
+                    }
+                  },
+                  "selection": "manual"
+                }
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "variables",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "deltar": {
+                    "@type": "schema:StructuredValue",
+                    "is_common": 1,
+                    "value": 0,
+                    "vary": 1
+                  },
+                  "e0": {
+                    "@type": "schema:StructuredValue",
+                    "is_common": 1,
+                    "value": 0,
+                    "vary": 1
+                  },
+                  "s02": {
+                    "@type": "schema:StructuredValue",
+                    "is_common": 1,
+                    "value": 1,
+                    "vary": 1
+                  },
+                  "sigma2": {
+                    "@type": "schema:StructuredValue",
+                    "is_common": 0,
+                    "value": 0.003,
+                    "vary": 1
+                  }
+                }
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "4",
             "schema:position": 3,
-            "schema:description": "Inputs from: 3"
+            "schema:description": "Inputs from: 3",
+            "schema:startTime": "2024-10-23T14:09:57.141933",
+            "schema:endTime": "2024-10-23T14:10:18.969215",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_artemis",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_artemis/larch_artemis/0.9.75+galaxy0"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.75+galaxy0"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "execution.execution",
+                "schema:value": "parallel"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "fit_vars",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "dk": 4,
+                  "fitspace": "r",
+                  "kmax": 20,
+                  "kmin": 0,
+                  "kweight": 2,
+                  "rmax": 10,
+                  "rmin": 0,
+                  "window": "kaiser"
+                }
+              }
+            ]
           },
           {
             "@type": "schema:HowToStep",
             "schema:name": "5",
             "schema:position": 4,
-            "schema:description": "Inputs from: 4, 3, 2"
+            "schema:description": "Inputs from: 4, 3, 2",
+            "schema:startTime": "2024-10-23T14:09:56.910615",
+            "schema:endTime": "2024-10-23T14:10:05.023876",
+            "schema:additionalProperty": [
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "tool",
+                "schema:value": "larch_feff",
+                "schema:propertyID": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_feff/larch_feff/0.9.75+galaxy0"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "toolVersion",
+                "schema:value": "0.9.75+galaxy0"
+              },
+              {
+                "@type": "schema:PropertyValue",
+                "schema:name": "format",
+                "schema:value": {
+                  "@type": "schema:StructuredValue",
+                  "absorbing_atom": 0,
+                  "format": "cif",
+                  "radius": 4
+                }
+              }
+            ]
           }
         ]
       },

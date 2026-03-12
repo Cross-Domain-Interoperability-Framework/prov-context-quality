@@ -74,7 +74,47 @@
       "schema:position": 1,
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
-      }
+      },
+      "schema:startTime": "2024-09-27T10:30:39.342295",
+      "schema:endTime": "2024-09-27T10:30:46.390132",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_athena",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+      },
+      "prov:used": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#external-95eb7b0f1c7d",
+          "schema:name": "workflow input (merge_inputs|format|dat_file)"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-1-1/output-athena_project_file",
+          "schema:name": "1/athena_project_file"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "merge_inputs.format",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "extract_group.extract_group": "single",
+            "format": "athena"
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "processing.rebin",
+          "schema:value": 0
+        }
+      ]
     },
     {
       "@type": [
@@ -90,7 +130,47 @@
       "schema:position": 2,
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
-      }
+      },
+      "schema:startTime": "2024-09-27T10:30:39.437429",
+      "schema:endTime": "2024-09-27T10:30:46.672024",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_athena",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+      },
+      "prov:used": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#external-759aaaf52eb3",
+          "schema:name": "workflow input (merge_inputs|format|dat_file)"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-2-2/output-athena_project_file",
+          "schema:name": "2/athena_project_file"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "merge_inputs.format",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "extract_group.extract_group": "single",
+            "format": "athena"
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "processing.rebin",
+          "schema:value": 0
+        }
+      ]
     },
     {
       "@type": [
@@ -106,7 +186,47 @@
       "schema:position": 3,
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
-      }
+      },
+      "schema:startTime": "2024-09-27T10:30:39.530865",
+      "schema:endTime": "2024-09-27T10:30:46.990772",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_athena",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+      },
+      "prov:used": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#external-e4daccf63788",
+          "schema:name": "workflow input (merge_inputs|format|dat_file)"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-3-3/output-athena_project_file",
+          "schema:name": "3/athena_project_file"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "merge_inputs.format",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "extract_group.extract_group": "single",
+            "format": "athena"
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "processing.rebin",
+          "schema:value": 0
+        }
+      ]
     },
     {
       "@type": [
@@ -122,7 +242,47 @@
       "schema:position": 4,
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
-      }
+      },
+      "schema:startTime": "2024-09-27T10:30:39.619530",
+      "schema:endTime": "2024-09-27T10:30:50.040010",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_athena",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+      },
+      "prov:used": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#external-fe95878be4d0",
+          "schema:name": "workflow input (merge_inputs|format|dat_file)"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-4-4/output-athena_project_file",
+          "schema:name": "4/athena_project_file"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "merge_inputs.format",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "extract_group.extract_group": "single",
+            "format": "athena"
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "processing.rebin",
+          "schema:value": 0
+        }
+      ]
     },
     {
       "@type": [
@@ -138,7 +298,47 @@
       "schema:position": 5,
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
-      }
+      },
+      "schema:startTime": "2024-09-27T10:30:39.707046",
+      "schema:endTime": "2024-09-27T10:30:49.524233",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_athena",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+      },
+      "prov:used": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#external-b0df60d9dafc",
+          "schema:name": "workflow input (merge_inputs|format|dat_file)"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-5-5/output-athena_project_file",
+          "schema:name": "5/athena_project_file"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "merge_inputs.format",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "extract_group.extract_group": "single",
+            "format": "athena"
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "processing.rebin",
+          "schema:value": 0
+        }
+      ]
     },
     {
       "@type": [
@@ -154,7 +354,47 @@
       "schema:position": 6,
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
-      }
+      },
+      "schema:startTime": "2024-09-27T10:30:39.798614",
+      "schema:endTime": "2024-09-27T10:30:49.542732",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_athena",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+      },
+      "prov:used": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#external-8633fa8a68dd",
+          "schema:name": "workflow input (merge_inputs|format|dat_file)"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-6-6/output-athena_project_file",
+          "schema:name": "6/athena_project_file"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "merge_inputs.format",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "extract_group.extract_group": "single",
+            "format": "athena"
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "processing.rebin",
+          "schema:value": 0
+        }
+      ]
     },
     {
       "@type": [
@@ -170,7 +410,47 @@
       "schema:position": 7,
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
-      }
+      },
+      "schema:startTime": "2024-09-27T10:30:39.900525",
+      "schema:endTime": "2024-09-27T10:30:49.710736",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_athena",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+      },
+      "prov:used": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#external-5de03680c65b",
+          "schema:name": "workflow input (merge_inputs|format|dat_file)"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-7-7/output-athena_project_file",
+          "schema:name": "7/athena_project_file"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "merge_inputs.format",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "extract_group.extract_group": "single",
+            "format": "athena"
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "processing.rebin",
+          "schema:value": 0
+        }
+      ]
     },
     {
       "@type": [
@@ -187,11 +467,126 @@
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
       },
+      "schema:startTime": "2024-09-27T10:30:40.032227",
+      "schema:endTime": "2024-09-27T10:30:51.940457",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_athena",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+      },
       "prov:used": [
         {
           "@type": "schema:Thing",
           "@id": "#input-Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj",
           "schema:name": "Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|Au_foil",
+          "schema:name": "8/athena_project_file_collection|Au_foil"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|K2AuCl4_ref",
+          "schema:name": "8/athena_project_file_collection|K2AuCl4_ref"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_05mM_Au_1C_Colloid",
+          "schema:name": "8/athena_project_file_collection|d_0_05mM_Au_1C_Colloid"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_05mM_Au_1C_TiO2",
+          "schema:name": "8/athena_project_file_collection|d_0_05mM_Au_1C_TiO2"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_1mM_Au_1C_Colloid",
+          "schema:name": "8/athena_project_file_collection|d_0_1mM_Au_1C_Colloid"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_1mM_Au_1C_TiO2",
+          "schema:name": "8/athena_project_file_collection|d_0_1mM_Au_1C_TiO2"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_1mM_Au_25C_Colloid",
+          "schema:name": "8/athena_project_file_collection|d_0_1mM_Au_25C_Colloid"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_1mM_Au_25C_TiO2",
+          "schema:name": "8/athena_project_file_collection|d_0_1mM_Au_25C_TiO2"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_1mM_Au_50C_Colloid",
+          "schema:name": "8/athena_project_file_collection|d_0_1mM_Au_50C_Colloid"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_1mM_Au_50C_TiO2",
+          "schema:name": "8/athena_project_file_collection|d_0_1mM_Au_50C_TiO2"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_1mM_Au_75C_Colloid",
+          "schema:name": "8/athena_project_file_collection|d_0_1mM_Au_75C_Colloid"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_1mM_Au_75C_TiO2",
+          "schema:name": "8/athena_project_file_collection|d_0_1mM_Au_75C_TiO2"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_0_625mM_Au_1C_TiO2",
+          "schema:name": "8/athena_project_file_collection|d_0_625mM_Au_1C_TiO2"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_1_25mM_Au_1C_Colloid",
+          "schema:name": "8/athena_project_file_collection|d_1_25mM_Au_1C_Colloid"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-8-8/output-athena_project_file_collection|d_1_25mM_Au_1C_TiO2",
+          "schema:name": "8/athena_project_file_collection|d_1_25mM_Au_1C_TiO2"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "merge_inputs.format",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "extract_group.extract_group": "all",
+            "format": "athena"
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "processing",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "rebin": 0,
+            "xftf": {
+              "@type": "schema:StructuredValue",
+              "dk": 3.5,
+              "kmax": 11.5,
+              "kmin": 3,
+              "kweight": 3,
+              "window": "gaussian",
+              "xftf": "true"
+            }
+          }
         }
       ]
     },
@@ -209,6 +604,16 @@
       "schema:position": 9,
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      },
+      "schema:startTime": "2024-09-27T10:30:40.350505",
+      "schema:endTime": "2024-09-27T10:31:00.598912",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_plot",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_plot/larch_plot/0.9.80+galaxy1"
       },
       "prov:wasInformedBy": [
         {
@@ -253,6 +658,70 @@
           "@id": "#output-5-athena_project_file",
           "schema:name": "5/athena_project_file"
         }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-9-9/output-plot_collection|0_flat",
+          "schema:name": "9/plot_collection|0_flat"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-9-9/output-plot_collection|1_flat",
+          "schema:name": "9/plot_collection|1_flat"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-9-9/output-plot_collection|2_dmude",
+          "schema:name": "9/plot_collection|2_dmude"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-9-9/output-plot_collection|3_chir_mag",
+          "schema:name": "9/plot_collection|3_chir_mag"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "plots[0].variable",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "variable": "flat",
+            "x_limit_max": 11960,
+            "x_limit_min": 11900
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "plots[1].variable",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "variable": "flat",
+            "x_limit_max": 11960,
+            "x_limit_min": 11920
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "plots[2].variable",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "variable": "dmude",
+            "x_limit_max": 11980,
+            "x_limit_min": 11900
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "plots[3].variable",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "variable": "chir_mag",
+            "x_limit_max": 6,
+            "x_limit_min": 0
+          }
+        }
       ]
     },
     {
@@ -269,6 +738,16 @@
       "schema:position": 10,
       "prov:wasInfluencedBy": {
         "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      },
+      "schema:startTime": "2024-09-27T10:30:40.614112",
+      "schema:endTime": "2024-09-27T10:31:00.230629",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "larch_plot",
+        "schema:version": "0.9.80+galaxy1",
+        "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_plot/larch_plot/0.9.80+galaxy1"
       },
       "prov:wasInformedBy": [
         {
@@ -304,6 +783,70 @@
           "@type": "schema:Thing",
           "@id": "#output-7-athena_project_file",
           "schema:name": "7/athena_project_file"
+        }
+      ],
+      "schema:result": [
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-10-10/output-plot_collection|0_flat",
+          "schema:name": "10/plot_collection|0_flat"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-10-10/output-plot_collection|1_flat",
+          "schema:name": "10/plot_collection|1_flat"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-10-10/output-plot_collection|2_dmude",
+          "schema:name": "10/plot_collection|2_dmude"
+        },
+        {
+          "@type": "schema:Thing",
+          "@id": "#step-10-10/output-plot_collection|3_chir_mag",
+          "schema:name": "10/plot_collection|3_chir_mag"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "plots[0].variable",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "variable": "flat",
+            "x_limit_max": 11960,
+            "x_limit_min": 11900
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "plots[1].variable",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "variable": "flat",
+            "x_limit_max": 11960,
+            "x_limit_min": 11920
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "plots[2].variable",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "variable": "dmude",
+            "x_limit_max": 11980,
+            "x_limit_min": 11900
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "plots[3].variable",
+          "schema:value": {
+            "@type": "schema:StructuredValue",
+            "variable": "chir_mag",
+            "x_limit_max": 6,
+            "x_limit_min": 0
+          }
         }
       ]
     }
