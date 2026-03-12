@@ -482,7 +482,7 @@ def _build_file_ref(entity):
 
 def _build_collection_ref(entity, index):
     """Build a reference for a Collection entity."""
-    node = {"@type": ["schema:DatasetSeries"]}
+    node = {"@type": ["schema:CreativeWorkSeries"]}
 
     eid = entity.get("@id", "")
     if eid:

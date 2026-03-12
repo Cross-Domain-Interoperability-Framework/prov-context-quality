@@ -138,7 +138,7 @@
       "prov:used": [
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-2617",
           "schema:name": "A Time",
@@ -146,7 +146,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-2618",
           "schema:name": "B Time",
@@ -154,7 +154,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-2619",
           "schema:name": "C Time",
@@ -162,7 +162,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-2620",
           "schema:name": "D Time",
@@ -170,7 +170,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-2621",
           "schema:name": "Fe metal",
@@ -178,7 +178,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-2622",
           "schema:name": "FrBr Standard",
@@ -186,7 +186,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-2623",
           "schema:name": "Reading 7a",

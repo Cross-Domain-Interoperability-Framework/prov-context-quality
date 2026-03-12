@@ -2001,7 +2001,7 @@
       "prov:used": [
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-9118",
           "schema:name": "Sn K edge H2 under H2",
@@ -2009,7 +2009,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-9119",
           "schema:name": "Sn K edge H2",
@@ -2017,7 +2017,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-9120",
           "schema:name": "Sn K edge Ar",
@@ -2025,7 +2025,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-9121",
           "schema:name": "Sn K edge Air",
@@ -2033,7 +2033,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-9122",
           "schema:name": "Pt L3 edge H2 under H2",
@@ -2041,7 +2041,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-9123",
           "schema:name": "Pt L3 edge H2",
@@ -2049,7 +2049,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-9124",
           "schema:name": "Pt L3 edge Ar",
@@ -2057,7 +2057,7 @@
         },
         {
           "@type": [
-            "schema:DatasetSeries"
+            "schema:CreativeWorkSeries"
           ],
           "@id": "#dataset_collection-9125",
           "schema:name": "Pt L3 edge Air",
