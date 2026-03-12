@@ -20,11 +20,10 @@
       "schema:endTime": "2024-10-23T14:09:57.188610",
       "schema:instrument": {
         "@type": [
-          "schema:Thing",
           "schema:SoftwareApplication"
         ],
-        "@id": "#248c4448-96a7-4050-acbf-1e68e621e637",
-        "schema:name": "Galaxy workflow engine"
+        "schema:name": "Galaxy workflow engine",
+        "schema:version": "24.1"
       }
     },
     {
@@ -40,128 +39,75 @@
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:startTime": "2024-10-23T14:09:38.754317",
       "schema:endTime": "2024-10-23T14:09:38.754320",
-      "schema:instrument": {
+      "schema:actionProcess": {
         "@type": [
-          "schema:Thing",
-          "schema:SoftwareApplication"
+          "schema:HowTo"
         ],
-        "@id": "workflows/6f2a09489271f4de.gxwf.yml",
-        "schema:name": "FeS2 Analysis",
         "schema:additionalType": [
           "bios:ComputationalWorkflow"
         ],
-        "schema:object": [
+        "schema:name": "FeS2 Analysis workflow",
+        "@id": "workflows/6f2a09489271f4de.gxwf.yml",
+        "bios:computationalTool": [
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#f640df2f-ce68-4309-bc83-2e052fb749f1",
-            "schema:name": "fes2_rt01_mar02.xmu",
-            "schema:additionalType": [
-              "bios:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_athena",
+            "schema:version": "0.9.75+galaxy0",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.75+galaxy0"
           },
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#0c058fb5-124f-4a1e-820a-643ff322c47a",
-            "schema:name": "1564889.cif",
-            "schema:additionalType": [
-              "bios:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_select_paths",
+            "schema:version": "0.9.75+galaxy0",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_select_paths/larch_select_paths/0.9.75+galaxy0"
+          },
+          {
+            "@type": [
+              "schema:SoftwareApplication"
+            ],
+            "schema:name": "larch_artemis",
+            "schema:version": "0.9.75+galaxy0",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_artemis/larch_artemis/0.9.75+galaxy0"
+          },
+          {
+            "@type": [
+              "schema:SoftwareApplication"
+            ],
+            "schema:name": "larch_feff",
+            "schema:version": "0.9.75+galaxy0",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_feff/larch_feff/0.9.75+galaxy0"
           }
         ],
-        "schema:result": [
+        "schema:step": [
           {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#77c5b2f3-9a04-44dd-befd-a76467d5277c",
-            "schema:name": "FeS2_plot",
-            "schema:additionalType": [
-              "bios:FormalParameter",
-              "File"
-            ]
+            "@type": "schema:HowToStep",
+            "schema:name": "2",
+            "schema:position": 1,
+            "schema:description": "Inputs from: fes2_rt01_mar02.xmu"
           },
           {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#0b97bec8-4ea8-4a62-bc9d-fb03e229da8c",
-            "schema:name": "FeS2_athena",
-            "schema:additionalType": [
-              "bios:FormalParameter",
-              "File"
-            ]
+            "@type": "schema:HowToStep",
+            "schema:name": "3",
+            "schema:position": 2,
+            "schema:description": "Inputs from: 1564889.cif"
           },
           {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#d27f0edf-71e5-4739-b016-770e7bcd02bb",
-            "schema:name": "fes2_sp",
-            "schema:additionalType": [
-              "bios:FormalParameter",
-              "File"
-            ]
+            "@type": "schema:HowToStep",
+            "schema:name": "4",
+            "schema:position": 3,
+            "schema:description": "Inputs from: 3"
           },
           {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#f00eb10f-cf39-4a5c-a65f-f78e3ebd0600",
-            "schema:name": "fes2_gds",
-            "schema:additionalType": [
-              "bios:FormalParameter",
-              "File"
-            ]
-          },
-          {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#8b809a36-4335-40f1-b5a7-279154baaeaa",
-            "schema:name": "fit_report_FeS2",
-            "schema:additionalType": [
-              "bios:FormalParameter",
-              "File"
-            ]
-          },
-          {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#783887b9-b28d-4a8f-8c88-91eabb9170bb",
-            "schema:name": "rmr_FeS2",
-            "schema:additionalType": [
-              "bios:FormalParameter",
-              "File"
-            ]
-          },
-          {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#acc4dcb8-d90b-40d7-aac2-08878864e45e",
-            "schema:name": "chikr_FeS2",
-            "schema:additionalType": [
-              "bios:FormalParameter",
-              "File"
-            ]
+            "@type": "schema:HowToStep",
+            "schema:name": "5",
+            "schema:position": 4,
+            "schema:description": "Inputs from: 4, 3, 2"
           }
-        ],
-        "schema:subjectOf": {
-          "@type": [
-            "schema:MediaObject",
-            "schema:HowTo",
-            "schema:SoftwareSourceCode"
-          ],
-          "@id": "workflows/6f2a09489271f4de.abstract.cwl",
-          "schema:name": "workflows/6f2a09489271f4de.abstract"
-        }
+        ]
       },
       "prov:used": [
         {
@@ -170,10 +116,7 @@
           ],
           "@id": "datasets/fes2_rt01_mar02.xmu_df0bac1ee137448a.txt",
           "schema:name": "fes2_rt01_mar02.xmu",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#f640df2f-ce68-4309-bc83-2e052fb749f1"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -181,10 +124,7 @@
           ],
           "@id": "datasets/1564889.cif_df02c7af9dfe5b62.cif",
           "schema:name": "1564889.cif",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#0c058fb5-124f-4a1e-820a-643ff322c47a"
-          }
+          "schema:encodingFormat": "text/plain"
         }
       ],
       "schema:result": [
@@ -194,10 +134,7 @@
           ],
           "@id": "datasets/FeS2_plot_6c2ea4582a260280.png",
           "schema:name": "FeS2_plot",
-          "schema:encodingFormat": "application/octet-stream",
-          "schema:exampleOfWork": {
-            "@id": "#77c5b2f3-9a04-44dd-befd-a76467d5277c"
-          }
+          "schema:encodingFormat": "application/octet-stream"
         },
         {
           "@type": [
@@ -205,10 +142,7 @@
           ],
           "@id": "datasets/FeS2_athena_d49ffa4044c67d15.prj",
           "schema:name": "FeS2_athena",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#0b97bec8-4ea8-4a62-bc9d-fb03e229da8c"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -216,10 +150,7 @@
           ],
           "@id": "datasets/fes2_sp_75738551921d866c.sp",
           "schema:name": "fes2_sp",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#d27f0edf-71e5-4739-b016-770e7bcd02bb"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -227,10 +158,7 @@
           ],
           "@id": "datasets/fes2_gds_547228271cdb66e2.gds",
           "schema:name": "fes2_gds",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#f00eb10f-cf39-4a5c-a65f-f78e3ebd0600"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -238,10 +166,7 @@
           ],
           "@id": "datasets/fit_report_FeS2_a9305118c6acc078.feffit",
           "schema:name": "fit_report_FeS2",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#8b809a36-4335-40f1-b5a7-279154baaeaa"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -249,10 +174,7 @@
           ],
           "@id": "datasets/rmr_FeS2_fb5bc774c9b03fce.png",
           "schema:name": "rmr_FeS2",
-          "schema:encodingFormat": "application/octet-stream",
-          "schema:exampleOfWork": {
-            "@id": "#783887b9-b28d-4a8f-8c88-91eabb9170bb"
-          }
+          "schema:encodingFormat": "application/octet-stream"
         },
         {
           "@type": [
@@ -260,10 +182,7 @@
           ],
           "@id": "datasets/chikr_FeS2_c3e4da2bb600d6e3.png",
           "schema:name": "chikr_FeS2",
-          "schema:encodingFormat": "application/octet-stream",
-          "schema:exampleOfWork": {
-            "@id": "#acc4dcb8-d90b-40d7-aac2-08878864e45e"
-          }
+          "schema:encodingFormat": "application/octet-stream"
         }
       ]
     }

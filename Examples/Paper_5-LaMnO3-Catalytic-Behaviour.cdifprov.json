@@ -1,7 +1,8 @@
 {
   "@context": {
     "schema": "http://schema.org/",
-    "prov": "http://www.w3.org/ns/prov#"
+    "prov": "http://www.w3.org/ns/prov#",
+    "bios": "https://bioschemas.org/"
   },
   "@graph": [
     {
@@ -19,11 +20,10 @@
       "schema:endTime": "2024-10-30T14:10:33.822661",
       "schema:instrument": {
         "@type": [
-          "schema:Thing",
           "schema:SoftwareApplication"
         ],
-        "@id": "#6bbb765e-5c48-42ed-8a0d-dcad0afdb12c",
-        "schema:name": "Galaxy workflow engine"
+        "schema:name": "Galaxy workflow engine",
+        "schema:version": "24.1"
       }
     },
     {
@@ -39,68 +39,137 @@
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:startTime": "2024-10-30T14:02:40.265013",
       "schema:endTime": "2024-10-30T14:02:40.265017",
-      "schema:instrument": {
+      "schema:actionProcess": {
         "@type": [
-          "schema:Thing",
-          "schema:SoftwareApplication"
+          "schema:HowTo"
         ],
+        "schema:additionalType": [
+          "bios:ComputationalWorkflow"
+        ],
+        "schema:name": "LaMnO3 Catalytic Behaviour workflow",
         "@id": "workflows/f06ca0d3d213b10e.gxwf.yml",
-        "schema:name": "LaMnO3 Catalytic Behaviour",
-        "schema:object": [
+        "bios:computationalTool": [
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#fadd0238-2a3b-4dce-978c-aa1e4fced660",
-            "schema:name": "Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_athena",
+            "schema:version": "0.9.80+galaxy1",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
           },
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#092081eb-d50c-47f8-b999-ef8afece02f5",
-            "schema:name": "Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_feff",
+            "schema:version": "0.9.80+galaxy0",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_feff/larch_feff/0.9.80+galaxy0"
           },
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#a3ee12d6-46f7-48ed-9d0d-873e5a1f46b3",
-            "schema:name": "mp-565203_Mn2O3.cif",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_plot",
+            "schema:version": "0.9.80+galaxy1",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_plot/larch_plot/0.9.80+galaxy1"
           },
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#8ffbf969-27c5-4072-99cf-ce95fa079946",
-            "schema:name": "1667441.cif",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_select_paths",
+            "schema:version": "0.9.80+galaxy0",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_select_paths/larch_select_paths/0.9.80+galaxy0"
+          },
+          {
+            "@type": [
+              "schema:SoftwareApplication"
+            ],
+            "schema:name": "larch_artemis",
+            "schema:version": "0.9.80+galaxy2",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_artemis/larch_artemis/0.9.80+galaxy2"
           }
         ],
-        "schema:subjectOf": {
-          "@type": [
-            "schema:MediaObject",
-            "schema:HowTo",
-            "schema:SoftwareSourceCode"
-          ],
-          "@id": "workflows/f06ca0d3d213b10e.abstract.cwl",
-          "schema:name": "workflows/f06ca0d3d213b10e.abstract"
-        }
+        "schema:step": [
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "4",
+            "schema:position": 1,
+            "schema:description": "Inputs from: Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "5",
+            "schema:position": 2,
+            "schema:description": "Inputs from: Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "6",
+            "schema:position": 3,
+            "schema:description": "Inputs from: Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "7",
+            "schema:position": 4,
+            "schema:description": "Inputs from: mp-565203_Mn2O3.cif"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "8",
+            "schema:position": 5,
+            "schema:description": "Inputs from: 1667441.cif"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "9",
+            "schema:position": 6,
+            "schema:description": "Inputs from: 4"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "10",
+            "schema:position": 7,
+            "schema:description": "Inputs from: 4"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "11",
+            "schema:position": 8,
+            "schema:description": "Inputs from: 6"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "12",
+            "schema:position": 9,
+            "schema:description": "Inputs from: 6"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "13",
+            "schema:position": 10,
+            "schema:description": "Inputs from: 7"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "14",
+            "schema:position": 11,
+            "schema:description": "Inputs from: 8"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "15",
+            "schema:position": 12,
+            "schema:description": "Inputs from: 13, 7, 4"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "16",
+            "schema:position": 13,
+            "schema:description": "Inputs from: 14, 8, 5"
+          }
+        ]
       },
       "prov:used": [
         {
@@ -109,10 +178,7 @@
           ],
           "@id": "datasets/Upload__Figure_2-5__Mn_K_edge_LMOA_time_series.prj_4bf0dfdd37d908b6.prj",
           "schema:name": "Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#fadd0238-2a3b-4dce-978c-aa1e4fced660"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -120,10 +186,7 @@
           ],
           "@id": "datasets/Upload__Figure_2-5__La_L3_edge_LMOA_time_series.prj_a22d0f72d1f36993.prj",
           "schema:name": "Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#092081eb-d50c-47f8-b999-ef8afece02f5"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -131,10 +194,7 @@
           ],
           "@id": "datasets/mp-565203_Mn2O3.cif_acaef9f591c8f62d.cif",
           "schema:name": "mp-565203_Mn2O3.cif",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#a3ee12d6-46f7-48ed-9d0d-873e5a1f46b3"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -142,10 +202,7 @@
           ],
           "@id": "datasets/1667441.cif_7be2e841c9ddb917.cif",
           "schema:name": "1667441.cif",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#8ffbf969-27c5-4072-99cf-ce95fa079946"
-          }
+          "schema:encodingFormat": "text/plain"
         }
       ]
     }

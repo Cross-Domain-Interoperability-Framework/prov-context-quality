@@ -1,7 +1,8 @@
 {
   "@context": {
     "schema": "http://schema.org/",
-    "prov": "http://www.w3.org/ns/prov#"
+    "prov": "http://www.w3.org/ns/prov#",
+    "bios": "https://bioschemas.org/"
   },
   "@graph": [
     {
@@ -19,11 +20,10 @@
       "schema:endTime": "2024-09-11T16:12:57.977262",
       "schema:instrument": {
         "@type": [
-          "schema:Thing",
           "schema:SoftwareApplication"
         ],
-        "@id": "#5a5580a2-c86f-485f-995b-49da50a2287d",
-        "schema:name": "Galaxy workflow engine"
+        "schema:name": "Galaxy workflow engine",
+        "schema:version": "23.2"
       }
     },
     {
@@ -39,130 +39,158 @@
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:startTime": "2024-09-11T16:11:48.596770",
       "schema:endTime": "2024-09-11T16:11:48.628535",
-      "schema:instrument": {
+      "schema:actionProcess": {
         "@type": [
-          "schema:Thing",
-          "schema:SoftwareApplication"
+          "schema:HowTo"
         ],
+        "schema:additionalType": [
+          "bios:ComputationalWorkflow"
+        ],
+        "schema:name": "Paper_2_Diphosphine-WF workflow",
         "@id": "workflows/1967248db44ca916.gxwf.yml",
-        "schema:name": "Paper_2_Diphosphine-WF",
-        "schema:object": [
+        "bios:computationalTool": [
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#dataset_collection-2617-param",
-            "schema:name": "A Time",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "Collection"
-            ]
+            "schema:name": "larch_athena",
+            "schema:version": "0.9.80+galaxy1",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
           },
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#dataset_collection-2618-param",
-            "schema:name": "B Time",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "Collection"
-            ]
-          },
-          {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#dataset_collection-2619-param",
-            "schema:name": "C Time",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "Collection"
-            ]
-          },
-          {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#dataset_collection-2620-param",
-            "schema:name": "D Time",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "Collection"
-            ]
-          },
-          {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#dataset_collection-2621-param",
-            "schema:name": "Fe metal",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "Collection"
-            ]
-          },
-          {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#dataset_collection-2622-param",
-            "schema:name": "FrBr Standard",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "Collection"
-            ]
-          },
-          {
-            "@type": [
-              "schema:MediaObject"
-            ],
-            "@id": "#dataset_collection-2623-param",
-            "schema:name": "Reading 7a",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "Collection"
-            ]
+            "schema:name": "larch_plot",
+            "schema:version": "0.9.80+galaxy1",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_plot/larch_plot/0.9.80+galaxy1"
           }
         ],
-        "schema:subjectOf": {
-          "@type": [
-            "schema:MediaObject",
-            "schema:HowTo",
-            "schema:SoftwareSourceCode"
-          ],
-          "@id": "workflows/1967248db44ca916.abstract.cwl",
-          "schema:name": "workflows/1967248db44ca916.abstract"
-        }
+        "schema:step": [
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "7",
+            "schema:position": 1,
+            "schema:description": "Inputs from: A data"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "8",
+            "schema:position": 2,
+            "schema:description": "Inputs from: B data"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "9",
+            "schema:position": 3,
+            "schema:description": "Inputs from: C data"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "10",
+            "schema:position": 4,
+            "schema:description": "Inputs from: D data"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "11",
+            "schema:position": 5,
+            "schema:description": "Inputs from: Fe Metal"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "12",
+            "schema:position": 6,
+            "schema:description": "Inputs from: FeBr"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "13",
+            "schema:position": 7,
+            "schema:description": "Inputs from: 7a"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "14",
+            "schema:position": 8,
+            "schema:description": "Inputs from: 7, 8, 9, 10, 11"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "15",
+            "schema:position": 9,
+            "schema:description": "Inputs from: 7, 8, 9, 10, 11, 12"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "16",
+            "schema:position": 10,
+            "schema:description": "Inputs from: 7, 8, 9, 10, 11, 12"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "17",
+            "schema:position": 11,
+            "schema:description": "Inputs from: 7, 8, 9, 10, 13"
+          }
+        ]
       },
       "prov:used": [
         {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
           "@id": "#dataset_collection-2617",
-          "schema:name": "A Time"
+          "schema:name": "A Time",
+          "schema:description": "Collection of 10 items"
         },
         {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
           "@id": "#dataset_collection-2618",
-          "schema:name": "B Time"
+          "schema:name": "B Time",
+          "schema:description": "Collection of 10 items"
         },
         {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
           "@id": "#dataset_collection-2619",
-          "schema:name": "C Time"
+          "schema:name": "C Time",
+          "schema:description": "Collection of 11 items"
         },
         {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
           "@id": "#dataset_collection-2620",
-          "schema:name": "D Time"
+          "schema:name": "D Time",
+          "schema:description": "Collection of 10 items"
         },
         {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
           "@id": "#dataset_collection-2621",
-          "schema:name": "Fe metal"
+          "schema:name": "Fe metal",
+          "schema:description": "Collection of 3 items"
         },
         {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
           "@id": "#dataset_collection-2622",
-          "schema:name": "FrBr Standard"
+          "schema:name": "FrBr Standard",
+          "schema:description": "Collection of 10 items"
         },
         {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
           "@id": "#dataset_collection-2623",
-          "schema:name": "Reading 7a"
+          "schema:name": "Reading 7a",
+          "schema:description": "Collection of 3 items"
         }
       ]
     }

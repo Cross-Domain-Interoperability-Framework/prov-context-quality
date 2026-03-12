@@ -1,7 +1,8 @@
 {
   "@context": {
     "schema": "http://schema.org/",
-    "prov": "http://www.w3.org/ns/prov#"
+    "prov": "http://www.w3.org/ns/prov#",
+    "bios": "https://bioschemas.org/"
   },
   "@graph": [
     {
@@ -19,11 +20,10 @@
       "schema:endTime": "2024-09-27T10:30:40.690532",
       "schema:instrument": {
         "@type": [
-          "schema:Thing",
           "schema:SoftwareApplication"
         ],
-        "@id": "#a1f5b92d-7152-4a4a-90fe-14446c76da01",
-        "schema:name": "Galaxy workflow engine"
+        "schema:name": "Galaxy workflow engine",
+        "schema:version": "23.2"
       }
     },
     {
@@ -39,35 +39,88 @@
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:startTime": "2024-09-27T10:28:59.043893",
       "schema:endTime": "2024-09-27T10:28:59.043905",
-      "schema:instrument": {
+      "schema:actionProcess": {
         "@type": [
-          "schema:Thing",
-          "schema:SoftwareApplication"
+          "schema:HowTo"
         ],
+        "schema:additionalType": [
+          "bios:ComputationalWorkflow"
+        ],
+        "schema:name": "Workflow constructed from history ''Extracting structural information of Au colloids at ultra-dilute concentrations: identification of growth during nanoparticle immobilization (paper-3'' workflow",
         "@id": "workflows/1a5c6ad02e8082a6.gxwf.yml",
-        "schema:name": "Workflow constructed from history ''Extracting structural information of Au colloids at ultra-dilute concentrations: identification of growth during nanoparticle immobilization (paper-3''",
-        "schema:object": [
+        "bios:computationalTool": [
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#5e03f729-585a-44c0-9eb0-f5299397a62c",
-            "schema:name": "Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_athena",
+            "schema:version": "0.9.80+galaxy1",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.80+galaxy1"
+          },
+          {
+            "@type": [
+              "schema:SoftwareApplication"
+            ],
+            "schema:name": "larch_plot",
+            "schema:version": "0.9.80+galaxy1",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_plot/larch_plot/0.9.80+galaxy1"
           }
         ],
-        "schema:subjectOf": {
-          "@type": [
-            "schema:MediaObject",
-            "schema:HowTo",
-            "schema:SoftwareSourceCode"
-          ],
-          "@id": "workflows/1a5c6ad02e8082a6.abstract.cwl",
-          "schema:name": "workflows/1a5c6ad02e8082a6.abstract"
-        }
+        "schema:step": [
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "1",
+            "schema:position": 1
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "2",
+            "schema:position": 2
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "3",
+            "schema:position": 3
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "4",
+            "schema:position": 4
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "5",
+            "schema:position": 5
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "6",
+            "schema:position": 6
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "7",
+            "schema:position": 7
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "8",
+            "schema:position": 8,
+            "schema:description": "Inputs from: Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "9",
+            "schema:position": 9,
+            "schema:description": "Inputs from: 1, 2, 3, 4, 5"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "10",
+            "schema:position": 10,
+            "schema:description": "Inputs from: 1, 2, 6, 7"
+          }
+        ]
       },
       "prov:used": [
         {
@@ -76,10 +129,7 @@
           ],
           "@id": "datasets/Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj_1.prj",
           "schema:name": "Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#5e03f729-585a-44c0-9eb0-f5299397a62c"
-          }
+          "schema:encodingFormat": "text/plain"
         }
       ]
     }

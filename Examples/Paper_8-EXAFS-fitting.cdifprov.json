@@ -1,7 +1,8 @@
 {
   "@context": {
     "schema": "http://schema.org/",
-    "prov": "http://www.w3.org/ns/prov#"
+    "prov": "http://www.w3.org/ns/prov#",
+    "bios": "https://bioschemas.org/"
   },
   "@graph": [
     {
@@ -19,11 +20,10 @@
       "schema:endTime": "2024-10-28T17:49:27.648788",
       "schema:instrument": {
         "@type": [
-          "schema:Thing",
           "schema:SoftwareApplication"
         ],
-        "@id": "#1f93607d-e8f7-4d03-b4c9-6d3619810560",
-        "schema:name": "Galaxy workflow engine"
+        "schema:name": "Galaxy workflow engine",
+        "schema:version": "24.1"
       }
     },
     {
@@ -39,68 +39,93 @@
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:startTime": "2024-09-27T15:27:15.076443",
       "schema:endTime": "2024-09-27T15:27:15.076453",
-      "schema:instrument": {
+      "schema:actionProcess": {
         "@type": [
-          "schema:Thing",
-          "schema:SoftwareApplication"
+          "schema:HowTo"
         ],
+        "schema:additionalType": [
+          "bios:ComputationalWorkflow"
+        ],
+        "schema:name": "Workflow to reproduce paper 8 EXAFS fitting workflow",
         "@id": "workflows/0a07785dca20180d.gxwf.yml",
-        "schema:name": "Workflow to reproduce paper 8 EXAFS fitting",
-        "schema:object": [
+        "bios:computationalTool": [
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#d71cd989-da11-4217-b71c-d72453bac70b",
-            "schema:name": "Washcoat Athena project file from paper",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_athena",
+            "schema:version": "0.9.75+galaxy2",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_athena/larch_athena/0.9.75+galaxy2"
           },
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#5b9487c3-d0ed-40f3-8a79-094e4c9d2374",
-            "schema:name": "20g ash Athena project file from paper",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_feff",
+            "schema:version": "0.9.75+galaxy0",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_feff/larch_feff/0.9.75+galaxy0"
           },
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#f544af95-5ed7-43ea-bbb4-7dbc315227aa",
-            "schema:name": "PdO_cif_file.cif",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_select_paths",
+            "schema:version": "0.9.80+galaxy0",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_select_paths/larch_select_paths/0.9.80+galaxy0"
           },
           {
             "@type": [
-              "schema:MediaObject"
+              "schema:SoftwareApplication"
             ],
-            "@id": "#e7984433-8814-4b43-b8b2-1b24d2e4753d",
-            "schema:name": "Pd_cif_file.cif",
-            "schema:additionalType": [
-              "schema:FormalParameter",
-              "File"
-            ]
+            "schema:name": "larch_artemis",
+            "schema:version": "0.9.80+galaxy2",
+            "schema:identifier": "toolshed.g2.bx.psu.edu/repos/muon-spectroscopy-computational-project/larch_artemis/larch_artemis/0.9.80+galaxy2"
           }
         ],
-        "schema:subjectOf": {
-          "@type": [
-            "schema:MediaObject",
-            "schema:HowTo",
-            "schema:SoftwareSourceCode"
-          ],
-          "@id": "workflows/0a07785dca20180d.abstract.cwl",
-          "schema:name": "workflows/0a07785dca20180d.abstract"
-        }
+        "schema:step": [
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "4",
+            "schema:position": 1,
+            "schema:description": "Inputs from: Washcoat Athena project file from paper"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "5",
+            "schema:position": 2,
+            "schema:description": "Inputs from: 20g ash Athena project file from paper"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "6",
+            "schema:position": 3,
+            "schema:description": "Inputs from: PdO cif file"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "7",
+            "schema:position": 4,
+            "schema:description": "Inputs from: Pd cif file"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "8",
+            "schema:position": 5,
+            "schema:description": "Inputs from: 6, 7"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "9",
+            "schema:position": 6,
+            "schema:description": "Inputs from: 8, 4"
+          },
+          {
+            "@type": "schema:HowToStep",
+            "schema:name": "10",
+            "schema:position": 7,
+            "schema:description": "Inputs from: 8, 5"
+          }
+        ]
       },
       "prov:used": [
         {
@@ -109,10 +134,7 @@
           ],
           "@id": "datasets/Washcoat_Athena_project_file_from_paper_3dfde3a7417d0973.prj",
           "schema:name": "Washcoat Athena project file from paper",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#d71cd989-da11-4217-b71c-d72453bac70b"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -120,10 +142,7 @@
           ],
           "@id": "datasets/20g_ash_Athena_project_file_from_paper_cb3d3286c5ba876f.prj",
           "schema:name": "20g ash Athena project file from paper",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#5b9487c3-d0ed-40f3-8a79-094e4c9d2374"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -131,10 +150,7 @@
           ],
           "@id": "datasets/PdO_cif_file.cif_ebd697d0c147d306.cif",
           "schema:name": "PdO_cif_file.cif",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#f544af95-5ed7-43ea-bbb4-7dbc315227aa"
-          }
+          "schema:encodingFormat": "text/plain"
         },
         {
           "@type": [
@@ -142,10 +158,7 @@
           ],
           "@id": "datasets/Pd_cif_file.cif_b0b2392468d82f00.cif",
           "schema:name": "Pd_cif_file.cif",
-          "schema:encodingFormat": "text/plain",
-          "schema:exampleOfWork": {
-            "@id": "#e7984433-8814-4b43-b8b2-1b24d2e4753d"
-          }
+          "schema:encodingFormat": "text/plain"
         }
       ]
     }

@@ -31,6 +31,16 @@ python tools/WRROCToCdifProv.py input-rocrate.json -o output.cdifprov.json -v
 python tools/WRROCToCdifProv.py input-rocrate.json
 ```
 
+- **[tools/galaxyROCrateToCDIF.py](tools/galaxyROCrateToCDIF.py)** — Converts full Galaxy RO-Crate archives (zip or directory) into cdifProv documents with per-step methodology detail. Reads `ro-crate-metadata.json`, CWL abstract workflow (step definitions), Galaxy workflow YAML (input defaults), and `jobs_attrs.txt` (execution records with tool IDs, versions, parameters, and timestamps). Output represents workflow steps as `schema:HowToStep` entries within a `schema:actionProcess` → `schema:HowTo` structure, with `bios:computationalTool` listing all tools used. Requires PyYAML.
+
+```bash
+# Convert Galaxy RO-Crate zip
+python tools/galaxyROCrateToCDIF.py crate.rocrate.zip -o output.cdifprov.json
+
+# Convert extracted directory
+python tools/galaxyROCrateToCDIF.py crate-directory/ -o output.cdifprov.json -v
+```
+
 ### Examples
 
 The [Examples/](Examples/) folder contains provenance instance documents in various formats:
@@ -46,7 +56,7 @@ The [Examples/](Examples/) folder contains provenance instance documents in vari
 | `Paper_5-LaMnO3*.*` | Galaxy LaMnO3 catalytic behaviour workflow |
 | `Paper_8-EXAFS-fitting.*` | Galaxy EXAFS fitting workflow |
 
-Galaxy workflow RO-Crates originate from [Zenodo record 13842780](https://zenodo.org/records/13842780). All `.cdifprov.json` files were generated using [tools/WRROCToCdifProv.py](tools/WRROCToCdifProv.py).
+Galaxy workflow RO-Crates originate from [Zenodo record 13842780](https://zenodo.org/records/13842780). Galaxy `.cdifprov.json` files were generated using [tools/galaxyROCrateToCDIF.py](tools/galaxyROCrateToCDIF.py), which produces per-step methodology detail from the full crate contents (CWL, Galaxy YAML, job records). Bennu ARC examples were generated using [tools/WRROCToCdifProv.py](tools/WRROCToCdifProv.py).
 
 ## Related Repositories
 
