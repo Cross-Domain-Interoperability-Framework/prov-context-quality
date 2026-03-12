@@ -49,41 +49,6 @@
         "schema:name": "Paper_2_Diphosphine-WF",
         "@id": "workflows/1967248db44ca916.gxwf.yml"
       },
-      "schema:hasPart": [
-        {
-          "@id": "#step-1-7"
-        },
-        {
-          "@id": "#step-2-8"
-        },
-        {
-          "@id": "#step-3-9"
-        },
-        {
-          "@id": "#step-4-10"
-        },
-        {
-          "@id": "#step-5-11"
-        },
-        {
-          "@id": "#step-6-12"
-        },
-        {
-          "@id": "#step-7-13"
-        },
-        {
-          "@id": "#step-8-14"
-        },
-        {
-          "@id": "#step-9-15"
-        },
-        {
-          "@id": "#step-10-16"
-        },
-        {
-          "@id": "#step-11-17"
-        }
-      ],
       "prov:used": [
         {
           "@type": [
@@ -155,8 +120,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 1,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-A data",
           "schema:name": "A data"
         }
@@ -174,8 +143,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 2,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-B data",
           "schema:name": "B data"
         }
@@ -193,8 +166,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 3,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-C data",
           "schema:name": "C data"
         }
@@ -212,8 +189,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 4,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-D data",
           "schema:name": "D data"
         }
@@ -231,8 +212,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 5,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Fe Metal",
           "schema:name": "Fe Metal"
         }
@@ -250,8 +235,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 6,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-FeBr",
           "schema:name": "FeBr"
         }
@@ -269,8 +258,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 7,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-7a",
           "schema:name": "7a"
         }
@@ -288,6 +281,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 8,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-4-10"
@@ -307,22 +303,27 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-athena_project_file",
           "schema:name": "7/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-athena_project_file",
           "schema:name": "8/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-9-athena_project_file",
           "schema:name": "9/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-10-athena_project_file",
           "schema:name": "10/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-11-athena_project_file",
           "schema:name": "11/athena_project_file"
         }
@@ -340,6 +341,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 9,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-4-10"
@@ -362,26 +366,32 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-athena_project_file",
           "schema:name": "7/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-athena_project_file",
           "schema:name": "8/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-9-athena_project_file",
           "schema:name": "9/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-10-athena_project_file",
           "schema:name": "10/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-11-athena_project_file",
           "schema:name": "11/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-12-athena_project_file",
           "schema:name": "12/athena_project_file"
         }
@@ -399,6 +409,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 10,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-4-10"
@@ -421,26 +434,32 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-athena_project_file",
           "schema:name": "7/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-athena_project_file",
           "schema:name": "8/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-9-athena_project_file",
           "schema:name": "9/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-10-athena_project_file",
           "schema:name": "10/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-11-athena_project_file",
           "schema:name": "11/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-12-athena_project_file",
           "schema:name": "12/athena_project_file"
         }
@@ -458,6 +477,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 11,
+      "prov:wasInfluencedBy": {
+        "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-4-10"
@@ -477,22 +499,27 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-athena_project_file",
           "schema:name": "7/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-athena_project_file",
           "schema:name": "8/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-9-athena_project_file",
           "schema:name": "9/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-10-athena_project_file",
           "schema:name": "10/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-13-athena_project_file",
           "schema:name": "13/athena_project_file"
         }

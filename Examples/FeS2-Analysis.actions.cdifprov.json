@@ -49,20 +49,6 @@
         "schema:name": "FeS2 Analysis",
         "@id": "workflows/6f2a09489271f4de.gxwf.yml"
       },
-      "schema:hasPart": [
-        {
-          "@id": "#step-1-2"
-        },
-        {
-          "@id": "#step-2-3"
-        },
-        {
-          "@id": "#step-3-4"
-        },
-        {
-          "@id": "#step-4-5"
-        }
-      ],
       "prov:used": [
         {
           "@type": [
@@ -152,18 +138,24 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 1,
+      "prov:wasInfluencedBy": {
+        "@id": "#d5787109-088d-4886-a72e-03f42a4ec5cc"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-fes2_rt01_mar02.xmu",
           "schema:name": "fes2_rt01_mar02.xmu"
         }
       ],
       "schema:result": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-2-athena_project_file",
           "schema:name": "2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-2-plot",
           "schema:name": "2/plot"
         }
@@ -181,8 +173,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 2,
+      "prov:wasInfluencedBy": {
+        "@id": "#d5787109-088d-4886-a72e-03f42a4ec5cc"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-1564889.cif",
           "schema:name": "1564889.cif"
         }
@@ -200,6 +196,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 3,
+      "prov:wasInfluencedBy": {
+        "@id": "#d5787109-088d-4886-a72e-03f42a4ec5cc"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-2-3"
@@ -207,20 +206,24 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-3-out_dir",
           "schema:name": "3/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-3-out_csv",
           "schema:name": "3/out_csv"
         }
       ],
       "schema:result": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-4-gds_csv",
           "schema:name": "4/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-4-sp_csv",
           "schema:name": "4/sp_csv"
         }
@@ -238,6 +241,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 4,
+      "prov:wasInfluencedBy": {
+        "@id": "#d5787109-088d-4886-a72e-03f42a4ec5cc"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-1-2"
@@ -251,32 +257,39 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-4-gds_csv",
           "schema:name": "4/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-4-sp_csv",
           "schema:name": "4/sp_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-3-out_dir",
           "schema:name": "3/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-2-athena_project_file",
           "schema:name": "2/athena_project_file"
         }
       ],
       "schema:result": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-5-rmr",
           "schema:name": "5/rmr"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-5-chikr",
           "schema:name": "5/chikr"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-5-fit_report",
           "schema:name": "5/fit_report"
         }

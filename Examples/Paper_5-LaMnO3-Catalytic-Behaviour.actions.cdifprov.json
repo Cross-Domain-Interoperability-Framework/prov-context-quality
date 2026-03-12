@@ -49,47 +49,6 @@
         "schema:name": "LaMnO3 Catalytic Behaviour",
         "@id": "workflows/f06ca0d3d213b10e.gxwf.yml"
       },
-      "schema:hasPart": [
-        {
-          "@id": "#step-1-4"
-        },
-        {
-          "@id": "#step-2-5"
-        },
-        {
-          "@id": "#step-3-6"
-        },
-        {
-          "@id": "#step-4-7"
-        },
-        {
-          "@id": "#step-5-8"
-        },
-        {
-          "@id": "#step-6-9"
-        },
-        {
-          "@id": "#step-7-10"
-        },
-        {
-          "@id": "#step-8-11"
-        },
-        {
-          "@id": "#step-9-12"
-        },
-        {
-          "@id": "#step-10-13"
-        },
-        {
-          "@id": "#step-11-14"
-        },
-        {
-          "@id": "#step-12-15"
-        },
-        {
-          "@id": "#step-13-16"
-        }
-      ],
       "prov:used": [
         {
           "@type": [
@@ -137,8 +96,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 1,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj",
           "schema:name": "Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj"
         }
@@ -156,8 +119,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 2,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj",
           "schema:name": "Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj"
         }
@@ -175,8 +142,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 3,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj",
           "schema:name": "Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj"
         }
@@ -194,8 +165,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 4,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-mp-565203_Mn2O3.cif",
           "schema:name": "mp-565203_Mn2O3.cif"
         }
@@ -213,8 +188,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 5,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-1667441.cif",
           "schema:name": "1667441.cif"
         }
@@ -232,6 +211,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 6,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-1-4"
@@ -239,6 +221,7 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-4-athena_project_file_collection",
           "schema:name": "4/athena_project_file_collection"
         }
@@ -256,6 +239,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 7,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-1-4"
@@ -263,6 +249,7 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-4-athena_project_file_collection",
           "schema:name": "4/athena_project_file_collection"
         }
@@ -280,6 +267,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 8,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-3-6"
@@ -287,6 +277,7 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-6-athena_project_file_collection",
           "schema:name": "6/athena_project_file_collection"
         }
@@ -304,6 +295,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 9,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-3-6"
@@ -311,6 +305,7 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-6-athena_project_file_collection",
           "schema:name": "6/athena_project_file_collection"
         }
@@ -328,6 +323,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 10,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-4-7"
@@ -335,10 +333,12 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-out_dir",
           "schema:name": "7/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-out_csv",
           "schema:name": "7/out_csv"
         }
@@ -356,6 +356,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 11,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-5-8"
@@ -363,10 +366,12 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-out_dir",
           "schema:name": "8/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-out_csv",
           "schema:name": "8/out_csv"
         }
@@ -384,6 +389,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 12,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-10-13"
@@ -397,18 +405,22 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-13-gds_csv",
           "schema:name": "13/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-13-sp_csv",
           "schema:name": "13/sp_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-out_dir",
           "schema:name": "7/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-4-athena_project_file_collection",
           "schema:name": "4/athena_project_file_collection"
         }
@@ -426,6 +438,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 13,
+      "prov:wasInfluencedBy": {
+        "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-11-14"
@@ -439,18 +454,22 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-14-gds_csv",
           "schema:name": "14/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-14-sp_csv",
           "schema:name": "14/sp_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-out_dir",
           "schema:name": "8/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-5-athena_project_file",
           "schema:name": "5/athena_project_file"
         }

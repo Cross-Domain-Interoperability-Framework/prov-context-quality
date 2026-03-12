@@ -49,89 +49,6 @@
         "schema:name": "Paper 1: XANES, LCF, EXAFS",
         "@id": "workflows/bf972370cf6dfa23.gxwf.yml"
       },
-      "schema:hasPart": [
-        {
-          "@id": "#step-1-Extract-Sn-Foil"
-        },
-        {
-          "@id": "#step-2-Extract-SnO2"
-        },
-        {
-          "@id": "#step-3-Merge-Sn-K-edge-H2-under-H2"
-        },
-        {
-          "@id": "#step-4-Merge-Sn-K-edge-H2"
-        },
-        {
-          "@id": "#step-5-Merge-Sn-K-edge-Ar"
-        },
-        {
-          "@id": "#step-6-Merge-Sn-K-edge-Air"
-        },
-        {
-          "@id": "#step-7-Merge-Pt-L3-edge-H2-under-H2"
-        },
-        {
-          "@id": "#step-8-Merge-Pt-L3-edge-H2"
-        },
-        {
-          "@id": "#step-9-Merge-Pt-L3-edge-Ar"
-        },
-        {
-          "@id": "#step-10-Merge-Pt-L3-edge-Air"
-        },
-        {
-          "@id": "#step-11-Pt3Sn-FEFF:-Sn"
-        },
-        {
-          "@id": "#step-12-Pt3Sn-FEFF:-Pt"
-        },
-        {
-          "@id": "#step-13-SnO2-FEFF"
-        },
-        {
-          "@id": "#step-14-PtO2-FEFF"
-        },
-        {
-          "@id": "#step-15-LCF:-Sn-Foil-/-SnO2,-H2"
-        },
-        {
-          "@id": "#step-16-LCF:-Pt3Sn-/-SnO2,-H2"
-        },
-        {
-          "@id": "#step-17-LCF:-Sn-Foil-/-SnO2,-Ar"
-        },
-        {
-          "@id": "#step-18-LCF:-Pt3Sn-/-SnO2,-Ar"
-        },
-        {
-          "@id": "#step-19-Sn-K-XANES-Plot"
-        },
-        {
-          "@id": "#step-20-LCF:-Sn-Foil-/-SnO2,-Air"
-        },
-        {
-          "@id": "#step-21-LCF:-Pt3Sn-/-SnO2,-Air"
-        },
-        {
-          "@id": "#step-22-Pt-L3-XANES-Plot"
-        },
-        {
-          "@id": "#step-23-41"
-        },
-        {
-          "@id": "#step-24-Artemis:-H2-under-H2"
-        },
-        {
-          "@id": "#step-25-Artemis:-H2"
-        },
-        {
-          "@id": "#step-26-Artemis:-Ar"
-        },
-        {
-          "@id": "#step-27-Artemis:-Air"
-        }
-      ],
       "prov:used": [
         {
           "@type": [
@@ -293,6 +210,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 1,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:46.220005",
       "schema:endTime": "2024-10-14T16:47:57.053179",
       "schema:instrument": {
@@ -305,10 +225,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn Foil",
           "schema:name": "Sn Foil"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn foil Calibration",
           "schema:name": "Sn foil Calibration"
         }
@@ -358,6 +280,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 2,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:46.326585",
       "schema:endTime": "2024-10-14T16:47:56.007141",
       "schema:instrument": {
@@ -370,10 +295,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-SnO2",
           "schema:name": "SnO2"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-SnO2 Calibration",
           "schema:name": "SnO2 Calibration"
         }
@@ -423,6 +350,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 3,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:46.441993",
       "schema:endTime": "2024-10-14T16:47:59.267649",
       "schema:instrument": {
@@ -435,10 +365,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn K edge H2 under H2",
           "schema:name": "Sn K edge H2 under H2"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn K edge under H2 Calibration",
           "schema:name": "Sn K edge under H2 Calibration"
         }
@@ -493,6 +425,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 4,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:46.553223",
       "schema:endTime": "2024-10-14T16:47:59.312173",
       "schema:instrument": {
@@ -505,10 +440,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn K edge H2",
           "schema:name": "Sn K edge H2"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn3Pt Sn Calibration",
           "schema:name": "Sn3Pt Sn Calibration"
         }
@@ -563,6 +500,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 5,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:46.664215",
       "schema:endTime": "2024-10-14T16:48:00.882046",
       "schema:instrument": {
@@ -575,10 +515,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn K edge Ar",
           "schema:name": "Sn K edge Ar"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn3Pt Sn Calibration",
           "schema:name": "Sn3Pt Sn Calibration"
         }
@@ -633,6 +575,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 6,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:46.777298",
       "schema:endTime": "2024-10-14T16:47:55.880658",
       "schema:instrument": {
@@ -645,10 +590,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn K edge Air",
           "schema:name": "Sn K edge Air"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn3Pt Sn Calibration",
           "schema:name": "Sn3Pt Sn Calibration"
         }
@@ -703,6 +650,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 7,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:46.930596",
       "schema:endTime": "2024-10-14T16:48:00.828245",
       "schema:instrument": {
@@ -715,10 +665,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Pt L3 edge H2 under H2",
           "schema:name": "Pt L3 edge H2 under H2"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-Pt L3 edge under H2 Calibration",
           "schema:name": "Pt L3 edge under H2 Calibration"
         }
@@ -768,6 +720,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 8,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:47.090291",
       "schema:endTime": "2024-10-14T16:48:00.933633",
       "schema:instrument": {
@@ -780,10 +735,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Pt L3 edge H2",
           "schema:name": "Pt L3 edge H2"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn3Pt Pt Calibration",
           "schema:name": "Sn3Pt Pt Calibration"
         }
@@ -833,6 +790,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 9,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:47.252704",
       "schema:endTime": "2024-10-14T16:48:08.027215",
       "schema:instrument": {
@@ -845,10 +805,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Pt L3 edge Ar",
           "schema:name": "Pt L3 edge Ar"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn3Pt Pt Calibration",
           "schema:name": "Sn3Pt Pt Calibration"
         }
@@ -898,6 +860,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 10,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:47.393183",
       "schema:endTime": "2024-10-14T16:48:09.055214",
       "schema:instrument": {
@@ -910,10 +875,12 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Pt L3 edge Air",
           "schema:name": "Pt L3 edge Air"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#input-Sn3Pt Pt Calibration",
           "schema:name": "Sn3Pt Pt Calibration"
         }
@@ -963,6 +930,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 11,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:47.499667",
       "schema:endTime": "2024-10-14T16:48:10.104907",
       "schema:instrument": {
@@ -975,6 +945,7 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Pt3Sn Cif",
           "schema:name": "Pt3Sn Cif"
         }
@@ -1009,6 +980,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 12,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:47.597194",
       "schema:endTime": "2024-10-14T16:48:03.832203",
       "schema:instrument": {
@@ -1021,6 +995,7 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Pt3Sn Cif",
           "schema:name": "Pt3Sn Cif"
         }
@@ -1055,6 +1030,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 13,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:47.709081",
       "schema:endTime": "2024-10-14T16:48:07.051566",
       "schema:instrument": {
@@ -1067,6 +1045,7 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-SnO2 Cif",
           "schema:name": "SnO2 Cif"
         }
@@ -1101,6 +1080,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 14,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:47.823783",
       "schema:endTime": "2024-10-14T16:48:07.817207",
       "schema:instrument": {
@@ -1113,6 +1095,7 @@
       },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-PtO2 Cif",
           "schema:name": "PtO2 Cif"
         }
@@ -1147,6 +1130,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 15,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:47.983788",
       "schema:endTime": "2024-10-14T16:48:10.192689",
       "schema:instrument": {
@@ -1170,20 +1156,24 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract Sn Foil-athena_project_file",
           "schema:name": "Extract Sn Foil/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract SnO2-athena_project_file",
           "schema:name": "Extract SnO2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge H2-athena_project_file",
           "schema:name": "Merge Sn K edge H2/athena_project_file"
         }
       ],
       "schema:result": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-LCF: Sn Foil / SnO2, H2-plot",
           "schema:name": "LCF: Sn Foil / SnO2, H2/plot"
         }
@@ -1243,6 +1233,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 16,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:48.161925",
       "schema:endTime": "2024-10-14T16:48:10.215560",
       "schema:instrument": {
@@ -1266,20 +1259,24 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge H2 under H2-athena_project_file",
           "schema:name": "Merge Sn K edge H2 under H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract SnO2-athena_project_file",
           "schema:name": "Extract SnO2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge H2-athena_project_file",
           "schema:name": "Merge Sn K edge H2/athena_project_file"
         }
       ],
       "schema:result": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-LCF: Pt3Sn / SnO2, H2-plot",
           "schema:name": "LCF: Pt3Sn / SnO2, H2/plot"
         }
@@ -1339,6 +1336,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 17,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:48.324376",
       "schema:endTime": "2024-10-14T16:48:13.330578",
       "schema:instrument": {
@@ -1362,20 +1362,24 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract Sn Foil-athena_project_file",
           "schema:name": "Extract Sn Foil/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract SnO2-athena_project_file",
           "schema:name": "Extract SnO2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge Ar-athena_project_file",
           "schema:name": "Merge Sn K edge Ar/athena_project_file"
         }
       ],
       "schema:result": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-LCF: Sn Foil / SnO2, Ar-plot",
           "schema:name": "LCF: Sn Foil / SnO2, Ar/plot"
         }
@@ -1435,6 +1439,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 18,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:48.464044",
       "schema:endTime": "2024-10-14T16:48:12.615747",
       "schema:instrument": {
@@ -1458,20 +1465,24 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge H2 under H2-athena_project_file",
           "schema:name": "Merge Sn K edge H2 under H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract SnO2-athena_project_file",
           "schema:name": "Extract SnO2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge Ar-athena_project_file",
           "schema:name": "Merge Sn K edge Ar/athena_project_file"
         }
       ],
       "schema:result": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-LCF: Pt3Sn / SnO2, Ar-plot",
           "schema:name": "LCF: Pt3Sn / SnO2, Ar/plot"
         }
@@ -1531,6 +1542,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 19,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:48.664617",
       "schema:endTime": "2024-10-14T16:48:12.860339",
       "schema:instrument": {
@@ -1563,26 +1577,32 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract Sn Foil-athena_project_file",
           "schema:name": "Extract Sn Foil/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract SnO2-athena_project_file",
           "schema:name": "Extract SnO2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge H2 under H2-athena_project_file",
           "schema:name": "Merge Sn K edge H2 under H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge H2-athena_project_file",
           "schema:name": "Merge Sn K edge H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge Ar-athena_project_file",
           "schema:name": "Merge Sn K edge Ar/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge Air-athena_project_file",
           "schema:name": "Merge Sn K edge Air/athena_project_file"
         }
@@ -1637,6 +1657,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 20,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:48.845649",
       "schema:endTime": "2024-10-14T16:48:07.773240",
       "schema:instrument": {
@@ -1660,20 +1683,24 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract Sn Foil-athena_project_file",
           "schema:name": "Extract Sn Foil/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract SnO2-athena_project_file",
           "schema:name": "Extract SnO2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge Air-athena_project_file",
           "schema:name": "Merge Sn K edge Air/athena_project_file"
         }
       ],
       "schema:result": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-LCF: Sn Foil / SnO2, Air-plot",
           "schema:name": "LCF: Sn Foil / SnO2, Air/plot"
         }
@@ -1733,6 +1760,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 21,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:48.965574",
       "schema:endTime": "2024-10-14T16:48:09.800340",
       "schema:instrument": {
@@ -1756,20 +1786,24 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge H2 under H2-athena_project_file",
           "schema:name": "Merge Sn K edge H2 under H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Extract SnO2-athena_project_file",
           "schema:name": "Extract SnO2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge Air-athena_project_file",
           "schema:name": "Merge Sn K edge Air/athena_project_file"
         }
       ],
       "schema:result": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-LCF: Pt3Sn / SnO2, Air-plot",
           "schema:name": "LCF: Pt3Sn / SnO2, Air/plot"
         }
@@ -1829,6 +1863,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 22,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:49.130416",
       "schema:endTime": "2024-10-14T16:48:18.349692",
       "schema:instrument": {
@@ -1855,18 +1892,22 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Pt L3 edge H2 under H2-athena_project_file",
           "schema:name": "Merge Pt L3 edge H2 under H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Pt L3 edge H2-athena_project_file",
           "schema:name": "Merge Pt L3 edge H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Pt L3 edge Ar-athena_project_file",
           "schema:name": "Merge Pt L3 edge Ar/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Pt L3 edge Air-athena_project_file",
           "schema:name": "Merge Pt L3 edge Air/athena_project_file"
         }
@@ -1921,6 +1962,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 23,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:49.323891",
       "schema:endTime": "2024-10-14T16:48:15.343934",
       "schema:instrument": {
@@ -1947,34 +1991,42 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-PtO2 FEFF-out_dir",
           "schema:name": "PtO2 FEFF/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-SnO2 FEFF-out_csv",
           "schema:name": "SnO2 FEFF/out_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-SnO2 FEFF-out_dir",
           "schema:name": "SnO2 FEFF/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Pt3Sn FEFF: Sn-out_csv",
           "schema:name": "Pt3Sn FEFF: Sn/out_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-PtO2 FEFF-out_csv",
           "schema:name": "PtO2 FEFF/out_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Pt3Sn FEFF: Pt-out_csv",
           "schema:name": "Pt3Sn FEFF: Pt/out_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Pt3Sn FEFF: Pt-out_dir",
           "schema:name": "Pt3Sn FEFF: Pt/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Pt3Sn FEFF: Sn-out_dir",
           "schema:name": "Pt3Sn FEFF: Sn/out_dir"
         }
@@ -2354,6 +2406,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 24,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:49.469422",
       "schema:endTime": "2024-10-14T16:48:48.455963",
       "schema:instrument": {
@@ -2377,22 +2432,27 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Pt L3 edge H2 under H2-athena_project_file",
           "schema:name": "Merge Pt L3 edge H2 under H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge H2 under H2-athena_project_file",
           "schema:name": "Merge Sn K edge H2 under H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-sp_csv",
           "schema:name": "41/sp_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-gds_csv",
           "schema:name": "41/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-merged_directories",
           "schema:name": "41/merged_directories"
         }
@@ -2482,6 +2542,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 25,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:49.604062",
       "schema:endTime": "2024-10-14T16:48:31.080319",
       "schema:instrument": {
@@ -2505,22 +2568,27 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Pt L3 edge H2-athena_project_file",
           "schema:name": "Merge Pt L3 edge H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge H2-athena_project_file",
           "schema:name": "Merge Sn K edge H2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-sp_csv",
           "schema:name": "41/sp_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-gds_csv",
           "schema:name": "41/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-merged_directories",
           "schema:name": "41/merged_directories"
         }
@@ -2610,6 +2678,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 26,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:49.744382",
       "schema:endTime": "2024-10-14T16:48:29.229657",
       "schema:instrument": {
@@ -2633,22 +2704,27 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Pt L3 edge Ar-athena_project_file",
           "schema:name": "Merge Pt L3 edge Ar/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge Ar-athena_project_file",
           "schema:name": "Merge Sn K edge Ar/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-sp_csv",
           "schema:name": "41/sp_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-gds_csv",
           "schema:name": "41/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-merged_directories",
           "schema:name": "41/merged_directories"
         }
@@ -2738,6 +2814,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 27,
+      "prov:wasInfluencedBy": {
+        "@id": "#bdb469cd-b85a-4ca3-b220-a041f0172418"
+      },
       "schema:startTime": "2024-10-14T16:47:49.877459",
       "schema:endTime": "2024-10-14T16:48:29.255189",
       "schema:instrument": {
@@ -2761,22 +2840,27 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Pt L3 edge Air-athena_project_file",
           "schema:name": "Merge Pt L3 edge Air/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-Merge Sn K edge Air-athena_project_file",
           "schema:name": "Merge Sn K edge Air/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-sp_csv",
           "schema:name": "41/sp_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-gds_csv",
           "schema:name": "41/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-41-merged_directories",
           "schema:name": "41/merged_directories"
         }

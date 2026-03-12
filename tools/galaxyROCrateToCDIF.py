@@ -718,7 +718,7 @@ def convert_galaxy_crate(input_path, verbose=False):
                             else:
                                 used_items.append(_build_file_ref(entity))
                         else:
-                            used_items.append({"@id": ref_id})
+                            used_items.append({"@type": "schema:Thing", "@id": ref_id})
                 if used_items:
                     node["prov:used"] = used_items
 
@@ -737,7 +737,7 @@ def convert_galaxy_crate(input_path, verbose=False):
                             else:
                                 result_items.append(_build_file_ref(entity))
                         else:
-                            result_items.append({"@id": ref_id})
+                            result_items.append({"@type": "schema:Thing", "@id": ref_id})
                 if result_items:
                     node["schema:result"] = result_items
 

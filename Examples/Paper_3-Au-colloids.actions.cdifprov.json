@@ -49,38 +49,6 @@
         "schema:name": "Workflow constructed from history ''Extracting structural information of Au colloids at ultra-dilute concentrations: identification of growth during nanoparticle immobilization (paper-3''",
         "@id": "workflows/1a5c6ad02e8082a6.gxwf.yml"
       },
-      "schema:hasPart": [
-        {
-          "@id": "#step-1-1"
-        },
-        {
-          "@id": "#step-2-2"
-        },
-        {
-          "@id": "#step-3-3"
-        },
-        {
-          "@id": "#step-4-4"
-        },
-        {
-          "@id": "#step-5-5"
-        },
-        {
-          "@id": "#step-6-6"
-        },
-        {
-          "@id": "#step-7-7"
-        },
-        {
-          "@id": "#step-8-8"
-        },
-        {
-          "@id": "#step-9-9"
-        },
-        {
-          "@id": "#step-10-10"
-        }
-      ],
       "prov:used": [
         {
           "@type": [
@@ -103,7 +71,10 @@
         "schema:CreateAction"
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
-      "schema:position": 1
+      "schema:position": 1,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      }
     },
     {
       "@type": [
@@ -116,7 +87,10 @@
         "schema:CreateAction"
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
-      "schema:position": 2
+      "schema:position": 2,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      }
     },
     {
       "@type": [
@@ -129,7 +103,10 @@
         "schema:CreateAction"
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
-      "schema:position": 3
+      "schema:position": 3,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      }
     },
     {
       "@type": [
@@ -142,7 +119,10 @@
         "schema:CreateAction"
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
-      "schema:position": 4
+      "schema:position": 4,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      }
     },
     {
       "@type": [
@@ -155,7 +135,10 @@
         "schema:CreateAction"
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
-      "schema:position": 5
+      "schema:position": 5,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      }
     },
     {
       "@type": [
@@ -168,7 +151,10 @@
         "schema:CreateAction"
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
-      "schema:position": 6
+      "schema:position": 6,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      }
     },
     {
       "@type": [
@@ -181,7 +167,10 @@
         "schema:CreateAction"
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
-      "schema:position": 7
+      "schema:position": 7,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      }
     },
     {
       "@type": [
@@ -195,8 +184,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 8,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj",
           "schema:name": "Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj"
         }
@@ -214,6 +207,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 9,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-1-1"
@@ -233,22 +229,27 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-1-athena_project_file",
           "schema:name": "1/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-2-athena_project_file",
           "schema:name": "2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-3-athena_project_file",
           "schema:name": "3/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-4-athena_project_file",
           "schema:name": "4/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-5-athena_project_file",
           "schema:name": "5/athena_project_file"
         }
@@ -266,6 +267,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 10,
+      "prov:wasInfluencedBy": {
+        "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-1-1"
@@ -282,18 +286,22 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-1-athena_project_file",
           "schema:name": "1/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-2-athena_project_file",
           "schema:name": "2/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-6-athena_project_file",
           "schema:name": "6/athena_project_file"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-athena_project_file",
           "schema:name": "7/athena_project_file"
         }

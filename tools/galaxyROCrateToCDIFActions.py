@@ -19,7 +19,7 @@ Output structure:
       - prov:used → input entities (from upstream step outputs or workflow inputs)
       - schema:result → output entities
       - schema:instrument → tool used for that step
-  - Top-level CreateAction uses schema:hasPart to reference all step activities
+  - Step activities link back to the top-level CreateAction via prov:wasInfluencedBy
 
 Usage:
     python galaxyROCrateToCDIFActions.py Paper_1_Pt3Sn.rocrate.zip -o output.json
@@ -392,7 +392,7 @@ def _build_collection_ref(entity, index):
 
 # --- Build per-step activity nodes ---
 
-def _build_step_activity(step, job, position, step_id_map):
+def _build_step_activity(step, job, position, step_id_map, parent_id=None):
     """Build a prov:Activity node for a single workflow step.
 
     Args:
@@ -400,6 +400,7 @@ def _build_step_activity(step, job, position, step_id_map):
         job: matched Galaxy job dict (or None)
         position: 1-based step position
         step_id_map: dict mapping step name -> activity @id for cross-references
+        parent_id: @id of the parent CreateAction activity
     """
     step_name = step["name"]
     act_id = step_id_map[step_name]
@@ -412,6 +413,10 @@ def _build_step_activity(step, job, position, step_id_map):
         "schema:actionStatus": "schema:CompletedActionStatus",
         "schema:position": position,
     }
+
+    # Link to parent workflow activity
+    if parent_id:
+        node["prov:wasInfluencedBy"] = {"@id": parent_id}
 
     # Timestamps from job
     if job:
@@ -455,12 +460,14 @@ def _build_step_activity(step, job, position, step_id_map):
                     # Step output reference: "StepName/output_name"
                     src_step, src_output = s.split("/", 1)
                     used_refs.append({
+                        "@type": "schema:Thing",
                         "@id": f"#output-{src_step}-{src_output}",
                         "schema:name": f"{src_step}/{src_output}",
                     })
                 else:
                     # Workflow input reference
                     used_refs.append({
+                        "@type": "schema:Thing",
                         "@id": f"#input-{s}",
                         "schema:name": s,
                     })
@@ -473,6 +480,7 @@ def _build_step_activity(step, job, position, step_id_map):
         result_refs = []
         for out in outputs:
             result_refs.append({
+                "@type": "schema:Thing",
                 "@id": f"#output-{step_name}-{out}",
                 "schema:name": f"{step_name}/{out}",
             })
@@ -663,9 +671,8 @@ def convert_galaxy_crate_actions(input_path, verbose=False):
                             "schema:version": gv,
                         }
 
-        # CreateAction: reference step activities via schema:hasPart
+        # CreateAction: workflow instrument reference
         if is_create and matched_steps:
-            # Workflow instrument reference
             inst_ref = action.get("instrument")
             wf_name = name
             if isinstance(inst_ref, dict) and "@id" in inst_ref:
@@ -678,12 +685,6 @@ def convert_galaxy_crate_actions(input_path, verbose=False):
                         "schema:name": wf_name,
                         "@id": wf_entity.get("@id"),
                     }
-
-            # List step activity references
-            step_refs = []
-            for step, _job in matched_steps:
-                step_refs.append({"@id": step_id_map[step["name"]]})
-            node["schema:hasPart"] = step_refs
 
         # Inputs (object) → prov:used
         if is_create:
@@ -701,7 +702,7 @@ def convert_galaxy_crate_actions(input_path, verbose=False):
                             else:
                                 used_items.append(_build_file_ref(entity))
                         else:
-                            used_items.append({"@id": ref_id})
+                            used_items.append({"@type": "schema:Thing", "@id": ref_id})
                 if used_items:
                     node["prov:used"] = used_items
 
@@ -720,7 +721,7 @@ def convert_galaxy_crate_actions(input_path, verbose=False):
                             else:
                                 result_items.append(_build_file_ref(entity))
                         else:
-                            result_items.append({"@id": ref_id})
+                            result_items.append({"@type": "schema:Thing", "@id": ref_id})
                 if result_items:
                     node["schema:result"] = result_items
 
@@ -750,10 +751,17 @@ def convert_galaxy_crate_actions(input_path, verbose=False):
 
         activity_nodes.append(node)
 
+    # Find the CreateAction @id for parent linking
+    create_action_id = None
+    for node in activity_nodes:
+        if "schema:CreateAction" in node.get("schema:additionalType", []):
+            create_action_id = node.get("@id")
+            break
+
     # Build per-step activity nodes
     step_activities = []
     for i, (step, job) in enumerate(matched_steps):
-        step_node = _build_step_activity(step, job, i + 1, step_id_map)
+        step_node = _build_step_activity(step, job, i + 1, step_id_map, create_action_id)
         step_activities.append(step_node)
 
         if verbose and i == 0:

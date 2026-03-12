@@ -49,29 +49,6 @@
         "schema:name": "Workflow to reproduce paper 8 EXAFS fitting",
         "@id": "workflows/0a07785dca20180d.gxwf.yml"
       },
-      "schema:hasPart": [
-        {
-          "@id": "#step-1-4"
-        },
-        {
-          "@id": "#step-2-5"
-        },
-        {
-          "@id": "#step-3-6"
-        },
-        {
-          "@id": "#step-4-7"
-        },
-        {
-          "@id": "#step-5-8"
-        },
-        {
-          "@id": "#step-6-9"
-        },
-        {
-          "@id": "#step-7-10"
-        }
-      ],
       "prov:used": [
         {
           "@type": [
@@ -119,8 +96,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 1,
+      "prov:wasInfluencedBy": {
+        "@id": "#5b1292dc-6021-45f6-8f81-40d977069fc9"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Washcoat Athena project file from paper",
           "schema:name": "Washcoat Athena project file from paper"
         }
@@ -138,8 +119,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 2,
+      "prov:wasInfluencedBy": {
+        "@id": "#5b1292dc-6021-45f6-8f81-40d977069fc9"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-20g ash Athena project file from paper",
           "schema:name": "20g ash Athena project file from paper"
         }
@@ -157,8 +142,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 3,
+      "prov:wasInfluencedBy": {
+        "@id": "#5b1292dc-6021-45f6-8f81-40d977069fc9"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-PdO cif file",
           "schema:name": "PdO cif file"
         }
@@ -176,8 +165,12 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 4,
+      "prov:wasInfluencedBy": {
+        "@id": "#5b1292dc-6021-45f6-8f81-40d977069fc9"
+      },
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#input-Pd cif file",
           "schema:name": "Pd cif file"
         }
@@ -195,6 +188,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 5,
+      "prov:wasInfluencedBy": {
+        "@id": "#5b1292dc-6021-45f6-8f81-40d977069fc9"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-3-6"
@@ -205,18 +201,22 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-6-out_dir",
           "schema:name": "6/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-out_csv",
           "schema:name": "7/out_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-7-out_dir",
           "schema:name": "7/out_dir"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-6-out_csv",
           "schema:name": "6/out_csv"
         }
@@ -234,6 +234,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 6,
+      "prov:wasInfluencedBy": {
+        "@id": "#5b1292dc-6021-45f6-8f81-40d977069fc9"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-1-4"
@@ -244,18 +247,22 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-gds_csv",
           "schema:name": "8/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-sp_csv",
           "schema:name": "8/sp_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-merged_directories",
           "schema:name": "8/merged_directories"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-4-athena_project_file_collection",
           "schema:name": "4/athena_project_file_collection"
         }
@@ -273,6 +280,9 @@
       ],
       "schema:actionStatus": "schema:CompletedActionStatus",
       "schema:position": 7,
+      "prov:wasInfluencedBy": {
+        "@id": "#5b1292dc-6021-45f6-8f81-40d977069fc9"
+      },
       "prov:wasInformedBy": [
         {
           "@id": "#step-2-5"
@@ -283,18 +293,22 @@
       ],
       "prov:used": [
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-gds_csv",
           "schema:name": "8/gds_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-sp_csv",
           "schema:name": "8/sp_csv"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-8-merged_directories",
           "schema:name": "8/merged_directories"
         },
         {
+          "@type": "schema:Thing",
           "@id": "#output-5-athena_project_file_collection",
           "schema:name": "5/athena_project_file_collection"
         }
