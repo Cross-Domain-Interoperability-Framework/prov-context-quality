@@ -1,0 +1,460 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "bios": "https://bioschemas.org/"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#2a5c0a80-1273-4077-8509-3c55eae0ddfd",
+      "schema:name": "Run of Galaxy workflow engine",
+      "schema:additionalType": [
+        "schema:OrganizeAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-30T14:10:21.773632",
+      "schema:endTime": "2024-10-30T14:10:33.822661",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "Galaxy workflow engine",
+        "schema:version": "24.1"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#0b43a0c7-a2a8-4c17-98ac-da8d89c9bb16",
+      "schema:name": "LaMnO3 Catalytic Behaviour",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-30T14:02:40.265013",
+      "schema:endTime": "2024-10-30T14:02:40.265017",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:additionalType": [
+          "bios:ComputationalWorkflow"
+        ],
+        "schema:name": "LaMnO3 Catalytic Behaviour",
+        "@id": "workflows/f06ca0d3d213b10e.gxwf.yml"
+      },
+      "schema:hasPart": [
+        {
+          "@id": "#step-1-4"
+        },
+        {
+          "@id": "#step-2-5"
+        },
+        {
+          "@id": "#step-3-6"
+        },
+        {
+          "@id": "#step-4-7"
+        },
+        {
+          "@id": "#step-5-8"
+        },
+        {
+          "@id": "#step-6-9"
+        },
+        {
+          "@id": "#step-7-10"
+        },
+        {
+          "@id": "#step-8-11"
+        },
+        {
+          "@id": "#step-9-12"
+        },
+        {
+          "@id": "#step-10-13"
+        },
+        {
+          "@id": "#step-11-14"
+        },
+        {
+          "@id": "#step-12-15"
+        },
+        {
+          "@id": "#step-13-16"
+        }
+      ],
+      "prov:used": [
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Upload__Figure_2-5__Mn_K_edge_LMOA_time_series.prj_4bf0dfdd37d908b6.prj",
+          "schema:name": "Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj",
+          "schema:encodingFormat": "text/plain"
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Upload__Figure_2-5__La_L3_edge_LMOA_time_series.prj_a22d0f72d1f36993.prj",
+          "schema:name": "Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj",
+          "schema:encodingFormat": "text/plain"
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/mp-565203_Mn2O3.cif_acaef9f591c8f62d.cif",
+          "schema:name": "mp-565203_Mn2O3.cif",
+          "schema:encodingFormat": "text/plain"
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/1667441.cif_7be2e841c9ddb917.cif",
+          "schema:name": "1667441.cif",
+          "schema:encodingFormat": "text/plain"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-1-4",
+      "schema:name": "4",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 1,
+      "prov:used": [
+        {
+          "@id": "#input-Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj",
+          "schema:name": "Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-2-5",
+      "schema:name": "5",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 2,
+      "prov:used": [
+        {
+          "@id": "#input-Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj",
+          "schema:name": "Upload: Figure 2-5_ Mn_K_edge_LMOA_time_series.prj"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-3-6",
+      "schema:name": "6",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 3,
+      "prov:used": [
+        {
+          "@id": "#input-Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj",
+          "schema:name": "Upload: Figure 2-5_ La_L3_edge_LMOA_time_series.prj"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-4-7",
+      "schema:name": "7",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 4,
+      "prov:used": [
+        {
+          "@id": "#input-mp-565203_Mn2O3.cif",
+          "schema:name": "mp-565203_Mn2O3.cif"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-5-8",
+      "schema:name": "8",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 5,
+      "prov:used": [
+        {
+          "@id": "#input-1667441.cif",
+          "schema:name": "1667441.cif"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-6-9",
+      "schema:name": "9",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 6,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-1-4"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-4-athena_project_file_collection",
+          "schema:name": "4/athena_project_file_collection"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-7-10",
+      "schema:name": "10",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 7,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-1-4"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-4-athena_project_file_collection",
+          "schema:name": "4/athena_project_file_collection"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-8-11",
+      "schema:name": "11",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 8,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-3-6"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-6-athena_project_file_collection",
+          "schema:name": "6/athena_project_file_collection"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-9-12",
+      "schema:name": "12",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 9,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-3-6"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-6-athena_project_file_collection",
+          "schema:name": "6/athena_project_file_collection"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-10-13",
+      "schema:name": "13",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 10,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-4-7"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-7-out_dir",
+          "schema:name": "7/out_dir"
+        },
+        {
+          "@id": "#output-7-out_csv",
+          "schema:name": "7/out_csv"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-11-14",
+      "schema:name": "14",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 11,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-5-8"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-8-out_dir",
+          "schema:name": "8/out_dir"
+        },
+        {
+          "@id": "#output-8-out_csv",
+          "schema:name": "8/out_csv"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-12-15",
+      "schema:name": "15",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 12,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-10-13"
+        },
+        {
+          "@id": "#step-1-4"
+        },
+        {
+          "@id": "#step-4-7"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-13-gds_csv",
+          "schema:name": "13/gds_csv"
+        },
+        {
+          "@id": "#output-13-sp_csv",
+          "schema:name": "13/sp_csv"
+        },
+        {
+          "@id": "#output-7-out_dir",
+          "schema:name": "7/out_dir"
+        },
+        {
+          "@id": "#output-4-athena_project_file_collection",
+          "schema:name": "4/athena_project_file_collection"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-13-16",
+      "schema:name": "16",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 13,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-11-14"
+        },
+        {
+          "@id": "#step-2-5"
+        },
+        {
+          "@id": "#step-5-8"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-14-gds_csv",
+          "schema:name": "14/gds_csv"
+        },
+        {
+          "@id": "#output-14-sp_csv",
+          "schema:name": "14/sp_csv"
+        },
+        {
+          "@id": "#output-8-out_dir",
+          "schema:name": "8/out_dir"
+        },
+        {
+          "@id": "#output-5-athena_project_file",
+          "schema:name": "5/athena_project_file"
+        }
+      ]
+    }
+  ]
+}

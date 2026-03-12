@@ -1,0 +1,502 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "bios": "https://bioschemas.org/"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#28904568-12b4-478c-815e-015203e5caf4",
+      "schema:name": "Run of Galaxy workflow engine",
+      "schema:additionalType": [
+        "schema:OrganizeAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-09-11T16:12:55.771086",
+      "schema:endTime": "2024-09-11T16:12:57.977262",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "Galaxy workflow engine",
+        "schema:version": "23.2"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#b37e0481-a1a1-4919-a3b7-c4ea91c07339",
+      "schema:name": "Paper_2_Diphosphine-WF",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-09-11T16:11:48.596770",
+      "schema:endTime": "2024-09-11T16:11:48.628535",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:additionalType": [
+          "bios:ComputationalWorkflow"
+        ],
+        "schema:name": "Paper_2_Diphosphine-WF",
+        "@id": "workflows/1967248db44ca916.gxwf.yml"
+      },
+      "schema:hasPart": [
+        {
+          "@id": "#step-1-7"
+        },
+        {
+          "@id": "#step-2-8"
+        },
+        {
+          "@id": "#step-3-9"
+        },
+        {
+          "@id": "#step-4-10"
+        },
+        {
+          "@id": "#step-5-11"
+        },
+        {
+          "@id": "#step-6-12"
+        },
+        {
+          "@id": "#step-7-13"
+        },
+        {
+          "@id": "#step-8-14"
+        },
+        {
+          "@id": "#step-9-15"
+        },
+        {
+          "@id": "#step-10-16"
+        },
+        {
+          "@id": "#step-11-17"
+        }
+      ],
+      "prov:used": [
+        {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
+          "@id": "#dataset_collection-2617",
+          "schema:name": "A Time",
+          "schema:description": "Collection of 10 items"
+        },
+        {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
+          "@id": "#dataset_collection-2618",
+          "schema:name": "B Time",
+          "schema:description": "Collection of 10 items"
+        },
+        {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
+          "@id": "#dataset_collection-2619",
+          "schema:name": "C Time",
+          "schema:description": "Collection of 11 items"
+        },
+        {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
+          "@id": "#dataset_collection-2620",
+          "schema:name": "D Time",
+          "schema:description": "Collection of 10 items"
+        },
+        {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
+          "@id": "#dataset_collection-2621",
+          "schema:name": "Fe metal",
+          "schema:description": "Collection of 3 items"
+        },
+        {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
+          "@id": "#dataset_collection-2622",
+          "schema:name": "FrBr Standard",
+          "schema:description": "Collection of 10 items"
+        },
+        {
+          "@type": [
+            "schema:DatasetSeries"
+          ],
+          "@id": "#dataset_collection-2623",
+          "schema:name": "Reading 7a",
+          "schema:description": "Collection of 3 items"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-1-7",
+      "schema:name": "7",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 1,
+      "prov:used": [
+        {
+          "@id": "#input-A data",
+          "schema:name": "A data"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-2-8",
+      "schema:name": "8",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 2,
+      "prov:used": [
+        {
+          "@id": "#input-B data",
+          "schema:name": "B data"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-3-9",
+      "schema:name": "9",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 3,
+      "prov:used": [
+        {
+          "@id": "#input-C data",
+          "schema:name": "C data"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-4-10",
+      "schema:name": "10",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 4,
+      "prov:used": [
+        {
+          "@id": "#input-D data",
+          "schema:name": "D data"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-5-11",
+      "schema:name": "11",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 5,
+      "prov:used": [
+        {
+          "@id": "#input-Fe Metal",
+          "schema:name": "Fe Metal"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-6-12",
+      "schema:name": "12",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 6,
+      "prov:used": [
+        {
+          "@id": "#input-FeBr",
+          "schema:name": "FeBr"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-7-13",
+      "schema:name": "13",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 7,
+      "prov:used": [
+        {
+          "@id": "#input-7a",
+          "schema:name": "7a"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-8-14",
+      "schema:name": "14",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 8,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-4-10"
+        },
+        {
+          "@id": "#step-5-11"
+        },
+        {
+          "@id": "#step-1-7"
+        },
+        {
+          "@id": "#step-2-8"
+        },
+        {
+          "@id": "#step-3-9"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-7-athena_project_file",
+          "schema:name": "7/athena_project_file"
+        },
+        {
+          "@id": "#output-8-athena_project_file",
+          "schema:name": "8/athena_project_file"
+        },
+        {
+          "@id": "#output-9-athena_project_file",
+          "schema:name": "9/athena_project_file"
+        },
+        {
+          "@id": "#output-10-athena_project_file",
+          "schema:name": "10/athena_project_file"
+        },
+        {
+          "@id": "#output-11-athena_project_file",
+          "schema:name": "11/athena_project_file"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-9-15",
+      "schema:name": "15",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 9,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-4-10"
+        },
+        {
+          "@id": "#step-5-11"
+        },
+        {
+          "@id": "#step-6-12"
+        },
+        {
+          "@id": "#step-1-7"
+        },
+        {
+          "@id": "#step-2-8"
+        },
+        {
+          "@id": "#step-3-9"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-7-athena_project_file",
+          "schema:name": "7/athena_project_file"
+        },
+        {
+          "@id": "#output-8-athena_project_file",
+          "schema:name": "8/athena_project_file"
+        },
+        {
+          "@id": "#output-9-athena_project_file",
+          "schema:name": "9/athena_project_file"
+        },
+        {
+          "@id": "#output-10-athena_project_file",
+          "schema:name": "10/athena_project_file"
+        },
+        {
+          "@id": "#output-11-athena_project_file",
+          "schema:name": "11/athena_project_file"
+        },
+        {
+          "@id": "#output-12-athena_project_file",
+          "schema:name": "12/athena_project_file"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-10-16",
+      "schema:name": "16",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 10,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-4-10"
+        },
+        {
+          "@id": "#step-5-11"
+        },
+        {
+          "@id": "#step-6-12"
+        },
+        {
+          "@id": "#step-1-7"
+        },
+        {
+          "@id": "#step-2-8"
+        },
+        {
+          "@id": "#step-3-9"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-7-athena_project_file",
+          "schema:name": "7/athena_project_file"
+        },
+        {
+          "@id": "#output-8-athena_project_file",
+          "schema:name": "8/athena_project_file"
+        },
+        {
+          "@id": "#output-9-athena_project_file",
+          "schema:name": "9/athena_project_file"
+        },
+        {
+          "@id": "#output-10-athena_project_file",
+          "schema:name": "10/athena_project_file"
+        },
+        {
+          "@id": "#output-11-athena_project_file",
+          "schema:name": "11/athena_project_file"
+        },
+        {
+          "@id": "#output-12-athena_project_file",
+          "schema:name": "12/athena_project_file"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-11-17",
+      "schema:name": "17",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 11,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-4-10"
+        },
+        {
+          "@id": "#step-7-13"
+        },
+        {
+          "@id": "#step-1-7"
+        },
+        {
+          "@id": "#step-2-8"
+        },
+        {
+          "@id": "#step-3-9"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-7-athena_project_file",
+          "schema:name": "7/athena_project_file"
+        },
+        {
+          "@id": "#output-8-athena_project_file",
+          "schema:name": "8/athena_project_file"
+        },
+        {
+          "@id": "#output-9-athena_project_file",
+          "schema:name": "9/athena_project_file"
+        },
+        {
+          "@id": "#output-10-athena_project_file",
+          "schema:name": "10/athena_project_file"
+        },
+        {
+          "@id": "#output-13-athena_project_file",
+          "schema:name": "13/athena_project_file"
+        }
+      ]
+    }
+  ]
+}

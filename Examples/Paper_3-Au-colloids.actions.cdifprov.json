@@ -1,0 +1,303 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "bios": "https://bioschemas.org/"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#194b7c6e-aeed-4b9e-8117-49621cccb965",
+      "schema:name": "Run of Galaxy workflow engine",
+      "schema:additionalType": [
+        "schema:OrganizeAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-09-27T10:30:38.975410",
+      "schema:endTime": "2024-09-27T10:30:40.690532",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "Galaxy workflow engine",
+        "schema:version": "23.2"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#c11186ad-4e77-43ae-8f18-21f1744094d5",
+      "schema:name": "Workflow constructed from history ''Extracting structural information of Au colloids at ultra-dilute concentrations: identification of growth during nanoparticle immobilization (paper-3''",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-09-27T10:28:59.043893",
+      "schema:endTime": "2024-09-27T10:28:59.043905",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:additionalType": [
+          "bios:ComputationalWorkflow"
+        ],
+        "schema:name": "Workflow constructed from history ''Extracting structural information of Au colloids at ultra-dilute concentrations: identification of growth during nanoparticle immobilization (paper-3''",
+        "@id": "workflows/1a5c6ad02e8082a6.gxwf.yml"
+      },
+      "schema:hasPart": [
+        {
+          "@id": "#step-1-1"
+        },
+        {
+          "@id": "#step-2-2"
+        },
+        {
+          "@id": "#step-3-3"
+        },
+        {
+          "@id": "#step-4-4"
+        },
+        {
+          "@id": "#step-5-5"
+        },
+        {
+          "@id": "#step-6-6"
+        },
+        {
+          "@id": "#step-7-7"
+        },
+        {
+          "@id": "#step-8-8"
+        },
+        {
+          "@id": "#step-9-9"
+        },
+        {
+          "@id": "#step-10-10"
+        }
+      ],
+      "prov:used": [
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj_1.prj",
+          "schema:name": "Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj",
+          "schema:encodingFormat": "text/plain"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-1-1",
+      "schema:name": "1",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 1
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-2-2",
+      "schema:name": "2",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 2
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-3-3",
+      "schema:name": "3",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 3
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-4-4",
+      "schema:name": "4",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 4
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-5-5",
+      "schema:name": "5",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 5
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-6-6",
+      "schema:name": "6",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 6
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-7-7",
+      "schema:name": "7",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 7
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-8-8",
+      "schema:name": "8",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 8,
+      "prov:used": [
+        {
+          "@id": "#input-Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj",
+          "schema:name": "Compiled_XAS_data_Colloid_and_TiO2_supported_Au.prj"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-9-9",
+      "schema:name": "9",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 9,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-1-1"
+        },
+        {
+          "@id": "#step-2-2"
+        },
+        {
+          "@id": "#step-3-3"
+        },
+        {
+          "@id": "#step-4-4"
+        },
+        {
+          "@id": "#step-5-5"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-1-athena_project_file",
+          "schema:name": "1/athena_project_file"
+        },
+        {
+          "@id": "#output-2-athena_project_file",
+          "schema:name": "2/athena_project_file"
+        },
+        {
+          "@id": "#output-3-athena_project_file",
+          "schema:name": "3/athena_project_file"
+        },
+        {
+          "@id": "#output-4-athena_project_file",
+          "schema:name": "4/athena_project_file"
+        },
+        {
+          "@id": "#output-5-athena_project_file",
+          "schema:name": "5/athena_project_file"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-10-10",
+      "schema:name": "10",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 10,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-1-1"
+        },
+        {
+          "@id": "#step-2-2"
+        },
+        {
+          "@id": "#step-6-6"
+        },
+        {
+          "@id": "#step-7-7"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-1-athena_project_file",
+          "schema:name": "1/athena_project_file"
+        },
+        {
+          "@id": "#output-2-athena_project_file",
+          "schema:name": "2/athena_project_file"
+        },
+        {
+          "@id": "#output-6-athena_project_file",
+          "schema:name": "6/athena_project_file"
+        },
+        {
+          "@id": "#output-7-athena_project_file",
+          "schema:name": "7/athena_project_file"
+        }
+      ]
+    }
+  ]
+}

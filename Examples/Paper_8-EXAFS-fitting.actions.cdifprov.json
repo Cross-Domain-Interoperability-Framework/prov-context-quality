@@ -1,0 +1,304 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "bios": "https://bioschemas.org/"
+  },
+  "@graph": [
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#c5250654-d18b-4657-b066-d3311ce7d2a5",
+      "schema:name": "Run of Galaxy workflow engine",
+      "schema:additionalType": [
+        "schema:OrganizeAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-10-28T17:49:11.644661",
+      "schema:endTime": "2024-10-28T17:49:27.648788",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:name": "Galaxy workflow engine",
+        "schema:version": "24.1"
+      }
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#5b1292dc-6021-45f6-8f81-40d977069fc9",
+      "schema:name": "Workflow to reproduce paper 8 EXAFS fitting",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:startTime": "2024-09-27T15:27:15.076443",
+      "schema:endTime": "2024-09-27T15:27:15.076453",
+      "schema:instrument": {
+        "@type": [
+          "schema:SoftwareApplication"
+        ],
+        "schema:additionalType": [
+          "bios:ComputationalWorkflow"
+        ],
+        "schema:name": "Workflow to reproduce paper 8 EXAFS fitting",
+        "@id": "workflows/0a07785dca20180d.gxwf.yml"
+      },
+      "schema:hasPart": [
+        {
+          "@id": "#step-1-4"
+        },
+        {
+          "@id": "#step-2-5"
+        },
+        {
+          "@id": "#step-3-6"
+        },
+        {
+          "@id": "#step-4-7"
+        },
+        {
+          "@id": "#step-5-8"
+        },
+        {
+          "@id": "#step-6-9"
+        },
+        {
+          "@id": "#step-7-10"
+        }
+      ],
+      "prov:used": [
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Washcoat_Athena_project_file_from_paper_3dfde3a7417d0973.prj",
+          "schema:name": "Washcoat Athena project file from paper",
+          "schema:encodingFormat": "text/plain"
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/20g_ash_Athena_project_file_from_paper_cb3d3286c5ba876f.prj",
+          "schema:name": "20g ash Athena project file from paper",
+          "schema:encodingFormat": "text/plain"
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/PdO_cif_file.cif_ebd697d0c147d306.cif",
+          "schema:name": "PdO_cif_file.cif",
+          "schema:encodingFormat": "text/plain"
+        },
+        {
+          "@type": [
+            "schema:MediaObject"
+          ],
+          "@id": "datasets/Pd_cif_file.cif_b0b2392468d82f00.cif",
+          "schema:name": "Pd_cif_file.cif",
+          "schema:encodingFormat": "text/plain"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-1-4",
+      "schema:name": "4",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 1,
+      "prov:used": [
+        {
+          "@id": "#input-Washcoat Athena project file from paper",
+          "schema:name": "Washcoat Athena project file from paper"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-2-5",
+      "schema:name": "5",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 2,
+      "prov:used": [
+        {
+          "@id": "#input-20g ash Athena project file from paper",
+          "schema:name": "20g ash Athena project file from paper"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-3-6",
+      "schema:name": "6",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 3,
+      "prov:used": [
+        {
+          "@id": "#input-PdO cif file",
+          "schema:name": "PdO cif file"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-4-7",
+      "schema:name": "7",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 4,
+      "prov:used": [
+        {
+          "@id": "#input-Pd cif file",
+          "schema:name": "Pd cif file"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-5-8",
+      "schema:name": "8",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 5,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-3-6"
+        },
+        {
+          "@id": "#step-4-7"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-6-out_dir",
+          "schema:name": "6/out_dir"
+        },
+        {
+          "@id": "#output-7-out_csv",
+          "schema:name": "7/out_csv"
+        },
+        {
+          "@id": "#output-7-out_dir",
+          "schema:name": "7/out_dir"
+        },
+        {
+          "@id": "#output-6-out_csv",
+          "schema:name": "6/out_csv"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-6-9",
+      "schema:name": "9",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 6,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-1-4"
+        },
+        {
+          "@id": "#step-5-8"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-8-gds_csv",
+          "schema:name": "8/gds_csv"
+        },
+        {
+          "@id": "#output-8-sp_csv",
+          "schema:name": "8/sp_csv"
+        },
+        {
+          "@id": "#output-8-merged_directories",
+          "schema:name": "8/merged_directories"
+        },
+        {
+          "@id": "#output-4-athena_project_file_collection",
+          "schema:name": "4/athena_project_file_collection"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "schema:Action",
+        "prov:Activity"
+      ],
+      "@id": "#step-7-10",
+      "schema:name": "10",
+      "schema:additionalType": [
+        "schema:CreateAction"
+      ],
+      "schema:actionStatus": "schema:CompletedActionStatus",
+      "schema:position": 7,
+      "prov:wasInformedBy": [
+        {
+          "@id": "#step-2-5"
+        },
+        {
+          "@id": "#step-5-8"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "#output-8-gds_csv",
+          "schema:name": "8/gds_csv"
+        },
+        {
+          "@id": "#output-8-sp_csv",
+          "schema:name": "8/sp_csv"
+        },
+        {
+          "@id": "#output-8-merged_directories",
+          "schema:name": "8/merged_directories"
+        },
+        {
+          "@id": "#output-5-athena_project_file_collection",
+          "schema:name": "5/athena_project_file_collection"
+        }
+      ]
+    }
+  ]
+}
