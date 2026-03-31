@@ -15,7 +15,7 @@ In addition to the native CDIF building blocks, the research community has devel
 |---|---|---|---|
 | **cdifProv** | schema.org + PROV-O | `["schema:Action", "prov:Activity"]` | [cdifProperties/cdifProv](https://github.com/usgin/metadataBuildingBlocks/tree/main/_sources/cdifProperties/cdifProv) |
 | **provActivity** | W3C PROV-O | `["prov:Activity"]` | [provProperties/provActivity](https://github.com/usgin/metadataBuildingBlocks/tree/main/_sources/provProperties/provActivity) |
-| **ddicdiProv** | DDI-CDI 1.0 | `cdi:Activity` | [ddiProperties/ddicdiProv](https://github.com/usgin/metadataBuildingBlocks/tree/main/_sources/ddiProperties/ddicdiProv) |
+| **ddicdiActivity** | DDI-CDI 1.0 | `cdi:Activity` | [ddiProperties/ddicdiActivity](https://github.com/usgin/metadataBuildingBlocks/tree/main/_sources/ddiProperties/ddicdiActivity) |
 
 ### External Provenance Profiles
 
@@ -32,7 +32,7 @@ In addition to the native CDIF building blocks, the research community has devel
 |---|---|---|
 | cdifProv | [resolvedSchema.json](https://github.com/usgin/metadataBuildingBlocks/blob/main/_sources/cdifProperties/cdifProv/resolvedSchema.json) | [exampleCdifProv.json](https://github.com/usgin/metadataBuildingBlocks/blob/main/_sources/cdifProperties/cdifProv/exampleCdifProv.json) |
 | provActivity | [provActivitySchema.json](https://github.com/usgin/metadataBuildingBlocks/blob/main/_sources/provProperties/provActivity/provActivitySchema.json) | [exampleProvActivity.json](https://github.com/usgin/metadataBuildingBlocks/blob/main/_sources/provProperties/provActivity/exampleProvActivity.json) |
-| ddicdiProv | [resolvedSchema.json](https://github.com/usgin/metadataBuildingBlocks/blob/main/_sources/ddiProperties/ddicdiProv/resolvedSchema.json) | [exampleDdicdiProv.json](https://github.com/usgin/metadataBuildingBlocks/blob/main/_sources/ddiProperties/ddicdiProv/exampleDdicdiProv.json) |
+| ddicdiActivity | [ddicdiActivitySchema.json](https://github.com/usgin/metadataBuildingBlocks/blob/main/_sources/ddiProperties/ddicdiActivity/ddicdiActivitySchema.json) | [exampleDdicdiActivity.json](https://github.com/usgin/metadataBuildingBlocks/blob/main/_sources/ddiProperties/ddicdiActivity/exampleDdicdiActivity.json) |
 
 WRROC conversion examples (Galaxy workflow RO-Crates from [Zenodo record 13842780](https://zenodo.org/records/13842780) and Bennu py-GC-MS analytical workflow) are available in the [prov-context-quality/Examples](./Examples/) folder.
 
@@ -53,9 +53,9 @@ Key properties: `schema:agent`, `schema:object` (inputs), `schema:result` (outpu
 
 Prioritizes W3C PROV-O vocabulary, using native PROV-O properties where they exist (`prov:wasAssociatedWith`, `prov:generated`, `prov:startedAtTime`, `prov:wasInformedBy`) and falling back to schema.org for concepts PROV-O does not cover (name, description, instrument, methodology, status). Appropriate for communities invested in PROV-O tooling or where formal provenance reasoning is needed.
 
-### ddicdiProv — DDI-CDI native workflow description
+### ddicdiActivity — DDI-CDI native workflow description
 
-Uses the [DDI-CDI 1.0](https://ddialliance.org/Specification/DDI-CDI/1.0/) vocabulary natively. Designed for communities using DDI-CDI for statistical and survey data, with detailed workflow modeling capabilities (Steps, Parameters, data flow between steps, ProcessingAgents, ProductionEnvironments). Based on the [BBeuster EU-SoGreen-Prov](https://github.com/ddialliance/ddi-cdi_provenance-examples) example pattern.
+Uses the [DDI-CDI 1.0](https://ddialliance.org/Specification/DDI-CDI/1.0/) vocabulary natively, generated from the DDI-CDI Enterprise Architect UML model with all structured data types resolved. Designed for communities using DDI-CDI for statistical and survey data, with detailed workflow modeling capabilities (Steps, Parameters, data flow between steps). Includes `cdi:definition` (InternationalString), `cdi:start`/`cdi:end` (timestamps), and `cdi:hasInternal` (ControlLogic) properties not present in the earlier ddicdiProv building block. Companion building blocks `ddicdiAgent` (Individual, Machine, Organization, ProcessingAgent) and `ddicdiValueDomain` (SubstantiveValueDomain, SentinelValueDomain) cover related DDI-CDI classes.
 
 ## 3. Workflow Run RO-Crate (WRROC) Profiles
 
@@ -303,7 +303,7 @@ Both approaches are valid cdifProv. The choice depends on the level of detail:
 
 ## 7. Property Mapping Across All Approaches
 
-| Concept | cdifProv | provActivity | ddicdiProv | WRROC | ARC Profile |
+| Concept | cdifProv | provActivity | ddicdiActivity | WRROC | ARC Profile |
 |---|---|---|---|---|---|
 | **Activity type** | `["schema:Action", "prov:Activity"]` | `["prov:Activity"]` | `cdi:Activity` | `CreateAction` | `CreateAction` + `LabProcess` |
 | **Name** | `schema:name` | `schema:name` | `cdi:name` | `name` | `name` |
@@ -313,8 +313,8 @@ Both approaches are valid cdifProv. The choice depends on the level of detail:
 | **Agent** | `schema:agent` | `prov:wasAssociatedWith` | `cdi:ProcessingAgent` | `agent` | `agent` |
 | **Instrument** | `schema:instrument` (in `prov:used`) | `schema:instrument` (in `prov:used`) | `cdi:entityUsed` | `instrument` | `labEquipment` (on protocol) |
 | **Methodology** | `schema:actionProcess` → `HowTo` | `schema:actionProcess` → `HowTo` | `cdi:has_Step` | `ComputationalWorkflow` | `executesLabProtocol` → `LabProtocol` |
-| **Start time** | `schema:startTime` | `prov:startedAtTime` | — | `startTime` | `startTime` |
-| **End time** | `schema:endTime` | `prov:endedAtTime` | — | `endTime` | `endTime` |
+| **Start time** | `schema:startTime` | `prov:startedAtTime` | `cdi:start` | `startTime` | `startTime` |
+| **End time** | `schema:endTime` | `prov:endedAtTime` | `cdi:end` | `endTime` | `endTime` |
 | **Parameters** | `schema:additionalProperty` | — | `cdi:Parameter` | — | `parameterValue` |
 | **Status** | `schema:actionStatus` | `schema:actionStatus` | — | `actionStatus` | `actionStatus` |
 | **Error** | `schema:error` | `schema:error` | — | `error` | `error` |
@@ -349,18 +349,19 @@ Both approaches are valid cdifProv. The choice depends on the level of detail:
 - Mixed `prov:` and `schema:` prefixes may confuse implementers
 - No native methodology property in PROV-O outside of qualified associations
 
-### ddicdiProv
+### ddicdiActivity
 
 **Benefits:**
 - Native DDI-CDI vocabulary compatible with DDI-CDI statistical infrastructure
 - Explicit data-flow modeling via `cdi:Parameter` with `cdi:receives` / `cdi:produces`
 - `cdi:Step` nodes with `cdi:script` for executable code references
 - `cdi:standardModelMapping` links to standard process models (e.g., GSBPM)
+- `cdi:start`/`cdi:end` timestamps for temporal bounds (added from EA model)
+- `cdi:definition` (InternationalString) for formal concept definitions
 
 **Challenges:**
 - DDI-CDI vocabulary specialized and not widely recognized outside statistical community
 - Multi-node graph structure ~2.5× more verbose for the same scenario
-- Cannot express temporal bounds, status, or location directly on Activity
 - No dedicated instrument class
 - Not understood by web search engines
 
@@ -430,8 +431,8 @@ The Bennu py-GC-MS/MS analysis ([standard](./Examples/Bennu-py-GC-MS.cdifprov.js
 | Interoperability with ODIS / Ocean InfoHub | **cdifProv** |
 | Converting existing WRROC/ARC workflow provenance | **cdifProv** (via converter) |
 | PROV-O tooling and formal provenance reasoning | **provActivity** |
-| DDI-CDI infrastructure and statistical workflows | **ddicdiProv** |
-| Detailed data-flow modeling between processing steps | **ddicdiProv** |
+| DDI-CDI infrastructure and statistical workflows | **ddicdiActivity** |
+| Detailed data-flow modeling between processing steps | **ddicdiActivity** |
 | Lab analytical workflows with rich parameterization | **cdifProv** with ARC-inspired patterns |
 | Minimal authoring effort | **cdifProv** or **provActivity** |
 
